@@ -18,6 +18,8 @@ Sources ──> Bronze ──> Silver ──> Gold ──> Impala ──> Power 
             + HDFS     Parquet    étoile    SQL         sur des vues
 ```
 
+![Architecture de la solution : sources, Talend, couches Bronze, Silver et Gold, Impala, Power BI](docs/schemas/architecture.png)
+
 Six sources alimentent l'entrepôt : des tables PostgreSQL (patients, consultations, professionnels), les établissements, les hospitalisations, la satisfaction des patients (e-Satis), les décès (fichiers INSEE) et le référentiel des régions (INSEE). Le lac de données, stocké sur HDFS, est organisé en trois couches :
 
 - **Bronze** : les fichiers et la base sont copiés tels quels par des jobs Talend. Les identifiants des patients y sont déjà pseudonymisés.
@@ -43,11 +45,11 @@ Quelques termes :
 
 | Dossier | Contenu |
 |---|---|
-| `docs/` | Rapports des livrables 1 et 2, dictionnaires de données, fiches des jobs, schémas de conception |
+| `docs/` | Rapports des livrables 1 et 2, dictionnaires de données, fiches des jobs, schémas (architecture, modèle dimensionnel, chaîne de traitement) |
 | `etl/` | Scripts de chaque couche (`1_Bronze` à `4_Datamarts`) et benchmark (`5_Benchmark`). Le fichier [etl/README.md](etl/README.md) donne l'ordre de lancement |
 | `powerbi/` | Rapport Power BI (`.pbit`), vues Impala qu'il lit et scripts qui l'ont généré. Voir [powerbi/README.md](powerbi/README.md) |
 
-Les schémas de `docs/schemas/` viennent de la conception du livrable 1. Le Gold y est prévu au format ORC, alors que l'implémentation utilise Parquet, et les datamarts PostgreSQL du livrable 2 (`etl/4_Datamarts`) ont été remplacés dans le livrable 3 par une lecture directe du Gold par Impala.
+Les schémas de `docs/schemas/` viennent des rapports et du diaporama de soutenance, et [docs/schemas/README.md](docs/schemas/README.md) dit ce que montre chacun. Le schéma de la chaîne de traitement du livrable 1 prévoit encore une étape de datamarts PostgreSQL. Le livrable 3 l'a remplacée par une lecture directe du Gold par Impala, et `etl/4_Datamarts` garde les scripts de cette étape.
 
 ## Rejouer le projet
 
