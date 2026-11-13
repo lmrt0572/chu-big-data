@@ -2,7 +2,7 @@
 
 *English summary: a data lake and BI project built by a team of three students. Heterogeneous hospital data (PostgreSQL tables, CSV and Excel files) is ingested with Talend into HDFS, refined through Bronze, Silver and Gold layers with Hive, queried with Impala and shown in a Power BI dashboard. The repository holds the code, the reports and the benchmark results, but no data. The documentation is in French.*
 
-## De quoi s'agit-il ?
+## Le projet
 
 Un centre hospitalier universitaire (CHU) produit des données dans des formats très différents : une base de données, des fichiers CSV, des tableurs Excel. Ce projet les rassemble dans un entrepôt de données, les nettoie, protège l'identité des patients, puis les rend interrogeables depuis un tableau de bord. Ce tableau de bord s'adresse à deux profils, les praticiens et la direction, et répond à huit indicateurs, nommés B1 à B8 dans les rapports : part de chaque établissement et de chaque diagnostic dans les consultations, taux d'hospitalisation, séjours par diagnostic, hospitalisation par sexe et par âge, consultations par professionnel, décès par région, satisfaction par région.
 
