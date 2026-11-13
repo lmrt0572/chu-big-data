@@ -1,0 +1,39 @@
+                                                                       QUERY PLAN                                                                       
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+ GroupAggregate  (cost=81.90..82.72 rows=21 width=57) (actual time=1.659..1.902 rows=17 loops=1)
+   Group Key: r.code_region, r.libelle_region
+   Buffers: shared hit=27 read=3
+   ->  Sort  (cost=81.90..81.95 rows=23 width=27) (actual time=1.631..1.657 rows=837 loops=1)
+         Sort Key: r.code_region, r.libelle_region
+         Sort Method: quicksort  Memory: 90kB
+         Buffers: shared hit=27 read=3
+         ->  Hash Join  (cost=1.77..81.38 rows=23 width=27) (actual time=0.832..1.220 rows=837 loops=1)
+               Hash Cond: (s.id_region = r.id_region)
+               Buffers: shared hit=21 read=3
+               ->  Nested Loop  (cost=0.30..79.83 rows=23 width=14) (actual time=0.796..1.090 rows=837 loops=1)
+                     Buffers: shared hit=20 read=3
+                     ->  Seq Scan on fait_satisfaction s  (cost=0.00..45.78 rows=1248 width=18) (actual time=0.020..0.236 rows=1695 loops=1)
+                           Filter: ((note_globale IS NOT NULL) AND (nb_avis > 0))
+                           Rows Removed by Filter: 607
+                           Buffers: shared hit=17
+                     ->  Memoize  (cost=0.30..0.96 rows=1 width=4) (actual time=0.000..0.000 rows=0 loops=1695)
+                           Cache Key: s.id_temps
+                           Cache Mode: logical
+                           Hits: 1693  Misses: 2  Evictions: 0  Overflows: 0  Memory Usage: 1kB
+                           Buffers: shared hit=3 read=3
+                           ->  Index Scan using pk_dim_temps on dim_temps t  (cost=0.29..0.95 rows=1 width=4) (actual time=0.246..0.246 rows=1 loops=2)
+                                 Index Cond: (id_temps = s.id_temps)
+                                 Filter: (annee = 2020)
+                                 Rows Removed by Filter: 1
+                                 Buffers: shared hit=3 read=3
+               ->  Hash  (cost=1.21..1.21 rows=21 width=21) (actual time=0.020..0.020 rows=21 loops=1)
+                     Buckets: 1024  Batches: 1  Memory Usage: 10kB
+                     Buffers: shared hit=1
+                     ->  Seq Scan on dim_region r  (cost=0.00..1.21 rows=21 width=21) (actual time=0.010..0.013 rows=21 loops=1)
+                           Buffers: shared hit=1
+ Planning:
+   Buffers: shared hit=261
+ Planning Time: 3.518 ms
+ Execution Time: 2.017 ms
+(35 rows)
+

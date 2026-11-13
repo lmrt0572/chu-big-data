@@ -1,0 +1,1063 @@
+horodatage;moteur;volume;utilisateurs;utilisateur;ouverture;requete;debut_s;secondes;statut
+2026-11-06 11:34:37;impala;v50;1;1;1;B1;11.95;1.553;OK
+2026-11-06 11:34:37;impala;v50;1;1;1;TOTAL;11.95;8.607;OK
+2026-11-06 11:34:37;impala;v50;1;1;1;B2;13.5;1.238;OK
+2026-11-06 11:34:37;impala;v50;1;1;1;B3;14.74;0.172;OK
+2026-11-06 11:34:37;impala;v50;1;1;1;B4;14.91;0.264;OK
+2026-11-06 11:34:37;impala;v50;1;1;1;B5;15.18;0.548;OK
+2026-11-06 11:34:37;impala;v50;1;1;1;B6;15.72;3.921;OK
+2026-11-06 11:34:37;impala;v50;1;1;1;B7;19.65;0.332;OK
+2026-11-06 11:34:37;impala;v50;1;1;1;B8;19.98;0.58;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;B1;26.14;1.614;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;TOTAL;26.14;8.591;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;B2;27.76;1.14;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;B3;28.9;0.14;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;B4;29.04;0.282;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;B5;29.32;0.634;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;B6;29.96;3.726;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;B7;33.68;0.376;OK
+2026-11-06 11:34:37;impala;v50;1;1;2;B8;34.06;0.678;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;B1;47.34;1.575;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;TOTAL;47.34;9.364;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;B2;48.91;1.021;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;B3;49.93;0.257;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;B4;50.19;0.38;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;B5;50.57;0.925;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;B6;51.5;4.264;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;B7;55.76;0.376;OK
+2026-11-06 11:34:37;impala;v50;1;1;3;B8;56.14;0.566;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;B1;70.33;1.196;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;TOTAL;70.33;8.23;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;B2;71.53;1.137;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;B3;72.66;0.194;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;B4;72.86;0.295;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;B5;73.15;0.505;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;B6;73.66;3.749;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;B7;77.41;0.445;OK
+2026-11-06 11:34:37;impala;v50;1;1;4;B8;77.85;0.71;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;B1;84.47;1.312;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;TOTAL;84.47;8.591;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;B2;85.79;1.082;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;B3;86.87;0.196;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;B4;87.06;0.301;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;B5;87.37;0.731;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;B6;88.1;3.928;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;B7;92.02;0.326;OK
+2026-11-06 11:34:37;impala;v50;1;1;5;B8;92.35;0.714;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;B1;107.09;1.434;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;TOTAL;107.09;9.012;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;B2;108.52;1.246;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;B3;109.77;0.273;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;B4;110.04;0.332;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;B5;110.37;0.658;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;B6;111.03;4.215;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;B7;115.25;0.328;OK
+2026-11-06 11:34:37;impala;v50;1;1;6;B8;115.58;0.527;OK
+2026-11-06 11:36:48;impala;v50;2;1;1;B1;8.8;1.479;OK
+2026-11-06 11:36:48;impala;v50;2;1;1;TOTAL;8.8;11.548;OK
+2026-11-06 11:36:48;impala;v50;2;1;1;B2;10.28;1.765;OK
+2026-11-06 11:36:48;impala;v50;2;2;1;B1;10.91;1.599;OK
+2026-11-06 11:36:48;impala;v50;2;2;1;TOTAL;10.91;7.3;ECHEC
+2026-11-06 11:36:48;impala;v50;2;1;1;B3;12.04;0.275;OK
+2026-11-06 11:36:48;impala;v50;2;1;1;B4;12.32;0.509;OK
+2026-11-06 11:36:48;impala;v50;2;2;1;B2;12.51;1.48;OK
+2026-11-06 11:36:48;impala;v50;2;1;1;B5;12.83;0.721;OK
+2026-11-06 11:36:48;impala;v50;2;1;1;B6;13.55;5.754;OK
+2026-11-06 11:36:48;impala;v50;2;2;1;B3;13.99;0.312;OK
+2026-11-06 11:36:48;impala;v50;2;2;1;B4;14.3;0.592;OK
+2026-11-06 11:36:48;impala;v50;2;2;1;B5;14.9;0.835;OK
+2026-11-06 11:36:48;impala;v50;2;2;1;B6;15.73;0.851;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:36:48;impala;v50;2;2;1;B7;16.58;0.47;OK
+2026-11-06 11:36:48;impala;v50;2;2;1;B8;17.05;1.16;OK
+2026-11-06 11:36:48;impala;v50;2;1;1;B7;19.3;0.391;OK
+2026-11-06 11:36:48;impala;v50;2;1;1;B8;19.69;0.653;OK
+2026-11-06 11:36:48;impala;v50;2;2;2;B1;28.22;1.385;OK
+2026-11-06 11:36:48;impala;v50;2;2;2;TOTAL;28.22;11.408;OK
+2026-11-06 11:36:48;impala;v50;2;1;2;B1;28.97;1.503;OK
+2026-11-06 11:36:48;impala;v50;2;1;2;TOTAL;28.97;7.608;ECHEC
+2026-11-06 11:36:48;impala;v50;2;2;2;B2;29.6;1.451;OK
+2026-11-06 11:36:48;impala;v50;2;1;2;B2;30.47;1.18;OK
+2026-11-06 11:36:48;impala;v50;2;2;2;B3;31.05;0.218;OK
+2026-11-06 11:36:48;impala;v50;2;2;2;B4;31.27;0.421;OK
+2026-11-06 11:36:48;impala;v50;2;1;2;B3;31.65;0.308;OK
+2026-11-06 11:36:48;impala;v50;2;2;2;B5;31.69;0.93;OK
+2026-11-06 11:36:48;impala;v50;2;1;2;B4;31.96;0.515;OK
+2026-11-06 11:36:48;impala;v50;2;1;2;B5;32.48;1.005;OK
+2026-11-06 11:36:48;impala;v50;2;2;2;B6;32.62;5.733;OK
+2026-11-06 11:36:48;impala;v50;2;1;2;B6;33.48;0.94;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:36:48;impala;v50;2;1;2;B7;34.42;0.659;OK
+2026-11-06 11:36:48;impala;v50;2;1;2;B8;35.08;1.498;OK
+2026-11-06 11:36:48;impala;v50;2;2;2;B7;38.35;0.584;OK
+2026-11-06 11:36:48;impala;v50;2;2;2;B8;38.94;0.687;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;B1;42.1;1.722;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;TOTAL;42.1;9.365;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;B2;43.83;1.751;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;B3;45.58;0.35;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;B4;45.93;0.436;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;B5;46.36;0.53;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;B6;46.89;3.605;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;B7;50.5;0.365;OK
+2026-11-06 11:36:48;impala;v50;2;1;3;B8;50.86;0.606;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;B1;52.4;1.417;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;TOTAL;52.4;7.856;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;B2;53.82;0.998;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;B3;54.81;0.185;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;B4;55.0;0.322;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;B5;55.32;0.506;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;B6;55.83;3.597;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;B7;59.42;0.328;OK
+2026-11-06 11:36:48;impala;v50;2;2;3;B8;59.75;0.505;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;B1;62.98;1.111;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;TOTAL;62.98;8.287;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;B2;64.09;0.922;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;B3;65.01;0.156;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;B4;65.17;0.297;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;B5;65.47;0.657;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;B6;66.12;3.939;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;B7;70.06;0.321;OK
+2026-11-06 11:36:48;impala;v50;2;1;4;B8;70.38;0.885;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;B1;70.9;1.241;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;TOTAL;70.9;8.133;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;B2;72.14;1.187;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;B3;73.32;0.209;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;B4;73.53;0.284;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;B5;73.82;0.574;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;B6;74.39;3.621;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;B7;78.01;0.337;OK
+2026-11-06 11:36:48;impala;v50;2;2;4;B8;78.35;0.682;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;B1;85.77;1.123;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;TOTAL;85.77;9.399;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;B2;86.9;1.099;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;B3;88.0;0.206;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;B4;88.2;0.371;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;B5;88.57;0.563;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;B6;89.14;3.697;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;B7;92.83;1.109;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;B1;92.83;2.683;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;TOTAL;92.83;9.709;OK
+2026-11-06 11:36:48;impala;v50;2;1;5;B8;93.94;1.229;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;B2;95.52;1.029;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;B3;96.55;0.141;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;B4;96.69;0.276;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;B5;96.96;0.468;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;B6;97.43;4.202;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;B7;101.63;0.29;OK
+2026-11-06 11:36:48;impala;v50;2;2;5;B8;101.92;0.62;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;B1;106.11;1.168;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;TOTAL;106.11;7.928;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;B2;107.27;1.053;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;B3;108.33;0.137;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;B4;108.46;0.273;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;B5;108.74;0.478;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;B6;109.22;3.953;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;B7;113.17;0.32;OK
+2026-11-06 11:36:48;impala;v50;2;1;6;B8;113.49;0.545;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;B1;116.39;1.095;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;TOTAL;116.39;7.608;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;B2;117.49;1.01;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;B3;118.5;0.155;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;B4;118.65;0.284;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;B5;118.94;0.447;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;B6;119.38;3.602;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;B7;122.99;0.334;OK
+2026-11-06 11:36:48;impala;v50;2;2;6;B8;123.32;0.681;OK
+2026-11-06 11:39:10;impala;v50;5;3;1;B1;2.39;1.351;OK
+2026-11-06 11:39:10;impala;v50;5;3;1;TOTAL;2.39;23.459;OK
+2026-11-06 11:39:10;impala;v50;5;5;1;B1;3.22;1.463;OK
+2026-11-06 11:39:10;impala;v50;5;5;1;TOTAL;3.22;12.7;ECHEC
+2026-11-06 11:39:10;impala;v50;5;3;1;B2;3.74;1.271;OK
+2026-11-06 11:39:10;impala;v50;5;5;1;B2;4.68;1.877;OK
+2026-11-06 11:39:10;impala;v50;5;4;1;B1;4.95;2.703;OK
+2026-11-06 11:39:10;impala;v50;5;4;1;TOTAL;4.95;16.261;ECHEC
+2026-11-06 11:39:10;impala;v50;5;3;1;B3;5.01;0.55;OK
+2026-11-06 11:39:10;impala;v50;5;3;1;B4;5.56;0.779;OK
+2026-11-06 11:39:10;impala;v50;5;3;1;B5;6.34;1.091;OK
+2026-11-06 11:39:10;impala;v50;5;5;1;B3;6.56;0.438;OK
+2026-11-06 11:39:10;impala;v50;5;5;1;B4;7.0;0.442;OK
+2026-11-06 11:39:10;impala;v50;5;3;1;B6;7.43;15.872;OK
+2026-11-06 11:39:10;impala;v50;5;5;1;B5;7.44;1.887;OK
+2026-11-06 11:39:10;impala;v50;5;4;1;B2;7.65;2.673;OK
+2026-11-06 11:39:10;impala;v50;5;1;1;B1;8.55;2.948;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65003 bytes for decompressed data. HDFS_SC
+2026-11-06 11:39:10;impala;v50;5;1;1;TOTAL;8.55;15.988;ECHEC
+2026-11-06 11:39:10;impala;v50;5;5;1;B6;9.33;2.025;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;2;1;B1;9.57;4.837;OK
+2026-11-06 11:39:10;impala;v50;5;2;1;TOTAL;9.57;15.962;ECHEC
+2026-11-06 11:39:10;impala;v50;5;4;1;B3;10.32;1.495;OK
+2026-11-06 11:39:10;impala;v50;5;5;1;B7;11.35;1.82;OK
+2026-11-06 11:39:10;impala;v50;5;1;1;B2;11.5;4.448;OK
+2026-11-06 11:39:10;impala;v50;5;4;1;B4;11.82;1.577;OK
+2026-11-06 11:39:10;impala;v50;5;5;1;B8;13.17;2.747;OK
+2026-11-06 11:39:10;impala;v50;5;4;1;B5;13.39;2.453;OK
+2026-11-06 11:39:10;impala;v50;5;2;1;B2;14.41;3.236;OK
+2026-11-06 11:39:10;impala;v50;5;4;1;B6;15.85;1.762;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;1;1;B3;15.95;0.933;OK
+2026-11-06 11:39:10;impala;v50;5;1;1;B4;16.88;0.817;OK
+2026-11-06 11:39:10;impala;v50;5;4;1;B7;17.61;1.413;OK
+2026-11-06 11:39:10;impala;v50;5;2;1;B3;17.64;0.579;OK
+2026-11-06 11:39:10;impala;v50;5;1;1;B5;17.7;1.948;OK
+2026-11-06 11:39:10;impala;v50;5;2;1;B4;18.22;0.727;OK
+2026-11-06 11:39:10;impala;v50;5;2;1;B5;18.95;1.909;OK
+2026-11-06 11:39:10;impala;v50;5;4;1;B8;19.02;2.184;OK
+2026-11-06 11:39:10;impala;v50;5;1;1;B6;19.65;1.42;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;2;1;B6;20.86;1.514;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;1;1;B7;21.07;1.461;OK
+2026-11-06 11:39:10;impala;v50;5;5;2;B1;21.47;3.414;OK
+2026-11-06 11:39:10;impala;v50;5;5;2;TOTAL;21.47;14.023;OK
+2026-11-06 11:39:10;impala;v50;5;2;1;B7;22.37;1.499;OK
+2026-11-06 11:39:10;impala;v50;5;1;1;B8;22.53;2.013;OK
+2026-11-06 11:39:10;impala;v50;5;3;1;B7;23.31;1.215;OK
+2026-11-06 11:39:10;impala;v50;5;2;1;B8;23.87;1.66;OK
+2026-11-06 11:39:10;impala;v50;5;3;1;B8;24.52;1.329;OK
+2026-11-06 11:39:10;impala;v50;5;5;2;B2;24.89;1.515;OK
+2026-11-06 11:39:10;impala;v50;5;5;2;B3;26.4;0.153;OK
+2026-11-06 11:39:10;impala;v50;5;5;2;B4;26.55;0.35;OK
+2026-11-06 11:39:10;impala;v50;5;5;2;B5;26.9;0.479;OK
+2026-11-06 11:39:10;impala;v50;5;5;2;B6;27.38;5.24;OK
+2026-11-06 11:39:10;impala;v50;5;4;2;B1;28.96;2.495;OK
+2026-11-06 11:39:10;impala;v50;5;4;2;TOTAL;28.96;19.414;ECHEC
+2026-11-06 11:39:10;impala;v50;5;4;2;B2;31.45;2.632;OK
+2026-11-06 11:39:10;impala;v50;5;5;2;B7;32.62;1.178;OK
+2026-11-06 11:39:10;impala;v50;5;2;2;B1;33.09;3.0;OK
+2026-11-06 11:39:10;impala;v50;5;2;2;TOTAL;33.09;15.599;ECHEC
+2026-11-06 11:39:10;impala;v50;5;5;2;B8;33.8;1.695;OK
+2026-11-06 11:39:10;impala;v50;5;4;2;B3;34.09;0.454;OK
+2026-11-06 11:39:10;impala;v50;5;4;2;B4;34.54;0.941;OK
+2026-11-06 11:39:10;impala;v50;5;4;2;B5;35.48;1.329;OK
+2026-11-06 11:39:10;impala;v50;5;1;2;B1;35.83;3.367;OK
+2026-11-06 11:39:10;impala;v50;5;1;2;TOTAL;35.83;21.36;ECHEC
+2026-11-06 11:39:10;impala;v50;5;2;2;B2;36.09;2.621;OK
+2026-11-06 11:39:10;impala;v50;5;4;2;B6;36.81;7.27;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 874c3688319da23d:4c8da5e100000002
+2026-11-06 11:39:10;impala;v50;5;3;2;B1;38.35;3.614;OK
+2026-11-06 11:39:10;impala;v50;5;3;2;TOTAL;38.35;14.426;ECHEC
+2026-11-06 11:39:10;impala;v50;5;2;2;B3;38.71;0.428;OK
+2026-11-06 11:39:10;impala;v50;5;2;2;B4;39.14;1.115;OK
+2026-11-06 11:39:10;impala;v50;5;1;2;B2;39.19;3.308;OK
+2026-11-06 11:39:10;impala;v50;5;2;2;B5;40.25;1.753;OK
+2026-11-06 11:39:10;impala;v50;5;3;2;B2;41.97;2.005;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:39:10;impala;v50;5;2;2;B6;42.0;2.146;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;1;2;B3;42.5;0.741;OK
+2026-11-06 11:39:10;impala;v50;5;1;2;B4;43.24;0.681;ECHEC Memory limit exceeded 
+2026-11-06 11:39:10;impala;v50;5;1;2;B5;43.92;2.228;OK
+2026-11-06 11:39:10;impala;v50;5;3;2;B3;43.97;0.608;OK
+2026-11-06 11:39:10;impala;v50;5;4;2;B7;44.08;1.314;OK
+2026-11-06 11:39:10;impala;v50;5;2;2;B7;44.15;1.339;OK
+2026-11-06 11:39:10;impala;v50;5;3;2;B4;44.58;1.01;OK
+2026-11-06 11:39:10;impala;v50;5;5;3;B1;44.96;4.317;OK
+2026-11-06 11:39:10;impala;v50;5;5;3;TOTAL;44.96;11.346;ECHEC
+2026-11-06 11:39:10;impala;v50;5;4;2;B8;45.39;2.979;OK
+2026-11-06 11:39:10;impala;v50;5;2;2;B8;45.49;3.196;OK
+2026-11-06 11:39:10;impala;v50;5;3;2;B5;45.59;2.844;OK
+2026-11-06 11:39:10;impala;v50;5;1;2;B6;46.15;9.925;OK
+2026-11-06 11:39:10;impala;v50;5;3;2;B6;48.43;1.592;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;5;3;B2;49.28;2.924;OK
+2026-11-06 11:39:10;impala;v50;5;3;2;B7;50.02;1.21;OK
+2026-11-06 11:39:10;impala;v50;5;3;2;B8;51.23;1.544;OK
+2026-11-06 11:39:10;impala;v50;5;5;3;B3;52.2;0.417;OK
+2026-11-06 11:39:10;impala;v50;5;5;3;B4;52.62;0.55;OK
+2026-11-06 11:39:10;impala;v50;5;5;3;B5;53.17;0.839;OK
+2026-11-06 11:39:10;impala;v50;5;5;3;B6;54.01;0.75;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;5;3;B7;54.76;0.473;OK
+2026-11-06 11:39:10;impala;v50;5;5;3;B8;55.23;1.078;OK
+2026-11-06 11:39:10;impala;v50;5;1;2;B7;56.07;0.525;OK
+2026-11-06 11:39:10;impala;v50;5;1;2;B8;56.6;0.587;OK
+2026-11-06 11:39:10;impala;v50;5;4;3;B1;59.42;1.034;OK
+2026-11-06 11:39:10;impala;v50;5;4;3;TOTAL;59.42;15.031;ECHEC
+2026-11-06 11:39:10;impala;v50;5;4;3;B2;60.45;1.374;OK
+2026-11-06 11:39:10;impala;v50;5;3;3;B1;60.63;2.518;OK
+2026-11-06 11:39:10;impala;v50;5;3;3;TOTAL;60.63;13.945;ECHEC
+2026-11-06 11:39:10;impala;v50;5;4;3;B3;61.83;0.357;OK
+2026-11-06 11:39:10;impala;v50;5;4;3;B4;62.18;0.683;OK
+2026-11-06 11:39:10;impala;v50;5;2;3;B1;62.23;2.147;OK
+2026-11-06 11:39:10;impala;v50;5;2;3;TOTAL;62.23;19.266;OK
+2026-11-06 11:39:10;impala;v50;5;4;3;B5;62.86;0.988;OK
+2026-11-06 11:39:10;impala;v50;5;3;3;B2;63.15;2.147;OK
+2026-11-06 11:39:10;impala;v50;5;4;3;B6;63.85;5.957;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 86420ac302776804:5950221500000002
+2026-11-06 11:39:10;impala;v50;5;2;3;B2;64.38;2.542;OK
+2026-11-06 11:39:10;impala;v50;5;5;4;B1;64.7;3.602;OK
+2026-11-06 11:39:10;impala;v50;5;5;4;TOTAL;64.7;13.884;ECHEC
+2026-11-06 11:39:10;impala;v50;5;3;3;B3;65.29;0.323;OK
+2026-11-06 11:39:10;impala;v50;5;3;3;B4;65.62;1.106;OK
+2026-11-06 11:39:10;impala;v50;5;3;3;B5;66.72;1.466;OK
+2026-11-06 11:39:10;impala;v50;5;2;3;B3;66.92;0.597;OK
+2026-11-06 11:39:10;impala;v50;5;2;3;B4;67.52;0.732;OK
+2026-11-06 11:39:10;impala;v50;5;3;3;B6;68.19;1.62;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;2;3;B5;68.25;2.238;OK
+2026-11-06 11:39:10;impala;v50;5;5;4;B2;68.3;1.393;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment e42a47141453571:4abf48c200000001 
+2026-11-06 11:39:10;impala;v50;5;1;3;B1;69.57;0.287;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL <= 20191231.Memory limit exceeded: Could not allocat
+2026-11-06 11:39:10;impala;v50;5;1;3;TOTAL;69.57;10.263;ECHEC
+2026-11-06 11:39:10;impala;v50;5;5;4;B3;69.69;0.603;OK
+2026-11-06 11:39:10;impala;v50;5;4;3;B7;69.81;1.764;OK
+2026-11-06 11:39:10;impala;v50;5;3;3;B7;69.81;1.765;OK
+2026-11-06 11:39:10;impala;v50;5;1;3;B2;69.86;4.089;OK
+2026-11-06 11:39:10;impala;v50;5;5;4;B4;70.3;1.305;OK
+2026-11-06 11:39:10;impala;v50;5;2;3;B6;70.49;9.746;OK
+2026-11-06 11:39:10;impala;v50;5;4;3;B8;71.57;2.875;OK
+2026-11-06 11:39:10;impala;v50;5;3;3;B8;71.57;3.0;OK
+2026-11-06 11:39:10;impala;v50;5;5;4;B5;71.6;2.434;OK
+2026-11-06 11:39:10;impala;v50;5;1;3;B3;73.95;0.699;OK
+2026-11-06 11:39:10;impala;v50;5;5;4;B6;74.04;1.564;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;1;3;B4;74.65;0.984;OK
+2026-11-06 11:39:10;impala;v50;5;5;4;B7;75.6;1.08;OK
+2026-11-06 11:39:10;impala;v50;5;1;3;B5;75.63;1.178;OK
+2026-11-06 11:39:10;impala;v50;5;5;4;B8;76.68;1.904;OK
+2026-11-06 11:39:10;impala;v50;5;1;3;B6;76.81;1.294;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;1;3;B7;78.1;0.638;OK
+2026-11-06 11:39:10;impala;v50;5;1;3;B8;78.74;1.095;OK
+2026-11-06 11:39:10;impala;v50;5;2;3;B7;80.23;0.352;OK
+2026-11-06 11:39:10;impala;v50;5;2;3;B8;80.58;0.913;OK
+2026-11-06 11:39:10;impala;v50;5;4;4;B1;80.77;1.433;OK
+2026-11-06 11:39:10;impala;v50;5;4;4;TOTAL;80.77;20.758;OK
+2026-11-06 11:39:10;impala;v50;5;4;4;B2;82.2;0.965;OK
+2026-11-06 11:39:10;impala;v50;5;4;4;B3;83.17;0.134;OK
+2026-11-06 11:39:10;impala;v50;5;4;4;B4;83.3;0.447;OK
+2026-11-06 11:39:10;impala;v50;5;3;4;B1;83.35;1.593;OK
+2026-11-06 11:39:10;impala;v50;5;3;4;TOTAL;83.35;16.552;ECHEC
+2026-11-06 11:39:10;impala;v50;5;4;4;B5;83.75;0.568;OK
+2026-11-06 11:39:10;impala;v50;5;4;4;B6;84.31;12.772;OK
+2026-11-06 11:39:10;impala;v50;5;3;4;B2;84.94;3.345;OK
+2026-11-06 11:39:10;impala;v50;5;5;5;B1;85.43;4.147;OK
+2026-11-06 11:39:10;impala;v50;5;5;5;TOTAL;85.43;21.776;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;B1;86.54;3.675;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;TOTAL;86.54;16.688;ECHEC
+2026-11-06 11:39:10;impala;v50;5;3;4;B3;88.28;0.646;OK
+2026-11-06 11:39:10;impala;v50;5;3;4;B4;88.93;1.22;OK
+2026-11-06 11:39:10;impala;v50;5;5;5;B2;89.58;3.114;OK
+2026-11-06 11:39:10;impala;v50;5;3;4;B5;90.15;2.483;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;B2;90.21;3.762;OK
+2026-11-06 11:39:10;impala;v50;5;1;4;B1;90.5;4.555;OK
+2026-11-06 11:39:10;impala;v50;5;1;4;TOTAL;90.5;14.404;ECHEC
+2026-11-06 11:39:10;impala;v50;5;3;4;B6;92.63;2.178;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;5;5;B3;92.69;0.844;OK
+2026-11-06 11:39:10;impala;v50;5;5;5;B4;93.54;1.469;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;B3;93.98;0.535;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;B4;94.51;1.415;OK
+2026-11-06 11:39:10;impala;v50;5;3;4;B7;94.81;1.922;OK
+2026-11-06 11:39:10;impala;v50;5;5;5;B5;95.01;2.477;OK
+2026-11-06 11:39:10;impala;v50;5;1;4;B2;95.05;3.823;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;B5;95.93;2.471;OK
+2026-11-06 11:39:10;impala;v50;5;3;4;B8;96.73;3.165;OK
+2026-11-06 11:39:10;impala;v50;5;4;4;B7;97.09;2.113;OK
+2026-11-06 11:39:10;impala;v50;5;5;5;B6;97.48;8.596;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;B6;98.4;1.938;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;1;4;B3;98.87;0.814;OK
+2026-11-06 11:39:10;impala;v50;5;4;4;B8;99.2;2.328;OK
+2026-11-06 11:39:10;impala;v50;5;1;4;B4;99.69;1.175;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;B7;100.34;1.359;OK
+2026-11-06 11:39:10;impala;v50;5;1;4;B5;100.86;1.551;OK
+2026-11-06 11:39:10;impala;v50;5;2;4;B8;101.69;1.533;OK
+2026-11-06 11:39:10;impala;v50;5;1;4;B6;102.41;0.917;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;1;4;B7;103.33;0.562;OK
+2026-11-06 11:39:10;impala;v50;5;1;4;B8;103.89;1.008;OK
+2026-11-06 11:39:10;impala;v50;5;5;5;B7;106.08;0.368;OK
+2026-11-06 11:39:10;impala;v50;5;5;5;B8;106.45;0.76;OK
+2026-11-06 11:39:10;impala;v50;5;4;5;B1;109.15;1.137;OK
+2026-11-06 11:39:10;impala;v50;5;4;5;TOTAL;109.15;22.213;OK
+2026-11-06 11:39:10;impala;v50;5;4;5;B2;110.28;0.81;OK
+2026-11-06 11:39:10;impala;v50;5;4;5;B3;111.09;0.348;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;B1;111.1;2.149;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;TOTAL;111.1;15.985;ECHEC
+2026-11-06 11:39:10;impala;v50;5;4;5;B4;111.44;0.37;OK
+2026-11-06 11:39:10;impala;v50;5;4;5;B5;111.81;0.859;OK
+2026-11-06 11:39:10;impala;v50;5;3;5;B1;112.28;3.686;OK
+2026-11-06 11:39:10;impala;v50;5;3;5;TOTAL;112.28;17.49;ECHEC
+2026-11-06 11:39:10;impala;v50;5;4;5;B6;112.67;16.316;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;B2;113.25;3.836;OK
+2026-11-06 11:39:10;impala;v50;5;5;6;B1;114.0;4.204;OK
+2026-11-06 11:39:10;impala;v50;5;5;6;TOTAL;114.0;17.599;ECHEC
+2026-11-06 11:39:10;impala;v50;5;2;5;B1;114.24;4.479;OK
+2026-11-06 11:39:10;impala;v50;5;2;5;TOTAL;114.24;20.839;OK
+2026-11-06 11:39:10;impala;v50;5;3;5;B2;115.97;4.244;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;B3;117.08;0.43;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;B4;117.51;1.119;OK
+2026-11-06 11:39:10;impala;v50;5;5;6;B2;118.2;3.769;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;B5;118.63;2.216;OK
+2026-11-06 11:39:10;impala;v50;5;2;5;B2;118.72;4.282;OK
+2026-11-06 11:39:10;impala;v50;5;3;5;B3;120.21;0.467;OK
+2026-11-06 11:39:10;impala;v50;5;3;5;B4;120.68;1.111;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;B6;120.85;1.685;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;3;5;B5;121.79;2.238;OK
+2026-11-06 11:39:10;impala;v50;5;5;6;B3;121.97;0.72;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;B7;122.53;1.769;OK
+2026-11-06 11:39:10;impala;v50;5;5;6;B4;122.69;1.339;OK
+2026-11-06 11:39:10;impala;v50;5;2;5;B3;123.0;0.5;OK
+2026-11-06 11:39:10;impala;v50;5;2;5;B4;123.5;1.765;OK
+2026-11-06 11:39:10;impala;v50;5;3;5;B6;124.03;2.128;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;5;6;B5;124.03;2.725;OK
+2026-11-06 11:39:10;impala;v50;5;1;5;B8;124.3;2.781;OK
+2026-11-06 11:39:10;impala;v50;5;2;5;B5;125.27;2.226;OK
+2026-11-06 11:39:10;impala;v50;5;3;5;B7;126.16;1.481;OK
+2026-11-06 11:39:10;impala;v50;5;5;6;B6;126.76;1.798;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:39:10;impala;v50;5;2;5;B6;127.49;6.429;OK
+2026-11-06 11:39:10;impala;v50;5;3;5;B8;127.64;2.135;OK
+2026-11-06 11:39:10;impala;v50;5;5;6;B7;128.55;1.357;OK
+2026-11-06 11:39:10;impala;v50;5;4;5;B7;128.99;0.893;OK
+2026-11-06 11:39:10;impala;v50;5;4;5;B8;129.88;1.48;OK
+2026-11-06 11:39:10;impala;v50;5;5;6;B8;129.91;1.686;OK
+2026-11-06 11:39:10;impala;v50;5;2;5;B7;133.92;0.428;OK
+2026-11-06 11:39:10;impala;v50;5;2;5;B8;134.35;0.729;OK
+2026-11-06 11:41:29;impala;v50;10;8;1;B1;2.17;1.248;OK
+2026-11-06 11:41:29;impala;v50;10;8;1;TOTAL;2.17;22.338;ECHEC
+2026-11-06 11:41:29;impala;v50;10;8;1;B2;3.42;2.009;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;B1;3.57;4.024;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;TOTAL;3.57;33.736;ECHEC
+2026-11-06 11:41:29;impala;v50;10;7;1;B1;3.85;4.174;OK
+2026-11-06 11:41:29;impala;v50;10;7;1;TOTAL;3.85;33.305;ECHEC
+2026-11-06 11:41:29;impala;v50;10;9;1;B1;4.78;5.158;OK
+2026-11-06 11:41:29;impala;v50;10;9;1;TOTAL;4.78;34.458;ECHEC
+2026-11-06 11:41:29;impala;v50;10;1;1;B1;5.34;4.707;OK
+2026-11-06 11:41:29;impala;v50;10;1;1;TOTAL;5.34;31.736;ECHEC
+2026-11-06 11:41:29;impala;v50;10;8;1;B3;5.43;0.865;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;B1;5.85;5.785;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;TOTAL;5.85;34.388;ECHEC
+2026-11-06 11:41:29;impala;v50;10;8;1;B4;6.29;1.709;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;B2;7.6;7.642;ECHEC Memory limit exceeded: Query did not have enough memory to get the minimum required buffers in the block manager. Error 
+2026-11-06 11:41:29;impala;v50;10;8;1;B5;8.0;3.677;OK
+2026-11-06 11:41:29;impala;v50;10;7;1;B2;8.02;7.186;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment ef440282b932428a:6d4d0b6e00000003
+2026-11-06 11:41:29;impala;v50;10;10;1;B1;8.27;8.141;OK
+2026-11-06 11:41:29;impala;v50;10;10;1;TOTAL;8.27;33.333;ECHEC
+2026-11-06 11:41:29;impala;v50;10;4;1;B1;9.1;8.293;OK
+2026-11-06 11:41:29;impala;v50;10;4;1;TOTAL;9.1;32.012;ECHEC
+2026-11-06 11:41:29;impala;v50;10;9;1;B2;9.94;7.474;OK
+2026-11-06 11:41:29;impala;v50;10;1;1;B2;10.05;7.259;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;B2;11.63;8.062;OK
+2026-11-06 11:41:29;impala;v50;10;8;1;B6;11.68;3.604;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;5;1;B1;12.0;3.339;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;5;1;TOTAL;12.0;29.598;ECHEC
+2026-11-06 11:41:29;impala;v50;10;3;1;B1;13.1;9.019;OK
+2026-11-06 11:41:29;impala;v50;10;3;1;TOTAL;13.1;45.539;ECHEC
+2026-11-06 11:41:29;impala;v50;10;7;1;B3;15.21;1.361;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;B3;15.24;1.346;OK
+2026-11-06 11:41:29;impala;v50;10;8;1;B7;15.28;3.415;OK
+2026-11-06 11:41:29;impala;v50;10;5;1;B2;15.34;7.916;OK
+2026-11-06 11:41:29;impala;v50;10;10;1;B2;16.41;7.934;OK
+2026-11-06 11:41:29;impala;v50;10;7;1;B4;16.57;2.978;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;B4;16.59;3.17;OK
+2026-11-06 11:41:29;impala;v50;10;1;1;B3;17.31;1.22;OK
+2026-11-06 11:41:29;impala;v50;10;4;1;B2;17.39;8.007;OK
+2026-11-06 11:41:29;impala;v50;10;9;1;B3;17.41;1.781;OK
+2026-11-06 11:41:29;impala;v50;10;1;1;B4;18.53;2.987;OK
+2026-11-06 11:41:29;impala;v50;10;8;1;B8;18.7;5.812;OK
+2026-11-06 11:41:29;impala;v50;10;9;1;B4;19.19;3.059;OK
+2026-11-06 11:41:29;impala;v50;10;7;1;B5;19.55;4.793;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;B3;19.7;1.3;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;B5;19.76;4.798;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;B4;21.0;2.536;OK
+2026-11-06 11:41:29;impala;v50;10;1;1;B5;21.52;4.895;OK
+2026-11-06 11:41:29;impala;v50;10;3;1;B2;22.12;5.649;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65534 bytes for decompressed data. HDFS_SC
+2026-11-06 11:41:29;impala;v50;10;9;1;B5;22.25;4.648;OK
+2026-11-06 11:41:29;impala;v50;10;5;1;B3;23.26;1.225;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;B5;23.53;4.957;OK
+2026-11-06 11:41:29;impala;v50;10;10;1;B3;24.34;1.041;OK
+2026-11-06 11:41:29;impala;v50;10;7;1;B6;24.34;3.679;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;5;1;B4;24.48;2.774;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;B6;24.55;3.507;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;10;1;B4;25.38;2.649;OK
+2026-11-06 11:41:29;impala;v50;10;4;1;B3;25.4;1.1;OK
+2026-11-06 11:41:29;impala;v50;10;1;1;B6;26.41;1.326;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment f349008458a3e19b:14258c6b00000001
+2026-11-06 11:41:29;impala;v50;10;4;1;B4;26.5;2.799;OK
+2026-11-06 11:41:29;impala;v50;10;9;1;B6;26.9;3.866;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;5;1;B5;27.26;0.602;ECHEC Memory limit exceeded: Could not allocate aggregate expression input value Exprs could not allocate 16.00 B without exce
+2026-11-06 11:41:29;impala;v50;10;1;1;B7;27.74;3.577;OK
+2026-11-06 11:41:29;impala;v50;10;3;1;B3;27.77;1.356;OK
+2026-11-06 11:41:29;impala;v50;10;5;1;B6;27.86;7.603;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 3e48b0f9e8323588:21157d6a00000002
+2026-11-06 11:41:29;impala;v50;10;7;1;B7;28.02;3.393;OK
+2026-11-06 11:41:29;impala;v50;10;10;1;B5;28.03;4.783;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;B7;28.06;3.255;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;B6;28.49;3.606;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;3;1;B4;29.12;2.442;OK
+2026-11-06 11:41:29;impala;v50;10;4;1;B5;29.3;4.371;OK
+2026-11-06 11:41:29;impala;v50;10;9;1;B7;30.77;3.271;OK
+2026-11-06 11:41:29;impala;v50;10;1;1;B8;31.32;5.765;OK
+2026-11-06 11:41:29;impala;v50;10;6;1;B8;31.32;5.994;OK
+2026-11-06 11:41:29;impala;v50;10;7;1;B8;31.41;5.741;OK
+2026-11-06 11:41:29;impala;v50;10;3;1;B5;31.57;5.672;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;B7;32.1;3.915;OK
+2026-11-06 11:41:29;impala;v50;10;10;1;B6;32.81;1.875;ECHEC Memory limit exceeded: Failed to allocate '4286' bytes for compiled code module CodeGen could not allocate 4.19 KB witho
+2026-11-06 11:41:29;impala;v50;10;4;1;B6;33.67;0.808;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 6148ae1a5e2a865e:e5c32c4a00000001
+2026-11-06 11:41:29;impala;v50;10;9;1;B8;34.04;5.2;OK
+2026-11-06 11:41:29;impala;v50;10;8;2;B1;34.14;0.62;ECHEC Memory limit exceeded: Could not allocate aggregate expression intermediate value Exprs could not allocate 16.00 B witho
+2026-11-06 11:41:29;impala;v50;10;8;2;TOTAL;34.14;12.855;ECHEC
+2026-11-06 11:41:29;impala;v50;10;4;1;B7;34.48;3.702;OK
+2026-11-06 11:41:29;impala;v50;10;10;1;B7;34.69;3.838;OK
+2026-11-06 11:41:29;impala;v50;10;8;2;B2;34.76;6.0;OK
+2026-11-06 11:41:29;impala;v50;10;5;1;B7;35.46;3.516;OK
+2026-11-06 11:41:29;impala;v50;10;2;1;B8;36.01;4.226;OK
+2026-11-06 11:41:29;impala;v50;10;3;1;B6;37.24;13.516;OK
+2026-11-06 11:41:29;impala;v50;10;4;1;B8;38.18;2.932;OK
+2026-11-06 11:41:29;impala;v50;10;10;1;B8;38.53;3.072;OK
+2026-11-06 11:41:29;impala;v50;10;5;1;B8;38.98;2.622;OK
+2026-11-06 11:41:29;impala;v50;10;8;2;B3;40.76;0.799;OK
+2026-11-06 11:41:29;impala;v50;10;8;2;B4;41.56;0.516;OK
+2026-11-06 11:41:29;impala;v50;10;8;2;B5;42.07;0.794;OK
+2026-11-06 11:41:29;impala;v50;10;8;2;B6;42.87;0.978;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;8;2;B7;43.84;1.036;OK
+2026-11-06 11:41:29;impala;v50;10;6;2;B1;44.02;3.01;OK
+2026-11-06 11:41:29;impala;v50;10;6;2;TOTAL;44.02;30.937;ECHEC
+2026-11-06 11:41:29;impala;v50;10;8;2;B8;44.88;2.113;OK
+2026-11-06 11:41:29;impala;v50;10;7;2;B1;45.03;4.858;OK
+2026-11-06 11:41:29;impala;v50;10;7;2;TOTAL;45.03;30.292;ECHEC
+2026-11-06 11:41:29;impala;v50;10;2;2;B1;46.31;3.717;OK
+2026-11-06 11:41:29;impala;v50;10;2;2;TOTAL;46.31;28.772;ECHEC
+2026-11-06 11:41:29;impala;v50;10;6;2;B2;47.03;3.988;OK
+2026-11-06 11:41:29;impala;v50;10;9;2;B1;47.69;6.039;OK
+2026-11-06 11:41:29;impala;v50;10;9;2;TOTAL;47.69;35.09;ECHEC
+2026-11-06 11:41:29;impala;v50;10;10;2;B1;49.37;6.264;OK
+2026-11-06 11:41:29;impala;v50;10;10;2;TOTAL;49.37;41.017;ECHEC
+2026-11-06 11:41:29;impala;v50;10;7;2;B2;49.89;6.143;OK
+2026-11-06 11:41:29;impala;v50;10;2;2;B2;50.02;5.701;OK
+2026-11-06 11:41:29;impala;v50;10;1;2;B1;50.33;6.802;OK
+2026-11-06 11:41:29;impala;v50;10;1;2;TOTAL;50.33;33.927;ECHEC
+2026-11-06 11:41:29;impala;v50;10;3;1;B7;50.75;2.821;OK
+2026-11-06 11:41:29;impala;v50;10;6;2;B3;51.02;0.892;OK
+2026-11-06 11:41:29;impala;v50;10;6;2;B4;51.91;2.702;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;B1;51.92;7.128;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;TOTAL;51.92;34.56;ECHEC
+2026-11-06 11:41:29;impala;v50;10;4;2;B1;52.51;7.752;OK
+2026-11-06 11:41:29;impala;v50;10;4;2;TOTAL;52.51;30.034;ECHEC
+2026-11-06 11:41:29;impala;v50;10;3;1;B8;53.57;5.065;OK
+2026-11-06 11:41:29;impala;v50;10;9;2;B2;53.72;6.964;OK
+2026-11-06 11:41:29;impala;v50;10;6;2;B5;54.61;4.582;OK
+2026-11-06 11:41:29;impala;v50;10;10;2;B2;55.63;6.407;OK
+2026-11-06 11:41:29;impala;v50;10;2;2;B3;55.72;1.16;OK
+2026-11-06 11:41:29;impala;v50;10;7;2;B3;56.04;1.352;OK
+2026-11-06 11:41:29;impala;v50;10;8;3;B1;56.74;6.903;OK
+2026-11-06 11:41:29;impala;v50;10;8;3;TOTAL;56.74;32.791;ECHEC
+2026-11-06 11:41:29;impala;v50;10;2;2;B4;56.88;2.448;OK
+2026-11-06 11:41:29;impala;v50;10;1;2;B2;57.13;5.998;OK
+2026-11-06 11:41:29;impala;v50;10;7;2;B4;57.39;1.974;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;B2;59.05;5.613;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;6;2;B6;59.19;5.55;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 2a426da57361cd18:66863f7800000002
+2026-11-06 11:41:29;impala;v50;10;2;2;B5;59.33;4.166;OK
+2026-11-06 11:41:29;impala;v50;10;7;2;B5;59.36;4.328;OK
+2026-11-06 11:41:29;impala;v50;10;4;2;B2;60.27;4.873;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65534 bytes for decompressed data. HDFS_SC
+2026-11-06 11:41:29;impala;v50;10;9;2;B3;60.69;0.988;OK
+2026-11-06 11:41:29;impala;v50;10;9;2;B4;61.68;3.113;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 9c4ec210b0515b24:40e1231300000000
+2026-11-06 11:41:29;impala;v50;10;10;2;B3;62.04;0.952;OK
+2026-11-06 11:41:29;impala;v50;10;10;2;B4;62.99;2.996;OK
+2026-11-06 11:41:29;impala;v50;10;1;2;B3;63.13;1.344;OK
+2026-11-06 11:41:29;impala;v50;10;2;2;B6;63.5;1.179;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment ae42a1982179911c:9d90de3100000001
+2026-11-06 11:41:29;impala;v50;10;8;3;B2;63.64;8.507;OK
+2026-11-06 11:41:29;impala;v50;10;7;2;B6;63.69;0.988;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment d4536c1080b9bbd:849168b900000001 
+2026-11-06 11:41:29;impala;v50;10;3;2;B1;63.69;9.057;OK
+2026-11-06 11:41:29;impala;v50;10;3;2;TOTAL;63.69;43.1;ECHEC
+2026-11-06 11:41:29;impala;v50;10;1;2;B4;64.47;3.891;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;B3;64.66;2.155;OK
+2026-11-06 11:41:29;impala;v50;10;2;2;B7;64.68;4.218;OK
+2026-11-06 11:41:29;impala;v50;10;7;2;B7;64.68;4.483;OK
+2026-11-06 11:41:29;impala;v50;10;6;2;B7;64.74;4.168;OK
+2026-11-06 11:41:29;impala;v50;10;9;2;B5;64.79;5.961;OK
+2026-11-06 11:41:29;impala;v50;10;4;2;B3;65.14;1.814;OK
+2026-11-06 11:41:29;impala;v50;10;10;2;B5;65.99;5.215;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;B4;66.82;2.973;OK
+2026-11-06 11:41:29;impala;v50;10;4;2;B4;66.95;2.922;OK
+2026-11-06 11:41:29;impala;v50;10;1;2;B5;68.36;5.216;OK
+2026-11-06 11:41:29;impala;v50;10;2;2;B8;68.9;6.183;OK
+2026-11-06 11:41:29;impala;v50;10;6;2;B8;68.91;6.045;OK
+2026-11-06 11:41:29;impala;v50;10;7;2;B8;69.16;6.166;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;B5;69.79;5.395;OK
+2026-11-06 11:41:29;impala;v50;10;4;2;B5;69.87;5.72;OK
+2026-11-06 11:41:29;impala;v50;10;9;2;B6;70.75;4.416;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;10;2;B6;71.2;13.331;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 65489fdb7853b9b3:c2958fb100000002
+2026-11-06 11:41:29;impala;v50;10;8;3;B3;72.15;1.261;OK
+2026-11-06 11:41:29;impala;v50;10;3;2;B2;72.75;4.461;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65003 bytes for decompressed data. HDFS_SC
+2026-11-06 11:41:29;impala;v50;10;8;3;B4;73.41;2.918;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 9e45da6fa5b3399f:3b570e8800000002
+2026-11-06 11:41:29;impala;v50;10;1;2;B6;73.58;3.052;ECHEC Memory limit exceeded: Failed to allocate '10196' bytes for compiled code module CodeGen could not allocate 9.96 KB with
+2026-11-06 11:41:29;impala;v50;10;9;2;B7;75.17;2.892;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;B6;75.19;3.413;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;4;2;B6;75.59;0.702;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment cc4b823220014b4f:8197a18f00000001
+2026-11-06 11:41:29;impala;v50;10;4;2;B7;76.3;0.482;ECHEC ExecQueryFInstances rpc query_id=514d0f6b690b63dd:856cb25a00000000 failed: Memory limit exceeded: Query 514d0f6b690b63dd
+2026-11-06 11:41:29;impala;v50;10;8;3;B5;76.33;4.333;OK
+2026-11-06 11:41:29;impala;v50;10;1;2;B7;76.63;2.989;OK
+2026-11-06 11:41:29;impala;v50;10;4;2;B8;76.78;5.769;OK
+2026-11-06 11:41:29;impala;v50;10;3;2;B3;77.21;1.229;OK
+2026-11-06 11:41:29;impala;v50;10;9;2;B8;78.06;4.717;OK
+2026-11-06 11:41:29;impala;v50;10;3;2;B4;78.44;2.304;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;B7;78.6;3.356;OK
+2026-11-06 11:41:29;impala;v50;10;1;2;B8;79.62;4.634;ECHEC Memory limit exceeded: Failed to allocate '18982' bytes for compiled code module CodeGen could not allocate 18.54 KB wit
+2026-11-06 11:41:29;impala;v50;10;2;3;B1;80.43;3.978;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;2;3;TOTAL;80.43;31.606;ECHEC
+2026-11-06 11:41:29;impala;v50;10;8;3;B6;80.66;3.678;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;3;2;B5;80.74;4.229;OK
+2026-11-06 11:41:29;impala;v50;10;5;2;B8;81.96;4.527;OK
+2026-11-06 11:41:29;impala;v50;10;8;3;B7;84.34;2.154;OK
+2026-11-06 11:41:29;impala;v50;10;2;3;B2;84.41;5.26;OK
+2026-11-06 11:41:29;impala;v50;10;10;2;B7;84.53;2.372;OK
+2026-11-06 11:41:29;impala;v50;10;3;2;B6;84.97;12.545;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment e34e08ecb0ebaf16:affbe50e00000002
+2026-11-06 11:41:29;impala;v50;10;7;3;B1;85.76;5.328;OK
+2026-11-06 11:41:29;impala;v50;10;7;3;TOTAL;85.76;29.484;ECHEC
+2026-11-06 11:41:29;impala;v50;10;8;3;B8;86.5;3.036;OK
+2026-11-06 11:41:29;impala;v50;10;10;2;B8;86.91;3.481;OK
+2026-11-06 11:41:29;impala;v50;10;6;3;B1;87.94;5.87;OK
+2026-11-06 11:41:29;impala;v50;10;6;3;TOTAL;87.94;27.536;ECHEC
+2026-11-06 11:41:29;impala;v50;10;9;3;B1;88.83;5.37;OK
+2026-11-06 11:41:29;impala;v50;10;9;3;TOTAL;88.83;26.428;ECHEC
+2026-11-06 11:41:29;impala;v50;10;2;3;B3;89.67;0.858;OK
+2026-11-06 11:41:29;impala;v50;10;1;3;B1;90.45;5.138;OK
+2026-11-06 11:41:29;impala;v50;10;1;3;TOTAL;90.45;29.459;ECHEC
+2026-11-06 11:41:29;impala;v50;10;2;3;B4;90.52;1.91;OK
+2026-11-06 11:41:29;impala;v50;10;7;3;B2;91.09;4.586;OK
+2026-11-06 11:41:29;impala;v50;10;2;3;B5;92.43;3.1;OK
+2026-11-06 11:41:29;impala;v50;10;6;3;B2;93.81;3.711;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;9;3;B2;94.2;3.36;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;2;3;B6;95.53;7.685;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:41:29;impala;v50;10;1;3;B2;95.59;1.878;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;7;3;B3;95.68;1.146;OK
+2026-11-06 11:41:29;impala;v50;10;5;3;B1;96.0;1.512;ECHEC Memory limit exceeded: ParquetColumnReader::InitDictionary() failed to allocate 160000 bytes for dictionary. HDFS_SCAN_N
+2026-11-06 11:41:29;impala;v50;10;5;3;TOTAL;96.0;23.768;ECHEC
+2026-11-06 11:41:29;impala;v50;10;7;3;B4;96.82;0.371;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=2) c
+2026-11-06 11:41:29;impala;v50;10;7;3;B5;97.19;6.156;OK
+2026-11-06 11:41:29;impala;v50;10;1;3;B3;97.47;1.645;OK
+2026-11-06 11:41:29;impala;v50;10;5;3;B2;97.51;3.202;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;3;2;B7;97.51;4.081;OK
+2026-11-06 11:41:29;impala;v50;10;6;3;B3;97.52;1.253;OK
+2026-11-06 11:41:29;impala;v50;10;4;3;B1;97.53;3.226;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:41:29;impala;v50;10;4;3;TOTAL;97.53;22.152;ECHEC
+2026-11-06 11:41:29;impala;v50;10;9;3;B3;97.56;1.519;OK
+2026-11-06 11:41:29;impala;v50;10;8;4;B1;97.72;3.338;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;8;4;TOTAL;97.72;22.084;ECHEC
+2026-11-06 11:41:29;impala;v50;10;10;3;B1;98.68;2.675;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:41:29;impala;v50;10;10;3;TOTAL;98.68;28.826;ECHEC
+2026-11-06 11:41:29;impala;v50;10;6;3;B4;98.78;2.881;OK
+2026-11-06 11:41:29;impala;v50;10;9;3;B4;99.08;3.122;OK
+2026-11-06 11:41:29;impala;v50;10;1;3;B4;99.11;4.193;OK
+2026-11-06 11:41:29;impala;v50;10;5;3;B3;100.72;1.13;OK
+2026-11-06 11:41:29;impala;v50;10;4;3;B2;100.75;2.363;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65534 bytes for decompressed data. HDFS_SC
+2026-11-06 11:41:29;impala;v50;10;8;4;B2;101.06;2.104;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65003 bytes for decompressed data. HDFS_SC
+2026-11-06 11:41:29;impala;v50;10;10;3;B2;101.35;5.951;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:41:29;impala;v50;10;3;2;B8;101.6;5.194;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment a465ba36bd9d876:7b96feb600000001 
+2026-11-06 11:41:29;impala;v50;10;6;3;B5;101.66;1.312;ECHEC Memory limit exceeded 
+2026-11-06 11:41:29;impala;v50;10;5;3;B4;101.85;3.69;OK
+2026-11-06 11:41:29;impala;v50;10;9;3;B5;102.2;0.546;ECHEC Memory limit exceeded: Codegen failed to reserve '235520' bytes for optimization CodeGen could not allocate 230.00 KB wi
+2026-11-06 11:41:29;impala;v50;10;9;3;B6;102.75;4.88;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment ee41bd220c7a60f6:48e6166000000002
+2026-11-06 11:41:29;impala;v50;10;6;3;B6;102.97;4.661;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;4;3;B3;103.12;1.784;OK
+2026-11-06 11:41:29;impala;v50;10;8;4;B3;103.16;1.924;OK
+2026-11-06 11:41:29;impala;v50;10;2;3;B7;103.22;4.085;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 8f494f8ac623e1fc:c04d0afd00000002
+2026-11-06 11:41:29;impala;v50;10;1;3;B5;103.31;5.506;OK
+2026-11-06 11:41:29;impala;v50;10;7;3;B6;103.35;3.802;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 7c42edca0eac1543:d7a3721800000001
+2026-11-06 11:41:29;impala;v50;10;4;3;B4;104.9;3.202;OK
+2026-11-06 11:41:29;impala;v50;10;8;4;B4;105.08;3.389;OK
+2026-11-06 11:41:29;impala;v50;10;5;3;B5;105.54;4.403;OK
+2026-11-06 11:41:29;impala;v50;10;7;3;B7;107.15;3.088;OK
+2026-11-06 11:41:29;impala;v50;10;10;3;B3;107.3;1.031;OK
+2026-11-06 11:41:29;impala;v50;10;2;3;B8;107.3;4.731;OK
+2026-11-06 11:41:29;impala;v50;10;9;3;B7;107.63;2.772;OK
+2026-11-06 11:41:29;impala;v50;10;6;3;B7;107.63;3.06;OK
+2026-11-06 11:41:29;impala;v50;10;4;3;B5;108.1;4.536;OK
+2026-11-06 11:41:29;impala;v50;10;10;3;B4;108.33;2.398;OK
+2026-11-06 11:41:29;impala;v50;10;8;4;B5;108.47;4.418;OK
+2026-11-06 11:41:29;impala;v50;10;1;3;B6;108.81;4.577;ECHEC Memory limit exceeded: Could not allocate constant expression value Exprs could not allocate 8.00 B without exceeding li
+2026-11-06 11:41:29;impala;v50;10;5;3;B6;109.94;3.647;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:41:29;impala;v50;10;7;3;B8;110.24;5.008;OK
+2026-11-06 11:41:29;impala;v50;10;9;3;B8;110.4;4.859;OK
+2026-11-06 11:41:29;impala;v50;10;6;3;B8;110.69;4.789;OK
+2026-11-06 11:41:29;impala;v50;10;10;3;B5;110.73;4.559;OK
+2026-11-06 11:41:29;impala;v50;10;4;3;B6;112.64;0.708;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=2) c
+2026-11-06 11:41:29;impala;v50;10;8;4;B6;112.89;0.498;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=2) c
+2026-11-06 11:41:29;impala;v50;10;4;3;B7;113.35;2.657;OK
+2026-11-06 11:41:29;impala;v50;10;8;4;B7;113.39;2.755;OK
+2026-11-06 11:41:29;impala;v50;10;1;3;B7;113.39;2.969;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;B1;113.46;6.579;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;TOTAL;113.46;18.956;OK
+2026-11-06 11:41:29;impala;v50;10;5;3;B7;113.59;2.998;OK
+2026-11-06 11:41:29;impala;v50;10;10;3;B6;115.29;9.663;OK
+2026-11-06 11:41:29;impala;v50;10;4;3;B8;116.0;3.675;OK
+2026-11-06 11:41:29;impala;v50;10;8;4;B8;116.14;3.658;OK
+2026-11-06 11:41:29;impala;v50;10;1;3;B8;116.36;3.552;OK
+2026-11-06 11:41:29;impala;v50;10;5;3;B8;116.58;3.186;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;B2;120.04;2.201;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;B3;122.24;0.387;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;B4;122.63;0.808;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;B5;123.44;1.344;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;B6;124.78;5.676;OK
+2026-11-06 11:41:29;impala;v50;10;10;3;B7;124.95;1.166;OK
+2026-11-06 11:41:29;impala;v50;10;10;3;B8;126.12;1.384;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;B7;130.46;0.576;OK
+2026-11-06 11:41:29;impala;v50;10;3;3;B8;131.03;1.386;OK
+2026-11-06 11:43:55;impala;v50;20;11;1;B1;0.57;1.451;OK
+2026-11-06 11:43:55;impala;v50;20;11;1;TOTAL;0.57;30.454;ECHEC
+2026-11-06 11:43:55;impala;v50;20;11;1;B2;2.02;1.148;OK
+2026-11-06 11:43:55;impala;v50;20;11;1;B3;3.16;0.386;OK
+2026-11-06 11:43:55;impala;v50;20;12;1;B1;3.2;5.292;OK
+2026-11-06 11:43:55;impala;v50;20;12;1;TOTAL;3.2;41.178;ECHEC
+2026-11-06 11:43:55;impala;v50;20;11;1;B4;3.55;1.152;OK
+2026-11-06 11:43:55;impala;v50;20;9;1;B1;3.8;6.776;OK
+2026-11-06 11:43:55;impala;v50;20;9;1;TOTAL;3.8;47.495;ECHEC
+2026-11-06 11:43:55;impala;v50;20;19;1;B1;4.11;7.843;OK
+2026-11-06 11:43:55;impala;v50;20;19;1;TOTAL;4.11;47.173;ECHEC
+2026-11-06 11:43:55;impala;v50;20;2;1;B1;4.68;9.351;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=2) could not allocate 21.00 KB without exceedi
+2026-11-06 11:43:55;impala;v50;20;2;1;TOTAL;4.68;38.629;ECHEC
+2026-11-06 11:43:55;impala;v50;20;11;1;B5;4.7;4.395;OK
+2026-11-06 11:43:55;impala;v50;20;1;1;B1;4.81;16.703;OK
+2026-11-06 11:43:55;impala;v50;20;1;1;TOTAL;4.81;68.612;ECHEC
+2026-11-06 11:43:55;impala;v50;20;15;1;B1;5.05;8.956;ECHEC Memory limit exceeded 
+2026-11-06 11:43:55;impala;v50;20;15;1;TOTAL;5.05;39.262;ECHEC
+2026-11-06 11:43:55;impala;v50;20;20;1;B1;6.69;12.08;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;20;1;TOTAL;6.69;67.553;ECHEC
+2026-11-06 11:43:55;impala;v50;20;8;1;B1;7.49;10.548;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;8;1;TOTAL;7.49;60.644;ECHEC
+2026-11-06 11:43:55;impala;v50;20;17;1;B1;7.78;6.147;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 8346d9def616bc98:5c5c6a8d00000001
+2026-11-06 11:43:55;impala;v50;20;17;1;TOTAL;7.78;36.127;ECHEC
+2026-11-06 11:43:55;impala;v50;20;16;1;B1;8.45;25.876;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 5b440cbc860fe162:d15f081a00000000
+2026-11-06 11:43:55;impala;v50;20;16;1;TOTAL;8.45;61.892;ECHEC
+2026-11-06 11:43:55;impala;v50;20;12;1;B2;8.5;5.485;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 22418fc738f28a69:6e5f6bff00000001
+2026-11-06 11:43:55;impala;v50;20;11;1;B6;9.1;4.66;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;10;1;B1;10.0;7.352;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;10;1;TOTAL;10.0;46.28;ECHEC
+2026-11-06 11:43:55;impala;v50;20;13;1;B1;10.08;3.861;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;13;1;TOTAL;10.08;39.894;ECHEC
+2026-11-06 11:43:55;impala;v50;20;9;1;B2;10.57;3.369;ECHEC Memory limit exceeded: ParquetColumnReader::InitDictionary() failed to allocate 61948 bytes for dictionary. HDFS_SCAN_NO
+2026-11-06 11:43:55;impala;v50;20;14;1;B1;11.15;6.843;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 12445aa09180b989:9f6948d300000001
+2026-11-06 11:43:55;impala;v50;20;5;1;B1;11.15;7.232;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 124b12b565466f3c:db13424500000001
+2026-11-06 11:43:55;impala;v50;20;5;1;TOTAL;11.15;45.232;ECHEC
+2026-11-06 11:43:55;impala;v50;20;14;1;TOTAL;11.15;56.941;ECHEC
+2026-11-06 11:43:55;impala;v50;20;3;1;B1;11.27;6.722;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment fd40cfb5bbbc50e7:ac4e231900000001
+2026-11-06 11:43:55;impala;v50;20;3;1;TOTAL;11.27;56.359;ECHEC
+2026-11-06 11:43:55;impala;v50;20;6;1;B1;11.34;6.532;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 5747d7b3f8866f0d:29a127f700000001
+2026-11-06 11:43:55;impala;v50;20;6;1;TOTAL;11.34;44.941;ECHEC
+2026-11-06 11:43:55;impala;v50;20;19;1;B2;11.95;5.095;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;18;1;B1;12.41;5.852;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 2246e890145ad744:ae0d02e900000001
+2026-11-06 11:43:55;impala;v50;20;18;1;TOTAL;12.41;55.433;ECHEC
+2026-11-06 11:43:55;impala;v50;20;4;1;B1;13.23;0.739;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL <= 20191231.Memory limit exceeded: Could not allocat
+2026-11-06 11:43:55;impala;v50;20;4;1;TOTAL;13.23;40.729;ECHEC
+2026-11-06 11:43:55;impala;v50;20;11;1;B7;13.76;9.45;OK
+2026-11-06 11:43:55;impala;v50;20;17;1;B2;13.92;2.852;ECHEC Memory limit exceeded: Failed to allocate '305' bytes for compiled code module CodeGen could not allocate 305.00 B witho
+2026-11-06 11:43:55;impala;v50;20;13;1;B2;13.94;2.888;ECHEC Memory limit exceeded: Codegen failed to reserve '525312' bytes for optimization CodeGen could not allocate 513.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;9;1;B3;13.94;4.939;OK
+2026-11-06 11:43:55;impala;v50;20;4;1;B2;13.97;2.804;ECHEC Memory limit exceeded: Failed to allocate '305' bytes for compiled code module CodeGen could not allocate 305.00 B witho
+2026-11-06 11:43:55;impala;v50;20;12;1;B3;13.98;2.882;ECHEC Memory limit exceeded: Codegen failed to reserve '193536' bytes for optimization CodeGen could not allocate 189.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;15;1;B2;14.0;2.856;ECHEC Memory limit exceeded: Codegen failed to reserve '307200' bytes for optimization CodeGen could not allocate 300.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;2;1;B2;14.03;2.739;ECHEC Memory limit exceeded: Codegen failed to reserve '307200' bytes for optimization CodeGen could not allocate 300.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;7;1;B1;14.87;1.819;ECHEC ExecQueryFInstances rpc query_id=be4a0956375dabd9:101d960d00000000 failed: Memory limit exceeded: Query be4a0956375dabd9
+2026-11-06 11:43:55;impala;v50;20;7;1;TOTAL;14.87;52.224;ECHEC
+2026-11-06 11:43:55;impala;v50;20;7;1;B2;16.69;17.569;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 25412675f7bb118d:a7fbd6a900000001
+2026-11-06 11:43:55;impala;v50;20;17;1;B3;16.77;2.817;OK
+2026-11-06 11:43:55;impala;v50;20;4;1;B3;16.77;2.901;OK
+2026-11-06 11:43:55;impala;v50;20;2;1;B3;16.77;3.731;OK
+2026-11-06 11:43:55;impala;v50;20;13;1;B3;16.83;2.954;OK
+2026-11-06 11:43:55;impala;v50;20;15;1;B3;16.86;3.762;OK
+2026-11-06 11:43:55;impala;v50;20;12;1;B4;16.86;9.314;OK
+2026-11-06 11:43:55;impala;v50;20;19;1;B3;17.05;3.274;OK
+2026-11-06 11:43:55;impala;v50;20;10;1;B2;17.35;13.434;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;6;1;B2;17.87;12.934;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;3;1;B2;17.99;12.62;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 204f0860c5c0579e:667c3db400000001
+2026-11-06 11:43:55;impala;v50;20;14;1;B2;18.0;12.575;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment f747e1417e5766d3:9640ca4200000001
+2026-11-06 11:43:55;impala;v50;20;8;1;B2;18.04;16.753;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;18;1;B2;18.26;16.437;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;5;1;B2;18.38;12.102;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment cb42a6b177f07ffb:8a3e74e800000001
+2026-11-06 11:43:55;impala;v50;20;20;1;B2;18.77;11.291;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 5c4420cd9583fd44:636bfbd400000001
+2026-11-06 11:43:55;impala;v50;20;9;1;B4;18.88;8.288;OK
+2026-11-06 11:43:55;impala;v50;20;17;1;B4;19.59;7.577;OK
+2026-11-06 11:43:55;impala;v50;20;4;1;B4;19.67;7.601;OK
+2026-11-06 11:43:55;impala;v50;20;13;1;B4;19.78;7.752;OK
+2026-11-06 11:43:55;impala;v50;20;19;1;B4;20.32;7.65;OK
+2026-11-06 11:43:55;impala;v50;20;2;1;B4;20.5;7.589;OK
+2026-11-06 11:43:55;impala;v50;20;15;1;B4;20.62;7.451;OK
+2026-11-06 11:43:55;impala;v50;20;1;1;B2;21.51;9.165;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;11;1;B8;23.21;7.811;OK
+2026-11-06 11:43:55;impala;v50;20;12;1;B5;26.18;4.306;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 904caa9ad022e4d2:54e2fde200000001
+2026-11-06 11:43:55;impala;v50;20;17;1;B5;27.17;3.198;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment a54b5d8680fdc539:dccb079d00000002
+2026-11-06 11:43:55;impala;v50;20;9;1;B5;27.17;10.305;OK
+2026-11-06 11:43:55;impala;v50;20;4;1;B5;27.27;10.639;OK
+2026-11-06 11:43:55;impala;v50;20;13;1;B5;27.54;2.91;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 2e44c0df0ad2a944:362cf10400000001
+2026-11-06 11:43:55;impala;v50;20;19;1;B5;27.97;2.675;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 224e3bdaa08f146d:910263f600000001
+2026-11-06 11:43:55;impala;v50;20;15;1;B5;28.07;1.426;ECHEC Memory limit exceeded: Failed to allocate '659' bytes for compiled code module CodeGen could not allocate 659.00 B witho
+2026-11-06 11:43:55;impala;v50;20;2;1;B5;28.09;1.178;ECHEC Memory limit exceeded: Codegen failed to reserve '50176' bytes for optimization CodeGen could not allocate 49.00 KB with
+2026-11-06 11:43:55;impala;v50;20;2;1;B6;29.27;5.06;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 7e4f05f3df4c9b6d:74dfb16d00000001
+2026-11-06 11:43:55;impala;v50;20;15;1;B6;29.5;4.626;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 774c08d0ebd487c7:5f6bee8600000001
+2026-11-06 11:43:55;impala;v50;20;20;1;B3;30.06;3.499;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment d64edd3f40812a76:1f64ba0700000003
+2026-11-06 11:43:55;impala;v50;20;17;1;B6;30.37;4.15;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 73478000c79501c6:69fc351a00000001
+2026-11-06 11:43:55;impala;v50;20;13;1;B6;30.45;3.691;ECHEC Memory limit exceeded: Failed to allocate '184' bytes for compiled code module CodeGen could not allocate 184.00 B witho
+2026-11-06 11:43:55;impala;v50;20;5;1;B3;30.48;3.45;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment d44182eec4274997:be9dbb2a00000003
+2026-11-06 11:43:55;impala;v50;20;12;1;B6;30.48;4.377;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 4e4b4103cc2384f3:ecf5abcc00000001
+2026-11-06 11:43:55;impala;v50;20;14;1;B3;30.57;3.545;ECHEC Memory limit exceeded: Failed to allocate '478' bytes for compiled code module CodeGen could not allocate 478.00 B witho
+2026-11-06 11:43:55;impala;v50;20;3;1;B3;30.61;3.607;ECHEC Memory limit exceeded: Failed to allocate '478' bytes for compiled code module CodeGen could not allocate 478.00 B witho
+2026-11-06 11:43:55;impala;v50;20;19;1;B6;30.65;3.769;ECHEC Memory limit exceeded 
+2026-11-06 11:43:55;impala;v50;20;1;1;B3;30.68;3.487;ECHEC Memory limit exceeded: Failed to allocate '319' bytes for compiled code module CodeGen could not allocate 319.00 B witho
+2026-11-06 11:43:55;impala;v50;20;10;1;B3;30.79;3.731;ECHEC Memory limit exceeded: Failed to allocate '478' bytes for compiled code module CodeGen could not allocate 478.00 B witho
+2026-11-06 11:43:55;impala;v50;20;6;1;B3;30.81;3.895;ECHEC Memory limit exceeded: Failed to allocate '1435' bytes for compiled code module CodeGen could not allocate 1.40 KB witho
+2026-11-06 11:43:55;impala;v50;20;20;1;B4;33.56;6.068;OK
+2026-11-06 11:43:55;impala;v50;20;5;1;B4;33.93;6.516;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 7d46951d3f607be7:fe9f493000000002
+2026-11-06 11:43:55;impala;v50;20;14;1;B4;34.12;6.895;OK
+2026-11-06 11:43:55;impala;v50;20;15;1;B7;34.13;7.704;OK
+2026-11-06 11:43:55;impala;v50;20;13;1;B7;34.14;7.334;OK
+2026-11-06 11:43:55;impala;v50;20;1;1;B4;34.16;6.194;ECHEC Memory limit exceeded: Failed to allocate '9599' bytes for compiled code module CodeGen could not allocate 9.37 KB witho
+2026-11-06 11:43:55;impala;v50;20;3;1;B4;34.21;6.495;OK
+2026-11-06 11:43:55;impala;v50;20;7;1;B3;34.26;3.687;OK
+2026-11-06 11:43:55;impala;v50;20;16;1;B2;34.33;5.957;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65496 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;2;1;B7;34.33;7.099;OK
+2026-11-06 11:43:55;impala;v50;20;19;1;B7;34.42;6.571;OK
+2026-11-06 11:43:55;impala;v50;20;10;1;B4;34.52;5.932;ECHEC Memory limit exceeded: Failed to allocate '9599' bytes for compiled code module CodeGen could not allocate 9.37 KB witho
+2026-11-06 11:43:55;impala;v50;20;17;1;B7;34.52;7.336;OK
+2026-11-06 11:43:55;impala;v50;20;18;1;B3;34.7;3.521;OK
+2026-11-06 11:43:55;impala;v50;20;6;1;B4;34.7;5.98;OK
+2026-11-06 11:43:55;impala;v50;20;8;1;B3;34.79;3.48;OK
+2026-11-06 11:43:55;impala;v50;20;12;1;B7;34.86;7.647;OK
+2026-11-06 11:43:55;impala;v50;20;9;1;B6;37.47;1.754;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 74b9b759d6915aa:11c176bf00000001 
+2026-11-06 11:43:55;impala;v50;20;4;1;B6;37.91;8.107;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;7;1;B4;37.95;6.332;ECHEC Memory limit exceeded: Failed to allocate '9599' bytes for compiled code module CodeGen could not allocate 9.37 KB witho
+2026-11-06 11:43:55;impala;v50;20;18;1;B4;38.22;6.298;OK
+2026-11-06 11:43:55;impala;v50;20;8;1;B4;38.27;6.592;OK
+2026-11-06 11:43:55;impala;v50;20;9;1;B7;39.23;1.312;ECHEC Memory limit exceeded: Codegen failed to reserve '50176' bytes for optimization CodeGen could not allocate 49.00 KB with
+2026-11-06 11:43:55;impala;v50;20;20;1;B5;39.63;9.152;OK
+2026-11-06 11:43:55;impala;v50;20;11;2;B1;40.05;14.086;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment f49c5a4fa37ec54:9c89100800000003 
+2026-11-06 11:43:55;impala;v50;20;11;2;TOTAL;40.05;39.772;ECHEC
+2026-11-06 11:43:55;impala;v50;20;16;1;B3;40.28;2.941;OK
+2026-11-06 11:43:55;impala;v50;20;1;1;B5;40.36;9.156;OK
+2026-11-06 11:43:55;impala;v50;20;5;1;B5;40.45;9.652;OK
+2026-11-06 11:43:55;impala;v50;20;10;1;B5;40.45;9.652;OK
+2026-11-06 11:43:55;impala;v50;20;9;1;B8;40.54;10.752;OK
+2026-11-06 11:43:55;impala;v50;20;6;1;B5;40.68;9.443;OK
+2026-11-06 11:43:55;impala;v50;20;3;1;B5;40.71;9.414;OK
+2026-11-06 11:43:55;impala;v50;20;19;1;B8;40.99;10.296;OK
+2026-11-06 11:43:55;impala;v50;20;14;1;B5;41.01;10.234;OK
+2026-11-06 11:43:55;impala;v50;20;2;1;B8;41.43;1.881;ECHEC Memory limit exceeded: Codegen failed to reserve '3293696' bytes for optimization CodeGen could not allocate 3.14 MB wit
+2026-11-06 11:43:55;impala;v50;20;13;1;B8;41.47;8.504;ECHEC Memory limit exceeded: Failed to allocate '250' bytes for compiled code module CodeGen could not allocate 250.00 B witho
+2026-11-06 11:43:55;impala;v50;20;15;1;B8;41.83;2.481;ECHEC Memory limit exceeded: Codegen failed to reserve '3293696' bytes for optimization CodeGen could not allocate 3.14 MB wit
+2026-11-06 11:43:55;impala;v50;20;17;1;B8;41.85;2.049;ECHEC Memory limit exceeded: Codegen failed to reserve '3293696' bytes for optimization CodeGen could not allocate 3.14 MB wit
+2026-11-06 11:43:55;impala;v50;20;12;1;B8;42.51;1.874;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=3) c
+2026-11-06 11:43:55;impala;v50;20;16;1;B4;43.23;1.206;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL <= 20191231.Memory limit exceeded: Could not allocat
+2026-11-06 11:43:55;impala;v50;20;7;1;B5;44.28;8.241;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=3). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;16;1;B5;44.43;8.145;OK
+2026-11-06 11:43:55;impala;v50;20;18;1;B5;44.52;8.056;OK
+2026-11-06 11:43:55;impala;v50;20;8;1;B5;44.86;7.879;OK
+2026-11-06 11:43:55;impala;v50;20;4;1;B7;46.02;6.01;OK
+2026-11-06 11:43:55;impala;v50;20;20;1;B6;48.78;7.605;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;1;1;B6;49.51;6.407;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment b4239a7e9d7ae01:73e2e15300000001 
+2026-11-06 11:43:55;impala;v50;20;10;1;B6;50.1;2.084;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment f04a581da7122b37:5f9f41c200000001
+2026-11-06 11:43:55;impala;v50;20;5;1;B6;50.1;2.148;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 7346c4e25ff26a55:2ea24ad800000001
+2026-11-06 11:43:55;impala;v50;20;6;1;B6;50.12;2.187;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 88440a683a343a41:487538ff00000001
+2026-11-06 11:43:55;impala;v50;20;3;1;B6;50.12;3.624;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 634a683be253c7fb:ef1b6f600000001 
+2026-11-06 11:43:55;impala;v50;20;14;1;B6;51.25;2.211;ECHEC Memory limit exceeded: Failed to allocate '184' bytes for compiled code module CodeGen could not allocate 184.00 B witho
+2026-11-06 11:43:55;impala;v50;20;4;1;B8;52.03;1.928;ECHEC Memory limit exceeded: Codegen failed to reserve '469504' bytes for optimization CodeGen could not allocate 458.50 KB wi
+2026-11-06 11:43:55;impala;v50;20;10;1;B7;52.19;1.637;ECHEC Memory limit exceeded: Codegen failed to reserve '1889792' bytes for optimization CodeGen could not allocate 1.80 MB wit
+2026-11-06 11:43:55;impala;v50;20;5;1;B7;52.25;1.707;ECHEC Memory limit exceeded: Codegen failed to reserve '1889792' bytes for optimization CodeGen could not allocate 1.80 MB wit
+2026-11-06 11:43:55;impala;v50;20;6;1;B7;52.31;1.657;ECHEC Memory limit exceeded: Codegen failed to reserve '435200' bytes for optimization CodeGen could not allocate 425.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;7;1;B6;52.52;1.433;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=2) c
+2026-11-06 11:43:55;impala;v50;20;16;1;B6;52.58;1.301;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=2) c
+2026-11-06 11:43:55;impala;v50;20;18;1;B6;52.58;1.301;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=2) c
+2026-11-06 11:43:55;impala;v50;20;8;1;B6;52.74;1.315;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=2) c
+2026-11-06 11:43:55;impala;v50;20;12;2;B1;52.9;1.052;ECHEC ExecQueryFInstances rpc query_id=6440616138aa3a7a:2257639000000000 failed: Memory limit exceeded: Query 6440616138aa3a7a
+2026-11-06 11:43:55;impala;v50;20;12;2;TOTAL;52.9;44.433;ECHEC
+2026-11-06 11:43:55;impala;v50;20;14;1;B7;53.46;2.84;ECHEC Memory limit exceeded: Failed to allocate '2657' bytes for compiled code module CodeGen could not allocate 2.59 KB witho
+2026-11-06 11:43:55;impala;v50;20;3;1;B7;53.75;2.569;ECHEC Memory limit exceeded: Codegen failed to reserve '50176' bytes for optimization CodeGen could not allocate 49.00 KB with
+2026-11-06 11:43:55;impala;v50;20;10;1;B8;53.82;2.458;ECHEC Memory limit exceeded: Codegen failed to reserve '3293696' bytes for optimization CodeGen could not allocate 3.14 MB wit
+2026-11-06 11:43:55;impala;v50;20;18;1;B7;53.88;2.453;ECHEC Memory limit exceeded: Codegen failed to reserve '435200' bytes for optimization CodeGen could not allocate 425.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;16;1;B7;53.88;5.317;ECHEC Memory limit exceeded: Codegen failed to reserve '435200' bytes for optimization CodeGen could not allocate 425.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;7;1;B7;53.96;2.255;ECHEC Memory limit exceeded: Codegen failed to reserve '50176' bytes for optimization CodeGen could not allocate 49.00 KB with
+2026-11-06 11:43:55;impala;v50;20;12;2;B2;53.96;2.306;ECHEC Memory limit exceeded: Codegen failed to reserve '148480' bytes for optimization CodeGen could not allocate 145.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;5;1;B8;53.96;2.425;ECHEC Memory limit exceeded: Codegen failed to reserve '3293696' bytes for optimization CodeGen could not allocate 3.14 MB wit
+2026-11-06 11:43:55;impala;v50;20;6;1;B8;53.97;2.312;ECHEC Memory limit exceeded: Codegen failed to reserve '3293696' bytes for optimization CodeGen could not allocate 3.14 MB wit
+2026-11-06 11:43:55;impala;v50;20;8;1;B7;54.05;1.96;ECHEC Memory limit exceeded: Codegen failed to reserve '50176' bytes for optimization CodeGen could not allocate 49.00 KB with
+2026-11-06 11:43:55;impala;v50;20;11;2;B2;54.13;1.939;ECHEC Memory limit exceeded: Failed to allocate '305' bytes for compiled code module CodeGen could not allocate 305.00 B witho
+2026-11-06 11:43:55;impala;v50;20;1;1;B7;55.92;8.852;OK
+2026-11-06 11:43:55;impala;v50;20;15;2;B1;55.99;13.948;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment b942a3164d5ad6a2:fcbaa1bd00000002
+2026-11-06 11:43:55;impala;v50;20;15;2;TOTAL;55.99;59.719;ECHEC
+2026-11-06 11:43:55;impala;v50;20;8;1;B8;56.01;12.118;OK
+2026-11-06 11:43:55;impala;v50;20;11;2;B3;56.07;6.248;OK
+2026-11-06 11:43:55;impala;v50;20;7;1;B8;56.21;10.886;OK
+2026-11-06 11:43:55;impala;v50;20;12;2;B3;56.26;3.256;OK
+2026-11-06 11:43:55;impala;v50;20;14;1;B8;56.3;11.797;OK
+2026-11-06 11:43:55;impala;v50;20;3;1;B8;56.32;11.307;OK
+2026-11-06 11:43:55;impala;v50;20;18;1;B8;56.33;11.514;OK
+2026-11-06 11:43:55;impala;v50;20;20;1;B7;56.38;9.517;OK
+2026-11-06 11:43:55;impala;v50;20;13;2;B1;56.47;13.567;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;13;2;TOTAL;56.47;64.841;ECHEC
+2026-11-06 11:43:55;impala;v50;20;17;2;B1;56.64;19.108;OK
+2026-11-06 11:43:55;impala;v50;20;17;2;TOTAL;56.64;61.474;ECHEC
+2026-11-06 11:43:55;impala;v50;20;19;2;B1;56.82;18.86;OK
+2026-11-06 11:43:55;impala;v50;20;19;2;TOTAL;56.82;57.798;ECHEC
+2026-11-06 11:43:55;impala;v50;20;2;2;B1;57.99;12.116;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;2;2;TOTAL;57.99;57.062;ECHEC
+2026-11-06 11:43:55;impala;v50;20;16;1;B8;59.19;11.149;OK
+2026-11-06 11:43:55;impala;v50;20;4;2;B1;59.22;10.657;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;4;2;TOTAL;59.22;65.983;ECHEC
+2026-11-06 11:43:55;impala;v50;20;12;2;B4;59.52;7.147;OK
+2026-11-06 11:43:55;impala;v50;20;9;2;B1;60.21;9.616;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;9;2;TOTAL;60.21;35.15;ECHEC
+2026-11-06 11:43:55;impala;v50;20;11;2;B4;62.32;6.388;OK
+2026-11-06 11:43:55;impala;v50;20;10;2;B1;64.41;5.813;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;10;2;TOTAL;64.41;50.648;ECHEC
+2026-11-06 11:43:55;impala;v50;20;1;1;B8;64.77;8.647;OK
+2026-11-06 11:43:55;impala;v50;20;20;1;B8;65.9;8.34;OK
+2026-11-06 11:43:55;impala;v50;20;5;2;B1;66.59;2.868;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment e546b7664c0a684d:3daf0da700000001
+2026-11-06 11:43:55;impala;v50;20;5;2;TOTAL;66.59;48.529;ECHEC
+2026-11-06 11:43:55;impala;v50;20;12;2;B5;66.67;7.62;OK
+2026-11-06 11:43:55;impala;v50;20;6;2;B1;68.16;13.326;OK
+2026-11-06 11:43:55;impala;v50;20;6;2;TOTAL;68.16;60.491;ECHEC
+2026-11-06 11:43:55;impala;v50;20;11;2;B5;68.71;0.665;ECHEC Memory limit exceeded: Codegen failed to reserve '50176' bytes for optimization CodeGen could not allocate 49.00 KB with
+2026-11-06 11:43:55;impala;v50;20;11;2;B6;69.37;3.897;ECHEC Memory limit exceeded: Failed to allocate '10196' bytes for compiled code module CodeGen could not allocate 9.96 KB with
+2026-11-06 11:43:55;impala;v50;20;5;2;B2;69.45;3.835;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 3e47246b934f765f:4ce7330300000001
+2026-11-06 11:43:55;impala;v50;20;9;2;B2;69.83;3.624;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;4;2;B2;69.88;12.243;OK
+2026-11-06 11:43:55;impala;v50;20;15;2;B2;69.94;3.529;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65534 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;13;2;B2;70.03;14.093;OK
+2026-11-06 11:43:55;impala;v50;20;2;2;B2;70.11;3.271;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65534 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;10;2;B2;70.22;3.273;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65534 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;11;2;B7;73.27;5.823;OK
+2026-11-06 11:43:55;impala;v50;20;5;2;B3;73.29;1.799;OK
+2026-11-06 11:43:55;impala;v50;20;2;2;B3;73.38;1.728;OK
+2026-11-06 11:43:55;impala;v50;20;9;2;B3;73.45;2.045;OK
+2026-11-06 11:43:55;impala;v50;20;15;2;B3;73.46;2.033;OK
+2026-11-06 11:43:55;impala;v50;20;10;2;B3;73.49;2.003;OK
+2026-11-06 11:43:55;impala;v50;20;3;2;B1;73.7;16.679;OK
+2026-11-06 11:43:55;impala;v50;20;3;2;TOTAL;73.7;54.506;ECHEC
+2026-11-06 11:43:55;impala;v50;20;12;2;B6;74.29;5.443;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;5;2;B4;75.09;4.757;OK
+2026-11-06 11:43:55;impala;v50;20;2;2;B4;75.11;4.771;OK
+2026-11-06 11:43:55;impala;v50;20;15;2;B4;75.5;4.346;OK
+2026-11-06 11:43:55;impala;v50;20;9;2;B4;75.5;4.378;OK
+2026-11-06 11:43:55;impala;v50;20;10;2;B4;75.5;4.407;OK
+2026-11-06 11:43:55;impala;v50;20;16;2;B1;75.58;12.179;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 8c4a097be5102b44:314750d200000002
+2026-11-06 11:43:55;impala;v50;20;16;2;TOTAL;75.58;56.012;ECHEC
+2026-11-06 11:43:55;impala;v50;20;19;2;B2;75.68;14.561;OK
+2026-11-06 11:43:55;impala;v50;20;17;2;B2;75.75;11.766;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 5d4f8b017d3956c2:2e1d967a00000001
+2026-11-06 11:43:55;impala;v50;20;11;2;B8;79.09;0.727;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL IS NOT NULL.Memory limit exceeded: Could not allocat
+2026-11-06 11:43:55;impala;v50;20;8;2;B1;79.36;8.365;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;8;2;TOTAL;79.36;49.037;ECHEC
+2026-11-06 11:43:55;impala;v50;20;12;2;B7;79.73;6.621;OK
+2026-11-06 11:43:55;impala;v50;20;5;2;B5;79.84;9.207;OK
+2026-11-06 11:43:55;impala;v50;20;15;2;B5;79.84;9.477;OK
+2026-11-06 11:43:55;impala;v50;20;2;2;B5;79.88;8.809;OK
+2026-11-06 11:43:55;impala;v50;20;9;2;B5;79.88;9.655;OK
+2026-11-06 11:43:55;impala;v50;20;10;2;B5;79.9;9.464;OK
+2026-11-06 11:43:55;impala;v50;20;18;2;B1;80.24;7.713;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 904ec23e7b18243d:dfc90cf200000001
+2026-11-06 11:43:55;impala;v50;20;18;2;TOTAL;80.24;50.32;ECHEC
+2026-11-06 11:43:55;impala;v50;20;7;2;B1;80.25;7.757;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;7;2;TOTAL;80.25;51.56;ECHEC
+2026-11-06 11:43:55;impala;v50;20;6;2;B2;81.49;6.477;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;14;2;B1;82.0;10.713;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;14;2;TOTAL;82.0;46.252;ECHEC
+2026-11-06 11:43:55;impala;v50;20;4;2;B3;82.12;4.082;OK
+2026-11-06 11:43:55;impala;v50;20;1;2;B1;82.79;12.249;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;1;2;TOTAL;82.79;50.55;ECHEC
+2026-11-06 11:43:55;impala;v50;20;20;2;B1;83.3;4.596;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 184fe12339a89467:97e0b93200000001
+2026-11-06 11:43:55;impala;v50;20;20;2;TOTAL;83.3;47.829;ECHEC
+2026-11-06 11:43:55;impala;v50;20;13;2;B3;84.13;3.853;OK
+2026-11-06 11:43:55;impala;v50;20;11;3;B1;85.69;7.262;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65544 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;11;3;TOTAL;85.69;43.06;ECHEC
+2026-11-06 11:43:55;impala;v50;20;4;2;B4;86.2;1.033;ECHEC Memory limit exceeded: Failed to allocate '1830' bytes for compiled code module CodeGen could not allocate 1.79 KB witho
+2026-11-06 11:43:55;impala;v50;20;12;2;B8;86.35;10.988;OK
+2026-11-06 11:43:55;impala;v50;20;4;2;B5;87.24;10.924;OK
+2026-11-06 11:43:55;impala;v50;20;17;2;B3;87.51;2.438;OK
+2026-11-06 11:43:55;impala;v50;20;8;2;B2;87.73;4.005;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment dd46b3fa7722c0d3:4fa5b40f00000001
+2026-11-06 11:43:55;impala;v50;20;16;2;B2;87.76;4.959;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;20;2;B2;87.89;4.106;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;18;2;B2;87.95;7.274;ECHEC Memory limit exceeded: Failed to allocate tuple buffer HDFS_SCAN_NODE (id=0) could not allocate 9.00 KB without exceedin
+2026-11-06 11:43:55;impala;v50;20;6;2;B3;87.96;5.077;OK
+2026-11-06 11:43:55;impala;v50;20;13;2;B4;87.98;7.258;OK
+2026-11-06 11:43:55;impala;v50;20;7;2;B2;88.01;7.139;ECHEC Memory limit exceeded: ParquetColumnReader::ReadDataPage() failed to allocate 65003 bytes for decompressed data. HDFS_SC
+2026-11-06 11:43:55;impala;v50;20;2;2;B6;88.69;5.214;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 7445c59e3d028542:a51763f500000001
+2026-11-06 11:43:55;impala;v50;20;5;2;B6;89.05;4.819;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment c444b024ead46a60:a9931ec100000001
+2026-11-06 11:43:55;impala;v50;20;15;2;B6;89.32;5.331;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment b44dea8be475eeae:c754a51400000001
+2026-11-06 11:43:55;impala;v50;20;10;2;B6;89.37;4.997;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 75431a3bfb4b3e22:512f2b9900000001
+2026-11-06 11:43:55;impala;v50;20;9;2;B6;89.53;1.677;ECHEC Memory limit exceeded: Failed to allocate '184' bytes for compiled code module CodeGen could not allocate 184.00 B witho
+2026-11-06 11:43:55;impala;v50;20;17;2;B4;89.95;1.255;ECHEC Memory limit exceeded: Codegen failed to reserve '186368' bytes for optimization CodeGen could not allocate 182.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;19;2;B3;90.24;1.181;ECHEC Memory limit exceeded: Could not allocate aggregate expression intermediate value Exprs could not allocate 16.00 B witho
+2026-11-06 11:43:55;impala;v50;20;3;2;B2;90.38;1.285;ECHEC Memory limit exceeded: Could not allocate aggregate expression input value Exprs could not allocate 16.00 B without exce
+2026-11-06 11:43:55;impala;v50;20;9;2;B7;91.21;2.038;ECHEC Memory limit exceeded: Codegen failed to reserve '435200' bytes for optimization CodeGen could not allocate 425.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;17;2;B5;91.21;2.479;ECHEC Memory limit exceeded: Codegen failed to reserve '235520' bytes for optimization CodeGen could not allocate 230.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;19;2;B4;91.42;3.235;ECHEC Memory limit exceeded: Failed to allocate '1830' bytes for compiled code module CodeGen could not allocate 1.79 KB witho
+2026-11-06 11:43:55;impala;v50;20;3;2;B3;91.67;2.914;ECHEC Memory limit exceeded 
+2026-11-06 11:43:55;impala;v50;20;8;2;B3;91.73;2.7;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 4040cfb5714d059e:79da72a300000003
+2026-11-06 11:43:55;impala;v50;20;20;2;B3;92.0;3.695;OK
+2026-11-06 11:43:55;impala;v50;20;14;2;B2;92.72;2.261;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL <= 20191231.Memory limit exceeded: Could not allocat
+2026-11-06 11:43:55;impala;v50;20;16;2;B3;92.72;2.652;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL != -1.Memory limit exceeded: Could not allocate expr
+2026-11-06 11:43:55;impala;v50;20;11;3;B2;92.95;3.315;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL <= 20191231.Memory limit exceeded: Could not allocat
+2026-11-06 11:43:55;impala;v50;20;6;2;B4;93.04;1.849;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL <= 20191231.Memory limit exceeded: Could not allocat
+2026-11-06 11:43:55;impala;v50;20;9;2;B8;93.25;2.117;ECHEC IllegalStateException: Failed to evaluate generated predicate: NULL IS NOT NULL.Memory limit exceeded: Could not allocat
+2026-11-06 11:43:55;impala;v50;20;17;2;B6;93.69;2.657;ECHEC AnalysisException: Failed to evaluate expr: 20 CAUSED BY: InternalException: Memory limit exceeded: Error occurred on ba
+2026-11-06 11:43:55;impala;v50;20;5;2;B7;93.87;7.638;OK
+2026-11-06 11:43:55;impala;v50;20;2;2;B7;93.9;7.426;OK
+2026-11-06 11:43:55;impala;v50;20;10;2;B7;94.37;7.61;OK
+2026-11-06 11:43:55;impala;v50;20;8;2;B4;94.43;6.403;OK
+2026-11-06 11:43:55;impala;v50;20;3;2;B4;94.58;6.552;OK
+2026-11-06 11:43:55;impala;v50;20;15;2;B7;94.65;7.307;OK
+2026-11-06 11:43:55;impala;v50;20;19;2;B5;94.66;11.778;OK
+2026-11-06 11:43:55;impala;v50;20;6;2;B5;94.89;10.883;OK
+2026-11-06 11:43:55;impala;v50;20;14;2;B3;94.98;3.9;OK
+2026-11-06 11:43:55;impala;v50;20;1;2;B2;95.04;14.816;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 9a4ff489d126aa27:2682249300000001
+2026-11-06 11:43:55;impala;v50;20;7;2;B3;95.15;3.731;OK
+2026-11-06 11:43:55;impala;v50;20;18;2;B3;95.22;4.088;OK
+2026-11-06 11:43:55;impala;v50;20;13;2;B5;95.24;11.008;OK
+2026-11-06 11:43:55;impala;v50;20;16;2;B4;95.37;6.851;OK
+2026-11-06 11:43:55;impala;v50;20;20;2;B4;95.69;6.011;OK
+2026-11-06 11:43:55;impala;v50;20;11;3;B3;96.27;3.077;OK
+2026-11-06 11:43:55;impala;v50;20;17;2;B7;96.34;7.781;OK
+2026-11-06 11:43:55;impala;v50;20;4;2;B6;98.16;7.946;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;7;2;B4;98.88;5.758;OK
+2026-11-06 11:43:55;impala;v50;20;14;2;B4;98.88;6.899;OK
+2026-11-06 11:43:55;impala;v50;20;18;2;B4;99.31;6.423;OK
+2026-11-06 11:43:55;impala;v50;20;11;3;B4;99.34;7.187;OK
+2026-11-06 11:43:55;impala;v50;20;8;2;B5;100.84;11.545;ECHEC Memory limit exceeded: Failed to allocate '17499' bytes for compiled code module CodeGen could not allocate 17.09 KB wit
+2026-11-06 11:43:55;impala;v50;20;3;2;B5;101.13;11.532;OK
+2026-11-06 11:43:55;impala;v50;20;2;2;B8;101.33;13.727;OK
+2026-11-06 11:43:55;impala;v50;20;5;2;B8;101.51;13.607;OK
+2026-11-06 11:43:55;impala;v50;20;20;2;B5;101.7;12.724;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 4a42f1ceea5ca82c:12c4a58d00000003
+2026-11-06 11:43:55;impala;v50;20;15;2;B8;101.96;13.747;OK
+2026-11-06 11:43:55;impala;v50;20;10;2;B8;101.98;13.081;OK
+2026-11-06 11:43:55;impala;v50;20;16;2;B5;102.22;12.835;OK
+2026-11-06 11:43:55;impala;v50;20;17;2;B8;104.13;13.989;OK
+2026-11-06 11:43:55;impala;v50;20;7;2;B5;104.64;12.923;OK
+2026-11-06 11:43:55;impala;v50;20;18;2;B5;105.74;12.368;OK
+2026-11-06 11:43:55;impala;v50;20;6;2;B6;105.77;7.8;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 654790c3567c27ad:b5ccf2c200000001
+2026-11-06 11:43:55;impala;v50;20;14;2;B5;105.78;12.394;OK
+2026-11-06 11:43:55;impala;v50;20;4;2;B7;106.11;9.682;OK
+2026-11-06 11:43:55;impala;v50;20;13;2;B6;106.24;3.295;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 534a3885a9b31491:7bed29f900000001
+2026-11-06 11:43:55;impala;v50;20;19;2;B6;106.44;3.24;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment d54aa76cee40eb7d:88300f0000000001
+2026-11-06 11:43:55;impala;v50;20;11;3;B5;106.53;5.339;ECHEC Memory limit exceeded: Failed to allocate '5361' bytes for compiled code module CodeGen could not allocate 5.24 KB witho
+2026-11-06 11:43:55;impala;v50;20;9;3;B1;108.59;1.303;ECHEC Memory limit exceeded: Could not allocate aggregate expression intermediate value Exprs could not allocate 16.00 B witho
+2026-11-06 11:43:55;impala;v50;20;9;3;TOTAL;108.59;29.934;ECHEC
+2026-11-06 11:43:55;impala;v50;20;13;2;B7;109.54;2.284;ECHEC Memory limit exceeded: Failed to allocate '250' bytes for compiled code module CodeGen could not allocate 250.00 B witho
+2026-11-06 11:43:55;impala;v50;20;19;2;B7;109.68;2.313;ECHEC Memory limit exceeded: Codegen failed to reserve '435200' bytes for optimization CodeGen could not allocate 425.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;1;2;B3;109.86;1.936;ECHEC Memory limit exceeded: Codegen failed to reserve '131584' bytes for optimization CodeGen could not allocate 128.50 KB wi
+2026-11-06 11:43:55;impala;v50;20;9;3;B2;109.89;2.097;ECHEC Memory limit exceeded: Could not allocate aggregate expression intermediate value Exprs could not allocate 16.00 B witho
+2026-11-06 11:43:55;impala;v50;20;12;3;B1;109.97;2.068;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=1). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;12;3;TOTAL;109.97;25.582;ECHEC
+2026-11-06 11:43:55;impala;v50;20;1;2;B4;111.79;2.22;ECHEC Memory limit exceeded: Codegen failed to reserve '1771520' bytes for optimization CodeGen could not allocate 1.69 MB wit
+2026-11-06 11:43:55;impala;v50;20;13;2;B8;111.82;9.483;ECHEC Memory limit exceeded: Codegen failed to reserve '159744' bytes for optimization CodeGen could not allocate 156.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;11;3;B6;111.87;2.537;ECHEC Memory limit exceeded: Codegen failed to reserve '1164800' bytes for optimization CodeGen could not allocate 1.11 MB wit
+2026-11-06 11:43:55;impala;v50;20;9;3;B3;111.99;1.751;ECHEC Memory limit exceeded: Codegen failed to reserve '523264' bytes for optimization CodeGen could not allocate 511.00 KB wi
+2026-11-06 11:43:55;impala;v50;20;19;2;B8;111.99;2.63;ECHEC Memory limit exceeded: Codegen failed to reserve '469504' bytes for optimization CodeGen could not allocate 458.50 KB wi
+2026-11-06 11:43:55;impala;v50;20;12;3;B2;112.04;2.132;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=1). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;8;2;B6;112.38;2.233;ECHEC Memory limit exceeded: HashTableCtx::ExprValuesCache failed to allocate 9344 bytes. Hash Join Builder (join_node_id=2) c
+2026-11-06 11:43:55;impala;v50;20;3;2;B6;112.67;1.95;ECHEC Memory limit exceeded: Could not allocate aggregate expression input value Exprs could not allocate 16.00 B without exce
+2026-11-06 11:43:55;impala;v50;20;6;2;B7;113.57;7.159;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 9f442c7e87d55fbb:fcee2c7800000002
+2026-11-06 11:43:55;impala;v50;20;9;3;B4;113.74;5.701;OK
+2026-11-06 11:43:55;impala;v50;20;1;2;B5;114.01;9.362;OK
+2026-11-06 11:43:55;impala;v50;20;12;3;B3;114.17;2.978;OK
+2026-11-06 11:43:55;impala;v50;20;11;3;B7;114.41;6.023;ECHEC Memory limit exceeded: Failed to allocate '10440' bytes for compiled code module CodeGen could not allocate 10.20 KB wit
+2026-11-06 11:43:55;impala;v50;20;20;2;B6;114.43;6.366;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 16419941d9304502:44a85a1700000002
+2026-11-06 11:43:55;impala;v50;20;8;2;B7;114.61;5.522;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 434fd5b367b16f79:1c5ee0f200000002
+2026-11-06 11:43:55;impala;v50;20;3;2;B7;114.61;5.639;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;16;2;B6;115.05;6.784;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;4;2;B8;115.79;9.416;OK
+2026-11-06 11:43:55;impala;v50;20;12;3;B4;117.15;5.211;OK
+2026-11-06 11:43:55;impala;v50;20;7;2;B6;117.56;6.084;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;18;2;B6;118.1;1.288;ECHEC Memory limit exceeded: Error occurred on backend quickstart.cloudera:22000 by fragment 6a49e05ddabc3913:eda3338f00000001
+2026-11-06 11:43:55;impala;v50;20;14;2;B6;118.17;1.115;ECHEC Memory limit exceeded: Failed to allocate '250' bytes for compiled code module CodeGen could not allocate 250.00 B witho
+2026-11-06 11:43:55;impala;v50;20;14;2;B7;119.28;1.335;ECHEC Memory limit exceeded: Codegen failed to reserve '50176' bytes for optimization CodeGen could not allocate 49.00 KB with
+2026-11-06 11:43:55;impala;v50;20;18;2;B7;119.39;5.744;OK
+2026-11-06 11:43:55;impala;v50;20;9;3;B5;119.44;7.575;OK
+2026-11-06 11:43:55;impala;v50;20;8;2;B8;120.14;8.264;OK
+2026-11-06 11:43:55;impala;v50;20;3;2;B8;120.25;7.956;OK
+2026-11-06 11:43:55;impala;v50;20;11;3;B8;120.43;8.32;OK
+2026-11-06 11:43:55;impala;v50;20;14;2;B8;120.62;7.635;OK
+2026-11-06 11:43:55;impala;v50;20;6;2;B8;120.73;7.92;OK
+2026-11-06 11:43:55;impala;v50;20;20;2;B7;120.79;5.546;OK
+2026-11-06 11:43:55;impala;v50;20;16;2;B7;121.84;5.121;OK
+2026-11-06 11:43:55;impala;v50;20;12;3;B5;122.36;6.73;OK
+2026-11-06 11:43:55;impala;v50;20;1;2;B6;123.38;4.72;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;7;2;B7;123.64;4.361;OK
+2026-11-06 11:43:55;impala;v50;20;18;2;B8;125.14;5.423;OK
+2026-11-06 11:43:55;impala;v50;20;20;2;B8;126.34;4.786;OK
+2026-11-06 11:43:55;impala;v50;20;16;2;B8;126.96;4.631;OK
+2026-11-06 11:43:55;impala;v50;20;9;3;B6;127.02;10.63;OK
+2026-11-06 11:43:55;impala;v50;20;7;2;B8;128.0;3.806;OK
+2026-11-06 11:43:55;impala;v50;20;1;2;B7;128.1;2.903;OK
+2026-11-06 11:43:55;impala;v50;20;12;3;B6;129.09;2.463;ECHEC Memory limit exceeded: The memory limit is set too low to initialize spilling operator (id=2). The minimum required memo
+2026-11-06 11:43:55;impala;v50;20;1;2;B8;131.0;2.342;OK
+2026-11-06 11:43:55;impala;v50;20;12;3;B7;131.55;1.483;OK
+2026-11-06 11:43:55;impala;v50;20;12;3;B8;133.03;2.518;OK
+2026-11-06 11:43:55;impala;v50;20;9;3;B7;137.65;0.32;OK
+2026-11-06 11:43:55;impala;v50;20;9;3;B8;137.97;0.557;OK

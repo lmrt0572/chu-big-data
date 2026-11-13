@@ -1,0 +1,88 @@
+STAGE DEPENDENCIES:
+  Stage-1 is a root stage
+  Stage-2 depends on stages: Stage-1
+  Stage-0 depends on stages: Stage-2
+
+STAGE PLANS:
+  Stage: Stage-1
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            alias: f
+            Statistics: Num rows: 24919220 Data size: 124596100 Basic stats: COMPLETE Column stats: NONE
+            Filter Operator
+              predicate: (id_region is not null and (annee_deces = 2019)) (type: boolean)
+              Statistics: Num rows: 6229805 Data size: 31149025 Basic stats: COMPLETE Column stats: NONE
+              Reduce Output Operator
+                key expressions: id_region (type: int)
+                sort order: +
+                Map-reduce partition columns: id_region (type: int)
+                Statistics: Num rows: 6229805 Data size: 31149025 Basic stats: COMPLETE Column stats: NONE
+                value expressions: nb_deces (type: int)
+          TableScan
+            alias: r
+            Statistics: Num rows: 21 Data size: 126 Basic stats: COMPLETE Column stats: NONE
+            Filter Operator
+              predicate: id_region is not null (type: boolean)
+              Statistics: Num rows: 11 Data size: 66 Basic stats: COMPLETE Column stats: NONE
+              Reduce Output Operator
+                key expressions: id_region (type: int)
+                sort order: +
+                Map-reduce partition columns: id_region (type: int)
+                Statistics: Num rows: 11 Data size: 66 Basic stats: COMPLETE Column stats: NONE
+                value expressions: code_region (type: string), libelle_region (type: string)
+      Reduce Operator Tree:
+        Join Operator
+          condition map:
+               Inner Join 0 to 1
+          keys:
+            0 id_region (type: int)
+            1 id_region (type: int)
+          outputColumnNames: _col1, _col9, _col10
+          Statistics: Num rows: 6852785 Data size: 34263928 Basic stats: COMPLETE Column stats: NONE
+          Group By Operator
+            aggregations: sum(_col1)
+            keys: _col9 (type: string), _col10 (type: string)
+            mode: hash
+            outputColumnNames: _col0, _col1, _col2
+            Statistics: Num rows: 6852785 Data size: 34263928 Basic stats: COMPLETE Column stats: NONE
+            File Output Operator
+              compressed: false
+              table:
+                  input format: org.apache.hadoop.mapred.SequenceFileInputFormat
+                  output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
+                  serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
+
+  Stage: Stage-2
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            Reduce Output Operator
+              key expressions: _col0 (type: string), _col1 (type: string)
+              sort order: ++
+              Map-reduce partition columns: _col0 (type: string), _col1 (type: string)
+              Statistics: Num rows: 6852785 Data size: 34263928 Basic stats: COMPLETE Column stats: NONE
+              value expressions: _col2 (type: bigint)
+      Reduce Operator Tree:
+        Group By Operator
+          aggregations: sum(VALUE._col0)
+          keys: KEY._col0 (type: string), KEY._col1 (type: string)
+          mode: mergepartial
+          outputColumnNames: _col0, _col1, _col2
+          Statistics: Num rows: 3426392 Data size: 17131961 Basic stats: COMPLETE Column stats: NONE
+          File Output Operator
+            compressed: false
+            Statistics: Num rows: 3426392 Data size: 17131961 Basic stats: COMPLETE Column stats: NONE
+            table:
+                input format: org.apache.hadoop.mapred.TextInputFormat
+                output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+                serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+
+  Stage: Stage-0
+    Fetch Operator
+      limit: -1
+      Processor Tree:
+        ListSink
+
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html#release for an explanation.

@@ -1,0 +1,27 @@
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ HashAggregate  (cost=494.10..497.72 rows=362 width=13) (actual time=2.362..2.394 rows=371 loops=1)
+   Group Key: d.code_diag
+   Batches: 1  Memory Usage: 61kB
+   Buffers: shared hit=217
+   ->  Hash Join  (cost=37.95..492.29 rows=362 width=5) (actual time=0.193..2.272 rows=374 loops=1)
+         Hash Cond: (d.id_diagnostic = f.id_diagnostic)
+         Buffers: shared hit=217
+         ->  Seq Scan on dim_diagnostic d  (cost=0.00..353.91 rows=15491 width=9) (actual time=0.013..0.905 rows=15491 loops=1)
+               Buffers: shared hit=199
+         ->  Hash  (cost=33.42..33.42 rows=362 width=4) (actual time=0.165..0.166 rows=374 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 22kB
+               Buffers: shared hit=18
+               ->  Bitmap Heap Scan on fait_hospitalisation f  (cost=11.99..33.42 rows=362 width=4) (actual time=0.040..0.126 rows=374 loops=1)
+                     Recheck Cond: ((id_temps_admission >= 20190101) AND (id_temps_admission <= 20191231))
+                     Heap Blocks: exact=16
+                     Buffers: shared hit=18
+                     ->  Bitmap Index Scan on ix_hosp_temps  (cost=0.00..11.90 rows=362 width=0) (actual time=0.022..0.022 rows=374 loops=1)
+                           Index Cond: ((id_temps_admission >= 20190101) AND (id_temps_admission <= 20191231))
+                           Buffers: shared hit=2
+ Planning:
+   Buffers: shared hit=229 read=6
+ Planning Time: 4.425 ms
+ Execution Time: 2.552 ms
+(23 rows)
+

@@ -1,0 +1,5 @@
+
+Logging initialized using configuration in jar:file:/usr/lib/hive/lib/hive-common-1.1.0-cdh5.12.0.jar!/hive-log4j.properties
+Query ID = cloudera_20261104112626_356148bc-8cb1-46e0-adfc-e4a27135be6e
+Total jobs = 1
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.mr.MapredLocalTask

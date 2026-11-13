@@ -1,0 +1,52 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- B1 sur des copies sans statistiques des consultations et des établissements (comparer à F4 B1, sur le Gold).
+EXPLAIN
+SELECT e.id_etablissement, e.raison_sociale, t.nb_consultations,
+       ROUND(100 * t.nb_consultations / SUM(t.nb_consultations) OVER (), 2) AS part_pct
+FROM (
+    SELECT id_etablissement, COUNT(*) AS nb_consultations
+    FROM bench.consult_sans_stats
+    WHERE id_temps BETWEEN 20190101 AND 20191231
+    GROUP BY id_etablissement
+) t
+JOIN bench.etab_sans_stats e ON t.id_etablissement = e.id_etablissement
+Query submitted at: 2026-10-30 18:56:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=2e45a3d450667f60:4ac9758a00000000
+Per-Host Resource Reservation: Memory=416.00MB
+Per-Host Resource Estimates: Memory=2.12GB
+WARNING: The following tables are missing relevant table and/or column statistics.
+bench.consult_sans_stats, bench.etab_sans_stats
+""
+PLAN-ROOT SINK
+|
+04:ANALYTIC
+|  functions: sum(count(*))
+|
+08:EXCHANGE [UNPARTITIONED]
+|
+03:HASH JOIN [INNER JOIN, BROADCAST]
+|  hash predicates: id_etablissement = e.id_etablissement
+|  runtime filters: RF000 <- e.id_etablissement
+|
+|--07:EXCHANGE [BROADCAST]
+|  |
+|  02:SCAN HDFS [bench.etab_sans_stats e]
+|     partitions=1/1 files=1 size=9.40MB
+|
+06:AGGREGATE [FINALIZE]
+|  output: count:merge(*)
+|  group by: id_etablissement
+|
+05:EXCHANGE [HASH(id_etablissement)]
+|
+01:AGGREGATE [STREAMING]
+|  output: count(*)
+|  group by: id_etablissement
+|
+00:SCAN HDFS [bench.consult_sans_stats]
+   partitions=1/1 files=1 size=16.67MB
+   predicates: id_temps <= 20191231, id_temps >= 20190101
+   runtime filters: RF000 -> bench.consult_sans_stats.id_etablissement
+Fetched 35 row(s) in 2.90s

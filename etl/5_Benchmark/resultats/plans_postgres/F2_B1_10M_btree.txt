@@ -1,0 +1,41 @@
+                                                                                         QUERY PLAN                                                                                         
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ WindowAgg  (cost=138144.58..148782.35 rows=19660 width=70) (actual time=936.596..976.622 rows=55293 loops=1)
+   Buffers: shared read=22224, temp read=1209 written=1962
+   ->  Hash Join  (cost=138144.58..148340.00 rows=19660 width=38) (actual time=800.379..919.831 rows=55293 loops=1)
+         Hash Cond: (e.id_etablissement = t.id_etablissement)
+         Buffers: shared read=22224, temp read=751 written=1585
+         ->  Seq Scan on dim_etablissement e  (cost=0.00..9101.66 rows=416666 width=30) (actual time=0.051..38.731 rows=416666 loops=1)
+               Buffers: shared read=4935
+         ->  Hash  (cost=137898.83..137898.83 rows=19660 width=12) (actual time=800.257..800.818 rows=55293 loops=1)
+               Buckets: 65536 (originally 32768)  Batches: 1 (originally 1)  Memory Usage: 2888kB
+               Buffers: shared read=17289, temp read=751 written=1585
+               ->  Subquery Scan on t  (cost=137505.63..137898.83 rows=19660 width=12) (actual time=770.850..793.592 rows=55293 loops=1)
+                     Buffers: shared read=17289, temp read=751 written=1585
+                     ->  Finalize HashAggregate  (cost=137505.63..137702.23 rows=19660 width=12) (actual time=770.848..790.706 rows=55293 loops=1)
+                           Group Key: fait_consultation.id_etablissement
+                           Batches: 5  Memory Usage: 4145kB  Disk Usage: 3480kB
+                           Buffers: shared read=17289, temp read=751 written=1585
+                           ->  Gather  (cost=133180.43..137309.03 rows=39320 width=12) (actual time=675.964..735.712 rows=153110 loops=1)
+                                 Workers Planned: 2
+                                 Workers Launched: 2
+                                 Buffers: shared read=17289, temp read=446 written=929
+                                 ->  Partial HashAggregate  (cost=132180.43..132377.03 rows=19660 width=12) (actual time=653.901..668.877 rows=51037 loops=3)
+                                       Group Key: fait_consultation.id_etablissement
+                                       Batches: 5  Memory Usage: 4145kB  Disk Usage: 1640kB
+                                       Buffers: shared read=17289, temp read=446 written=929
+                                       Worker 0:  Batches: 5  Memory Usage: 4145kB  Disk Usage: 1640kB
+                                       Worker 1:  Batches: 5  Memory Usage: 4145kB  Disk Usage: 1632kB
+                                       ->  Parallel Bitmap Heap Scan on fait_consultation  (cost=15041.34..129891.63 rows=457760 width=4) (actual time=21.207..550.901 rows=392192 loops=3)
+                                             Recheck Cond: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                             Heap Blocks: exact=5454
+                                             Buffers: shared read=17289
+                                             ->  Bitmap Index Scan on ix_consult_temps  (cost=0.00..14766.68 rows=1098625 width=0) (actual time=40.422..40.423 rows=1176577 loops=1)
+                                                   Index Cond: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                                   Buffers: shared read=1012
+ Planning:
+   Buffers: shared hit=176
+ Planning Time: 4.344 ms
+ Execution Time: 1043.353 ms
+(37 rows)
+

@@ -1,0 +1,37 @@
+                                                                              QUERY PLAN                                                                              
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Finalize GroupAggregate  (cost=22764.07..22767.37 rows=13 width=24) (actual time=425.632..523.994 rows=13 loops=1)
+   Group Key: d.region
+   Buffers: shared hit=4188 read=2444, temp read=4195 written=4264
+   ->  Gather Merge  (cost=22764.07..22767.11 rows=26 width=24) (actual time=425.622..523.983 rows=39 loops=1)
+         Workers Planned: 2
+         Workers Launched: 2
+         Buffers: shared hit=4188 read=2444, temp read=4195 written=4264
+         ->  Sort  (cost=21764.05..21764.08 rows=13 width=24) (actual time=397.986..398.186 rows=13 loops=3)
+               Sort Key: d.region
+               Sort Method: quicksort  Memory: 25kB
+               Buffers: shared hit=4188 read=2444, temp read=4195 written=4264
+               Worker 0:  Sort Method: quicksort  Memory: 25kB
+               Worker 1:  Sort Method: quicksort  Memory: 25kB
+               ->  Partial HashAggregate  (cost=21763.68..21763.81 rows=13 width=24) (actual time=397.925..398.126 rows=13 loops=3)
+                     Group Key: d.region
+                     Batches: 1  Memory Usage: 24kB
+                     Buffers: shared hit=4166 read=2444, temp read=4195 written=4264
+                     Worker 0:  Batches: 1  Memory Usage: 24kB
+                     Worker 1:  Batches: 1  Memory Usage: 24kB
+                     ->  Parallel Hash Join  (cost=6806.18..20396.88 rows=273360 width=16) (actual time=154.914..357.278 rows=212727 loops=3)
+                           Hash Cond: ((f.identifiant_organisation)::text = (d.identifiant_organisation)::text)
+                           Buffers: shared hit=4166 read=2444, temp read=4195 written=4264
+                           ->  Parallel Seq Scan on fait_consult_etab f  (cost=0.00..7199.60 rows=273360 width=13) (actual time=0.603..27.470 rows=218688 loops=3)
+                                 Buffers: shared hit=2080 read=2386
+                           ->  Parallel Hash  (cost=3729.19..3729.19 rows=159119 width=31) (actual time=43.234..43.235 rows=90168 loops=3)
+                                 Buckets: 65536  Batches: 8  Memory Usage: 2848kB
+                                 Buffers: shared hit=2080 read=58, temp written=1564
+                                 ->  Parallel Seq Scan on dim_etab_region d  (cost=0.00..3729.19 rows=159119 width=31) (actual time=0.037..11.951 rows=90168 loops=3)
+                                       Buffers: shared hit=2080 read=58
+ Planning:
+   Buffers: shared hit=126
+ Planning Time: 2.244 ms
+ Execution Time: 524.151 ms
+(33 rows)
+

@@ -1,0 +1,42 @@
+                                                                                                     QUERY PLAN                                                                                                      
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Finalize GroupAggregate  (cost=20531.89..20535.18 rows=13 width=24) (actual time=334.830..341.200 rows=13 loops=1)
+   Group Key: d.region
+   Buffers: shared hit=193603 read=2836
+   ->  Gather Merge  (cost=20531.89..20534.92 rows=26 width=24) (actual time=334.822..341.189 rows=39 loops=1)
+         Workers Planned: 2
+         Workers Launched: 2
+         Buffers: shared hit=193603 read=2836
+         ->  Sort  (cost=19531.87..19531.90 rows=13 width=24) (actual time=309.851..309.853 rows=13 loops=3)
+               Sort Key: d.region
+               Sort Method: quicksort  Memory: 25kB
+               Buffers: shared hit=193603 read=2836
+               Worker 0:  Sort Method: quicksort  Memory: 25kB
+               Worker 1:  Sort Method: quicksort  Memory: 25kB
+               ->  Partial HashAggregate  (cost=19531.50..19531.63 rows=13 width=24) (actual time=309.808..309.811 rows=13 loops=3)
+                     Group Key: d.region
+                     Batches: 1  Memory Usage: 24kB
+                     Buffers: shared hit=193581 read=2836
+                     Worker 0:  Batches: 1  Memory Usage: 24kB
+                     Worker 1:  Batches: 1  Memory Usage: 24kB
+                     ->  Nested Loop  (cost=0.43..18164.70 rows=273360 width=16) (actual time=0.620..274.585 rows=212727 loops=3)
+                           Buffers: shared hit=193581 read=2836
+                           ->  Parallel Seq Scan on fait_consult_etab f  (cost=0.00..7199.60 rows=273360 width=13) (actual time=0.364..20.968 rows=218688 loops=3)
+                                 Buffers: shared hit=3040 read=1426
+                           ->  Memoize  (cost=0.43..0.46 rows=1 width=31) (actual time=0.001..0.001 rows=1 loops=656063)
+                                 Cache Key: f.identifiant_organisation
+                                 Cache Mode: logical
+                                 Hits: 206680  Misses: 22412  Evictions: 0  Overflows: 0  Memory Usage: 3076kB
+                                 Buffers: shared hit=190541 read=1410
+                                 Worker 0:  Hits: 193276  Misses: 21036  Evictions: 0  Overflows: 0  Memory Usage: 2893kB
+                                 Worker 1:  Hits: 192125  Misses: 20534  Evictions: 0  Overflows: 0  Memory Usage: 2824kB
+                                 ->  Index Only Scan using dim_etab_region_identifiant_organisation_region_idx on dim_etab_region d  (cost=0.42..0.45 rows=1 width=31) (actual time=0.007..0.007 rows=1 loops=63982)
+                                       Index Cond: (identifiant_organisation = (f.identifiant_organisation)::text)
+                                       Heap Fetches: 0
+                                       Buffers: shared hit=190541 read=1410
+ Planning:
+   Buffers: shared hit=182 read=10
+ Planning Time: 3.550 ms
+ Execution Time: 341.777 ms
+(38 rows)
+

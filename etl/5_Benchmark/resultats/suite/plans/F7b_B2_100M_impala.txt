@@ -1,0 +1,50 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- B2 sur bench.consult_v100 (100M de consultations, palier de volume réaliste). Même requête que F2 B2 dans PostgreSQL.
+EXPLAIN
+SELECT d.id_diagnostic, d.code_diag, t.nb_consultations,
+       ROUND(100 * t.nb_consultations / SUM(t.nb_consultations) OVER (), 2) AS part_pct
+FROM (
+    SELECT id_diagnostic, COUNT(*) AS nb_consultations
+    FROM bench.consult_v100
+    WHERE id_temps BETWEEN 20190101 AND 20191231
+    GROUP BY id_diagnostic
+) t
+JOIN gold.dim_diagnostic d ON t.id_diagnostic = d.id_diagnostic
+Query submitted at: 2026-10-30 18:26:52 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=9a44ffd62c0386e3:b5c8060000000000
+Per-Host Resource Reservation: Memory=400.00MB
+Per-Host Resource Estimates: Memory=196.00MB
+""
+PLAN-ROOT SINK
+|
+04:ANALYTIC
+|  functions: sum(count(*))
+|
+08:EXCHANGE [UNPARTITIONED]
+|
+03:HASH JOIN [INNER JOIN, BROADCAST]
+|  hash predicates: d.id_diagnostic = id_diagnostic
+|  runtime filters: RF000 <- id_diagnostic
+|
+|--07:EXCHANGE [BROADCAST]
+|  |
+|  06:AGGREGATE [FINALIZE]
+|  |  output: count:merge(*)
+|  |  group by: id_diagnostic
+|  |
+|  05:EXCHANGE [HASH(id_diagnostic)]
+|  |
+|  01:AGGREGATE [STREAMING]
+|  |  output: count(*)
+|  |  group by: id_diagnostic
+|  |
+|  00:SCAN HDFS [bench.consult_v100]
+|     partitions=1/1 files=7 size=1.57GB
+|     predicates: id_temps <= 20191231, id_temps >= 20190101
+|
+02:SCAN HDFS [gold.dim_diagnostic d]
+   partitions=1/1 files=2 size=381.59KB
+   runtime filters: RF000 -> d.id_diagnostic
+Fetched 33 row(s) in 0.02s

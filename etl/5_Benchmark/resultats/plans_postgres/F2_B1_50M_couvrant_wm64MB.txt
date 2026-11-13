@@ -1,0 +1,38 @@
+                                                                                                  QUERY PLAN                                                                                                   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ WindowAgg  (cost=203455.03..214210.12 rows=24874 width=70) (actual time=1608.946..1633.067 rows=55341 loops=1)
+   Buffers: shared hit=11832 read=30137
+   ->  Hash Join  (cost=203455.03..213650.45 rows=24874 width=38) (actual time=1482.089..1596.322 rows=55341 loops=1)
+         Hash Cond: (e.id_etablissement = t.id_etablissement)
+         Buffers: shared hit=11832 read=30137
+         ->  Seq Scan on dim_etablissement e  (cost=0.00..9101.66 rows=416666 width=30) (actual time=0.056..39.439 rows=416666 loops=1)
+               Buffers: shared read=4935
+         ->  Hash  (cost=203144.11..203144.11 rows=24874 width=12) (actual time=1481.956..1482.048 rows=55341 loops=1)
+               Buckets: 65536 (originally 32768)  Batches: 1 (originally 1)  Memory Usage: 2890kB
+               Buffers: shared hit=11832 read=25202
+               ->  Subquery Scan on t  (cost=202646.63..203144.11 rows=24874 width=12) (actual time=1461.665..1473.755 rows=55341 loops=1)
+                     Buffers: shared hit=11832 read=25202
+                     ->  Finalize HashAggregate  (cost=202646.63..202895.37 rows=24874 width=12) (actual time=1461.663..1471.020 rows=55341 loops=1)
+                           Group Key: fait_consultation.id_etablissement
+                           Batches: 1  Memory Usage: 11281kB
+                           Buffers: shared hit=11832 read=25202
+                           ->  Gather  (cost=197174.35..202397.89 rows=49748 width=12) (actual time=1375.956..1407.121 rows=166023 loops=1)
+                                 Workers Planned: 2
+                                 Workers Launched: 2
+                                 Buffers: shared hit=11832 read=25202
+                                 ->  Partial HashAggregate  (cost=196174.35..196423.09 rows=24874 width=12) (actual time=1354.494..1366.946 rows=55341 loops=3)
+                                       Group Key: fait_consultation.id_etablissement
+                                       Batches: 1  Memory Usage: 11281kB
+                                       Buffers: shared hit=11832 read=25202
+                                       Worker 0:  Batches: 1  Memory Usage: 11281kB
+                                       Worker 1:  Batches: 1  Memory Usage: 11281kB
+                                       ->  Parallel Index Only Scan using cv_consult_temps on fait_consultation  (cost=0.56..183262.32 rows=2582405 width=4) (actual time=0.693..856.968 rows=2192156 loops=3)
+                                             Index Cond: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                             Heap Fetches: 0
+                                             Buffers: shared hit=11832 read=25202
+ Planning:
+   Buffers: shared hit=197
+ Planning Time: 5.985 ms
+ Execution Time: 1636.366 ms
+(34 rows)
+

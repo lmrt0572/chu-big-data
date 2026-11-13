@@ -1,0 +1,42 @@
+                                                                                      QUERY PLAN                                                                                      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=379432.17..379432.22 rows=20 width=26) (actual time=1522.919..1843.034 rows=20 loops=1)
+   Buffers: shared hit=10570 read=72857, temp read=13257 written=13613
+   ->  Sort  (cost=379432.17..382053.61 rows=1048576 width=26) (actual time=1522.917..1843.030 rows=20 loops=1)
+         Sort Key: (count(*)) DESC, p.id_professionnel
+         Sort Method: top-N heapsort  Memory: 27kB
+         Buffers: shared hit=10570 read=72857, temp read=13257 written=13613
+         ->  Finalize GroupAggregate  (cost=221786.69..351529.94 rows=1048576 width=26) (actual time=1336.649..1820.855 rows=201302 loops=1)
+               Group Key: p.id_professionnel, p.specialite
+               Buffers: shared hit=10567 read=72857, temp read=13257 written=13613
+               ->  Gather Merge  (cost=221786.69..334315.33 rows=897180 width=26) (actual time=1336.636..1772.104 rows=205452 loops=1)
+                     Workers Planned: 2
+                     Workers Launched: 2
+                     Buffers: shared hit=10567 read=72857, temp read=13257 written=13613
+                     ->  Partial GroupAggregate  (cost=220786.67..229758.47 rows=448590 width=26) (actual time=1305.831..1392.304 rows=68484 loops=3)
+                           Group Key: p.id_professionnel, p.specialite
+                           Buffers: shared hit=10567 read=72857, temp read=13257 written=13613
+                           ->  Sort  (cost=220786.67..221908.14 rows=448590 width=18) (actual time=1305.802..1346.916 rows=392192 loops=3)
+                                 Sort Key: p.id_professionnel, p.specialite
+                                 Sort Method: external merge  Disk: 13344kB
+                                 Buffers: shared hit=10567 read=72857, temp read=13257 written=13613
+                                 Worker 0:  Sort Method: external merge  Disk: 12024kB
+                                 Worker 1:  Sort Method: external merge  Disk: 13688kB
+                                 ->  Parallel Hash Join  (cost=20130.40..169473.70 rows=448590 width=18) (actual time=574.076..1154.918 rows=392192 loops=3)
+                                       Hash Cond: (f.id_professionnel = p.id_professionnel)
+                                       Buffers: shared hit=10431 read=72857, temp read=8375 written=8704
+                                       ->  Parallel Seq Scan on fait_consultation f  (cost=0.00..139724.95 rows=448590 width=4) (actual time=3.684..350.884 rows=392192 loops=3)
+                                             Filter: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                             Rows Removed by Filter: 3031664
+                                             Buffers: shared hit=6534 read=68993
+                                       ->  Parallel Hash  (cost=12108.07..12108.07 rows=436907 width=18) (actual time=119.119..119.119 rows=349525 loops=3)
+                                             Buckets: 65536  Batches: 32  Memory Usage: 2272kB
+                                             Buffers: shared hit=3875 read=3864, temp written=5064
+                                             ->  Parallel Seq Scan on dim_professionnel p  (cost=0.00..12108.07 rows=436907 width=18) (actual time=0.011..42.038 rows=349525 loops=3)
+                                                   Buffers: shared hit=3875 read=3864
+ Planning:
+   Buffers: shared hit=106
+ Planning Time: 1.675 ms
+ Execution Time: 1905.251 ms
+(38 rows)
+

@@ -1,0 +1,43 @@
+                                                                                       QUERY PLAN                                                                                       
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ WindowAgg  (cost=721447.17..732205.00 rows=24996 width=70) (actual time=4496.836..4552.487 rows=55341 loops=1)
+   Buffers: shared hit=14089 read=368492, temp read=4593 written=7854
+   ->  Hash Join  (cost=721447.17..731642.59 rows=24996 width=38) (actual time=4335.510..4473.577 rows=55341 loops=1)
+         Hash Cond: (e.id_etablissement = t.id_etablissement)
+         Buffers: shared hit=14089 read=368492, temp read=4135 written=7477
+         ->  Seq Scan on dim_etablissement e  (cost=0.00..9101.66 rows=416666 width=30) (actual time=0.075..42.741 rows=416666 loops=1)
+               Buffers: shared hit=64 read=4871
+         ->  Hash  (cost=721134.72..721134.72 rows=24996 width=12) (actual time=4334.971..4335.111 rows=55341 loops=1)
+               Buckets: 65536 (originally 32768)  Batches: 1 (originally 1)  Memory Usage: 2890kB
+               Buffers: shared hit=14025 read=363621, temp read=4135 written=7477
+               ->  Subquery Scan on t  (cost=714552.03..721134.72 rows=24996 width=12) (actual time=4273.398..4323.868 rows=55341 loops=1)
+                     Buffers: shared hit=14025 read=363621, temp read=4135 written=7477
+                     ->  Finalize GroupAggregate  (cost=714552.03..720884.76 rows=24996 width=12) (actual time=4273.397..4320.495 rows=55341 loops=1)
+                           Group Key: fait_consultation.id_etablissement
+                           Buffers: shared hit=14025 read=363621, temp read=4135 written=7477
+                           ->  Gather Merge  (cost=714552.03..720384.84 rows=49992 width=12) (actual time=4273.386..4301.350 rows=166023 loops=1)
+                                 Workers Planned: 2
+                                 Workers Launched: 2
+                                 Buffers: shared hit=14025 read=363621, temp read=4135 written=7477
+                                 ->  Sort  (cost=713552.01..713614.50 rows=24996 width=12) (actual time=4245.987..4254.262 rows=55341 loops=3)
+                                       Sort Key: fait_consultation.id_etablissement
+                                       Sort Method: quicksort  Memory: 3960kB
+                                       Buffers: shared hit=14025 read=363621, temp read=4135 written=7477
+                                       Worker 0:  Sort Method: quicksort  Memory: 3960kB
+                                       Worker 1:  Sort Method: quicksort  Memory: 3960kB
+                                       ->  Partial HashAggregate  (cost=711476.17..711726.13 rows=24996 width=12) (actual time=4122.065..4231.504 rows=55341 loops=3)
+                                             Group Key: fait_consultation.id_etablissement
+                                             Batches: 5  Memory Usage: 4145kB  Disk Usage: 11808kB
+                                             Buffers: shared hit=14011 read=363621, temp read=4135 written=7477
+                                             Worker 0:  Batches: 5  Memory Usage: 4145kB  Disk Usage: 11728kB
+                                             Worker 1:  Batches: 5  Memory Usage: 4145kB  Disk Usage: 11728kB
+                                             ->  Parallel Seq Scan on fait_consultation  (cost=0.00..698619.20 rows=2571393 width=4) (actual time=0.759..3408.781 rows=2192156 loops=3)
+                                                   Filter: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                                   Rows Removed by Filter: 14927127
+                                                   Buffers: shared hit=14011 read=363621
+ Planning:
+   Buffers: shared hit=174 read=2
+ Planning Time: 5.527 ms
+ Execution Time: 4568.981 ms
+(39 rows)
+

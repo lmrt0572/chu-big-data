@@ -1,0 +1,33 @@
+                                                                                    QUERY PLAN                                                                                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ WindowAgg  (cost=4396.59..13181.71 rows=13537 width=70) (actual time=87.953..97.654 rows=22778 loops=1)
+   Buffers: shared hit=2962 read=4150
+   ->  Gather  (cost=4396.59..12877.13 rows=13537 width=38) (actual time=35.093..82.918 rows=22778 loops=1)
+         Workers Planned: 2
+         Workers Launched: 2
+         Buffers: shared hit=2962 read=4150
+         ->  Hash Join  (cost=3396.59..10523.43 rows=5640 width=38) (actual time=30.757..61.683 rows=7593 loops=3)
+               Hash Cond: (e.id_etablissement = t.id_etablissement)
+               Buffers: shared hit=2962 read=4150
+               ->  Parallel Seq Scan on dim_etablissement e  (cost=0.00..6671.11 rows=173611 width=30) (actual time=0.298..14.028 rows=138889 loops=3)
+                     Buffers: shared hit=864 read=4071
+               ->  Hash  (cost=3227.38..3227.38 rows=13537 width=12) (actual time=29.987..29.989 rows=22778 loops=3)
+                     Buckets: 32768 (originally 16384)  Batches: 1 (originally 1)  Memory Usage: 1235kB
+                     Buffers: shared hit=2092 read=79
+                     ->  Subquery Scan on t  (cost=2956.64..3227.38 rows=13537 width=12) (actual time=23.223..27.469 rows=22778 loops=3)
+                           Buffers: shared hit=2092 read=79
+                           ->  HashAggregate  (cost=2956.64..3092.01 rows=13537 width=12) (actual time=23.221..26.361 rows=22778 loops=3)
+                                 Group Key: fait_consultation.id_etablissement
+                                 Batches: 1  Memory Usage: 2577kB
+                                 Buffers: shared hit=2092 read=79
+                                 Worker 0:  Batches: 1  Memory Usage: 2577kB
+                                 Worker 1:  Batches: 1  Memory Usage: 2577kB
+                                 ->  Index Scan using ix_consult_temps on fait_consultation  (cost=0.42..2545.40 rows=82248 width=4) (actual time=0.179..9.620 rows=87497 loops=3)
+                                       Index Cond: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                       Buffers: shared hit=2092 read=79
+ Planning:
+   Buffers: shared hit=196
+ Planning Time: 4.714 ms
+ Execution Time: 98.800 ms
+(29 rows)
+

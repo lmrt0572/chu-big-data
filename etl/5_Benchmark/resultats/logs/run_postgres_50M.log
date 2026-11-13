@@ -1,0 +1,103 @@
+2026-11-05 13:44:06 creation du palier v50
+valeurs distinctes : professionnels 201735 , établissements 55340 , diagnostics 15487 , patients 100000 , dates 2602
+  lignes  | couples_etab_date | professionnels | pct_rattachees | pct_2019 | taille  
+----------+-------------------+----------------+----------------+----------+---------
+ 51357850 |          27348090 |         201735 |          63.87 |    12.81 | 2951 MB
+(1 ligne)
+
+2026-11-05 13:57:32 F2 sur v50
+2026-11-05 13:57:33 palier v50, état sans_index : pose des index
+2026-11-05 13:57:46 F2 B1_50M_sans_index essai 1/4
+2026-11-05 13:57:50 F2 B1_50M_sans_index essai 2/4
+2026-11-05 13:57:55 F2 B1_50M_sans_index essai 3/4
+2026-11-05 13:57:59 F2 B1_50M_sans_index essai 4/4
+2026-11-05 13:58:07 F2 B2_50M_sans_index essai 1/4
+2026-11-05 13:58:11 F2 B2_50M_sans_index essai 2/4
+2026-11-05 13:58:15 F2 B2_50M_sans_index essai 3/4
+2026-11-05 13:58:18 F2 B2_50M_sans_index essai 4/4
+2026-11-05 13:58:29 F2 B6_50M_sans_index essai 1/4
+2026-11-05 13:58:36 F2 B6_50M_sans_index essai 2/4
+2026-11-05 13:58:43 F2 B6_50M_sans_index essai 3/4
+2026-11-05 13:58:50 F2 B6_50M_sans_index essai 4/4
+2026-11-05 13:58:59 palier v50, état btree : pose des index
+2026-11-05 14:03:00 F2 B1_50M_btree essai 1/4
+2026-11-05 14:03:05 F2 B1_50M_btree essai 2/4
+2026-11-05 14:03:10 F2 B1_50M_btree essai 3/4
+2026-11-05 14:03:14 F2 B1_50M_btree essai 4/4
+2026-11-05 14:03:23 F2 B2_50M_btree essai 1/4
+2026-11-05 14:03:27 F2 B2_50M_btree essai 2/4
+2026-11-05 14:03:32 F2 B2_50M_btree essai 3/4
+2026-11-05 14:03:36 F2 B2_50M_btree essai 4/4
+2026-11-05 14:03:46 F2 B6_50M_btree essai 1/4
+2026-11-05 14:03:53 F2 B6_50M_btree essai 2/4
+2026-11-05 14:03:59 F2 B6_50M_btree essai 3/4
+2026-11-05 14:04:06 F2 B6_50M_btree essai 4/4
+2026-11-05 14:04:13 palier v50, état couvrant : pose des index
+2026-11-05 14:10:15 F2 B1_50M_couvrant essai 1/4
+2026-11-05 14:10:17 F2 B1_50M_couvrant essai 2/4
+2026-11-05 14:10:18 F2 B1_50M_couvrant essai 3/4
+2026-11-05 14:10:20 F2 B1_50M_couvrant essai 4/4
+2026-11-05 14:10:23 F2 B2_50M_couvrant essai 1/4
+2026-11-05 14:10:24 F2 B2_50M_couvrant essai 2/4
+2026-11-05 14:10:25 F2 B2_50M_couvrant essai 3/4
+2026-11-05 14:10:27 F2 B2_50M_couvrant essai 4/4
+2026-11-05 14:10:35 F2 B6_50M_couvrant essai 1/4
+2026-11-05 14:10:43 F2 B6_50M_couvrant essai 2/4
+2026-11-05 14:10:51 F2 B6_50M_couvrant essai 3/4
+2026-11-05 14:10:58 F2 B6_50M_couvrant essai 4/4
+2026-11-05 14:11:06 fin F2
+2026-11-05 14:11:06 work_mem 64MB sur v10 et v50
+2026-11-05 14:11:07 palier v10, état sans_index : pose des index
+2026-11-05 14:11:15 F2 B1_10M_sans_index_wm64MB essai 1/4
+2026-11-05 14:11:17 F2 B1_10M_sans_index_wm64MB essai 2/4
+2026-11-05 14:11:18 F2 B1_10M_sans_index_wm64MB essai 3/4
+2026-11-05 14:11:19 F2 B1_10M_sans_index_wm64MB essai 4/4
+2026-11-05 14:11:22 F2 B2_10M_sans_index_wm64MB essai 1/4
+2026-11-05 14:11:23 F2 B2_10M_sans_index_wm64MB essai 2/4
+2026-11-05 14:11:24 F2 B2_10M_sans_index_wm64MB essai 3/4
+2026-11-05 14:11:25 F2 B2_10M_sans_index_wm64MB essai 4/4
+2026-11-05 14:11:27 F2 B6_10M_sans_index_wm64MB essai 1/4
+2026-11-05 14:11:29 F2 B6_10M_sans_index_wm64MB essai 2/4
+2026-11-05 14:11:30 F2 B6_10M_sans_index_wm64MB essai 3/4
+2026-11-05 14:11:32 F2 B6_10M_sans_index_wm64MB essai 4/4
+2026-11-05 14:11:33 palier v10, état couvrant : pose des index
+2026-11-05 14:12:40 F2 B1_10M_couvrant_wm64MB essai 1/4
+2026-11-05 14:12:41 F2 B1_10M_couvrant_wm64MB essai 2/4
+2026-11-05 14:12:42 F2 B1_10M_couvrant_wm64MB essai 3/4
+2026-11-05 14:12:43 F2 B1_10M_couvrant_wm64MB essai 4/4
+2026-11-05 14:12:44 F2 B2_10M_couvrant_wm64MB essai 1/4
+2026-11-05 14:12:45 F2 B2_10M_couvrant_wm64MB essai 2/4
+2026-11-05 14:12:46 F2 B2_10M_couvrant_wm64MB essai 3/4
+2026-11-05 14:12:46 F2 B2_10M_couvrant_wm64MB essai 4/4
+2026-11-05 14:12:49 F2 B6_10M_couvrant_wm64MB essai 1/4
+2026-11-05 14:12:51 F2 B6_10M_couvrant_wm64MB essai 2/4
+2026-11-05 14:12:53 F2 B6_10M_couvrant_wm64MB essai 3/4
+2026-11-05 14:12:55 F2 B6_10M_couvrant_wm64MB essai 4/4
+2026-11-05 14:12:57 palier v50, état sans_index : pose des index
+2026-11-05 14:13:08 F2 B1_50M_sans_index_wm64MB essai 1/4
+2026-11-05 14:13:12 F2 B1_50M_sans_index_wm64MB essai 2/4
+2026-11-05 14:13:16 F2 B1_50M_sans_index_wm64MB essai 3/4
+2026-11-05 14:13:19 F2 B1_50M_sans_index_wm64MB essai 4/4
+2026-11-05 14:13:25 F2 B2_50M_sans_index_wm64MB essai 1/4
+2026-11-05 14:13:28 F2 B2_50M_sans_index_wm64MB essai 2/4
+2026-11-05 14:13:31 F2 B2_50M_sans_index_wm64MB essai 3/4
+2026-11-05 14:13:34 F2 B2_50M_sans_index_wm64MB essai 4/4
+2026-11-05 14:13:43 F2 B6_50M_sans_index_wm64MB essai 1/4
+2026-11-05 14:13:49 F2 B6_50M_sans_index_wm64MB essai 2/4
+2026-11-05 14:13:55 F2 B6_50M_sans_index_wm64MB essai 3/4
+2026-11-05 14:14:01 F2 B6_50M_sans_index_wm64MB essai 4/4
+2026-11-05 14:14:07 palier v50, état couvrant : pose des index
+2026-11-05 14:21:47 F2 B1_50M_couvrant_wm64MB essai 1/4
+2026-11-05 14:21:49 F2 B1_50M_couvrant_wm64MB essai 2/4
+2026-11-05 14:21:51 F2 B1_50M_couvrant_wm64MB essai 3/4
+2026-11-05 14:21:53 F2 B1_50M_couvrant_wm64MB essai 4/4
+2026-11-05 14:21:56 F2 B2_50M_couvrant_wm64MB essai 1/4
+2026-11-05 14:21:57 F2 B2_50M_couvrant_wm64MB essai 2/4
+2026-11-05 14:21:59 F2 B2_50M_couvrant_wm64MB essai 3/4
+2026-11-05 14:22:00 F2 B2_50M_couvrant_wm64MB essai 4/4
+2026-11-05 14:22:04 F2 B6_50M_couvrant_wm64MB essai 1/4
+2026-11-05 14:22:07 F2 B6_50M_couvrant_wm64MB essai 2/4
+2026-11-05 14:22:10 F2 B6_50M_couvrant_wm64MB essai 3/4
+2026-11-05 14:22:13 F2 B6_50M_couvrant_wm64MB essai 4/4
+2026-11-05 14:22:16 fin F2
+C:              476G  461G   16G  97% /c

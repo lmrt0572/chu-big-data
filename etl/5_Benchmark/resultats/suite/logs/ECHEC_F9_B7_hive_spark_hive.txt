@@ -1,0 +1,17 @@
+
+Logging initialized using configuration in jar:file:/usr/lib/hive/lib/hive-common-1.1.0-cdh5.12.0.jar!/hive-log4j.properties
+Query ID = cloudera_20261030212020_277aa3c7-1b0f-408e-bf40-f574cc4ef61a
+Total jobs = 1
+Launching Job 1 out of 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Spark Job = 6757552a-7042-4b02-b8dd-6c50a5ec95f7
+Job hasn't been submitted after 61s. Aborting it.
+Possible reasons include network issues, errors in remote driver or the cluster has no available resources, etc.
+Please check YARN or Spark driver's logs for further information.
+Status: SENT
+FAILED: Execution Error, return code 2 from org.apache.hadoop.hive.ql.exec.spark.SparkTask

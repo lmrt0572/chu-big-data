@@ -1,0 +1,8 @@
+-- Famille F1b Granularité des partitions (année, mois, jour), test mars_annee (voir README_Benchmark.md).
+-- Décès de mars 2019 par région, sur les décès partitionnés par annee.
+-- Une question sur un seul mois : ici, des partitions plus fines permettent de lire moins de données.
+SELECT r.code_region, r.libelle_region, SUM(f.nb_deces) AS deces_mars_2019
+FROM bench.deces_p_annee f
+JOIN gold.dim_region r ON f.id_region = r.id_region
+WHERE f.annee_deces = 2019 AND f.id_temps BETWEEN 20190301 AND 20190331
+GROUP BY r.code_region, r.libelle_region;

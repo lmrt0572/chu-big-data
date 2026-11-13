@@ -1,0 +1,215 @@
+
+Logging initialized using configuration in jar:file:/usr/lib/hive/lib/hive-common-1.1.0-cdh5.12.0.jar!/hive-log4j.properties
+OK
+Time taken: 2.95 seconds
+OK
+Time taken: 0.558 seconds
+OK
+Time taken: 0.416 seconds
+Query ID = cloudera_20261104114646_8ac610fa-493e-46e2-b332-8f33928d4fae
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793786249725_0291, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793786249725_0291/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793786249725_0291
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2026-11-04 11:47:06,255 Stage-1 map = 0%,  reduce = 0%
+2026-11-04 11:47:17,898 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 4.67 sec
+MapReduce Total cumulative CPU time: 4 seconds 670 msec
+Ended Job = job_1793786249725_0291
+Stage-4 is selected by condition resolver.
+Stage-3 is filtered out by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/copies/.hive-staging_hive_2026-11-04_11-46-50_248_3135630903827119955-1/-ext-10000
+Loading data to table bench.copies
+Table bench.copies stats: [numFiles=1, numRows=100, totalSize=605, rawDataSize=100]
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1   Cumulative CPU: 4.67 sec   HDFS Read: 3880 HDFS Write: 675 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 670 msec
+OK
+Time taken: 30.368 seconds
+OK
+Time taken: 0.135 seconds
+Warning: Map Join MAPJOIN[9][bigTable=f] in task 'Stage-4:MAPRED' is a cross product
+Query ID = cloudera_20261104114747_1ad9408b-132d-4c2d-973b-d10690e73f3f
+Total jobs = 1
+2026-11-04 11:47:21	Starting to launch local task to process map join;	maximum memory = 716177408
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/lib/parquet/lib/parquet-pig-bundle-1.5.0-cdh5.12.0.jar!/shaded/parquet/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/lib/parquet/lib/parquet-hadoop-bundle-1.5.0-cdh5.12.0.jar!/shaded/parquet/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/lib/parquet/lib/parquet-format-2.1.0-cdh5.12.0.jar!/shaded/parquet/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/lib/hive/lib/hive-exec-1.1.0-cdh5.12.0.jar!/shaded/parquet/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/lib/hive/lib/hive-jdbc-1.1.0-cdh5.12.0-standalone.jar!/shaded/parquet/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [shaded.parquet.org.slf4j.helpers.NOPLoggerFactory]
+2026-11-04 11:47:22	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/cloudera/a47648be-0482-4d22-b420-2bb946133d55/hive_2026-11-04_11-47-20_758_8625546492152226880-1/-local-10003/HashTable-Stage-4/MapJoin-mapfile01--.hashtable
+2026-11-04 11:47:22	Uploaded 1 File to: file:/tmp/cloudera/a47648be-0482-4d22-b420-2bb946133d55/hive_2026-11-04_11-47-20_758_8625546492152226880-1/-local-10003/HashTable-Stage-4/MapJoin-mapfile01--.hashtable (278 bytes)
+2026-11-04 11:47:22	End of local task; Time Taken: 1.245 sec.
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793786249725_0292, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793786249725_0292/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793786249725_0292
+Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 0
+2026-11-04 11:47:34,757 Stage-4 map = 0%,  reduce = 0%
+2026-11-04 11:48:09,201 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 27.42 sec
+MapReduce Total cumulative CPU time: 27 seconds 420 msec
+Ended Job = job_1793786249725_0292
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/consult_x1
+Table bench.consult_x1 stats: [numFiles=1, numRows=1027157, totalSize=14748828, rawDataSize=6162942]
+MapReduce Jobs Launched: 
+Stage-Stage-4: Map: 1   Cumulative CPU: 27.42 sec   HDFS Read: 14758090 HDFS Write: 14748910 SUCCESS
+Total MapReduce CPU Time Spent: 27 seconds 420 msec
+OK
+Time taken: 49.87 seconds
+OK
+Time taken: 0.079 seconds
+Warning: Map Join MAPJOIN[9][bigTable=f] in task 'Stage-4:MAPRED' is a cross product
+Query ID = cloudera_20261104114848_0a092cbf-622b-4551-827a-623d9c972564
+Total jobs = 1
+2026-11-04 11:48:10	Starting to launch local task to process map join;	maximum memory = 716177408
+2026-11-04 11:48:10	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/cloudera/a47648be-0482-4d22-b420-2bb946133d55/hive_2026-11-04_11-48-10_715_7341119019128936720-1/-local-10003/HashTable-Stage-4/MapJoin-mapfile11--.hashtable
+2026-11-04 11:48:10	Uploaded 1 File to: file:/tmp/cloudera/a47648be-0482-4d22-b420-2bb946133d55/hive_2026-11-04_11-48-10_715_7341119019128936720-1/-local-10003/HashTable-Stage-4/MapJoin-mapfile11--.hashtable (332 bytes)
+2026-11-04 11:48:10	End of local task; Time Taken: 0.036 sec.
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793786249725_0293, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793786249725_0293/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793786249725_0293
+Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 0
+2026-11-04 11:48:23,297 Stage-4 map = 0%,  reduce = 0%
+2026-11-04 11:49:23,820 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 50.03 sec
+2026-11-04 11:50:24,010 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 110.98 sec
+2026-11-04 11:51:23,153 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 174.72 sec
+MapReduce Total cumulative CPU time: 2 minutes 54 seconds 720 msec
+Ended Job = job_1793786249725_0293
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/consult_x10
+Table bench.consult_x10 stats: [numFiles=1, numRows=10271570, totalSize=56013543, rawDataSize=61629420]
+MapReduce Jobs Launched: 
+Stage-Stage-4: Map: 1   Cumulative CPU: 174.72 sec   HDFS Read: 14758257 HDFS Write: 56013628 SUCCESS
+Total MapReduce CPU Time Spent: 2 minutes 54 seconds 720 msec
+OK
+Time taken: 193.899 seconds
+OK
+Time taken: 0.064 seconds
+Warning: Map Join MAPJOIN[7][bigTable=f] in task 'Stage-4:MAPRED' is a cross product
+Query ID = cloudera_20261104115151_bcaa4983-bd4f-4966-9ac7-2b55e093099e
+Total jobs = 1
+2026-11-04 11:51:24	Starting to launch local task to process map join;	maximum memory = 716177408
+2026-11-04 11:51:24	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/cloudera/a47648be-0482-4d22-b420-2bb946133d55/hive_2026-11-04_11-51-24_685_470346658209068705-1/-local-10003/HashTable-Stage-4/MapJoin-mapfile21--.hashtable
+2026-11-04 11:51:24	Uploaded 1 File to: file:/tmp/cloudera/a47648be-0482-4d22-b420-2bb946133d55/hive_2026-11-04_11-51-24_685_470346658209068705-1/-local-10003/HashTable-Stage-4/MapJoin-mapfile21--.hashtable (875 bytes)
+2026-11-04 11:51:24	End of local task; Time Taken: 0.038 sec.
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793786249725_0294, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793786249725_0294/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793786249725_0294
+Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 0
+2026-11-04 11:51:36,903 Stage-4 map = 0%,  reduce = 0%
+2026-11-04 11:52:37,221 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 49.91 sec
+2026-11-04 11:53:37,401 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 111.06 sec
+2026-11-04 11:54:37,557 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 172.03 sec
+2026-11-04 11:55:37,665 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 232.87 sec
+2026-11-04 11:56:37,716 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 293.78 sec
+2026-11-04 11:57:38,746 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 354.5 sec
+2026-11-04 11:58:38,783 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 415.13 sec
+2026-11-04 11:59:38,889 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 475.84 sec
+2026-11-04 12:00:38,980 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 537.27 sec
+2026-11-04 12:01:39,196 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 597.93 sec
+2026-11-04 12:02:39,227 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 658.6 sec
+2026-11-04 12:03:40,266 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 719.21 sec
+2026-11-04 12:04:40,518 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 779.89 sec
+2026-11-04 12:05:41,525 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 840.65 sec
+2026-11-04 12:06:42,521 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 901.42 sec
+2026-11-04 12:07:43,478 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 961.98 sec
+2026-11-04 12:08:44,478 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1023.03 sec
+2026-11-04 12:09:45,440 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1089.68 sec
+2026-11-04 12:10:45,473 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1150.36 sec
+2026-11-04 12:11:46,472 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1211.12 sec
+2026-11-04 12:12:47,491 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1271.75 sec
+2026-11-04 12:13:48,502 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1332.53 sec
+2026-11-04 12:14:48,565 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1393.26 sec
+2026-11-04 12:15:49,586 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1453.95 sec
+2026-11-04 12:16:50,600 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1514.79 sec
+2026-11-04 12:17:50,644 Stage-4 map = 0%,  reduce = 0%, Cumulative CPU 1575.5 sec
+2026-11-04 12:18:38,137 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 1626.28 sec
+MapReduce Total cumulative CPU time: 27 minutes 6 seconds 280 msec
+Ended Job = job_1793786249725_0294
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/consult_x100
+Table bench.consult_x100 stats: [numFiles=1, numRows=102715700, totalSize=441397906, rawDataSize=616294200]
+MapReduce Jobs Launched: 
+Stage-Stage-4: Map: 1   Cumulative CPU: 1626.28 sec   HDFS Read: 14758380 HDFS Write: 441397994 SUCCESS
+Total MapReduce CPU Time Spent: 27 minutes 6 seconds 280 msec
+OK
+Time taken: 1634.985 seconds
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html#release for an explanation.
+Nov 4, 2026 11:47:21 AM WARNING: parquet.hadoop.ParquetRecordReader: Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+Nov 4, 2026 11:47:22 AM INFO: parquet.hadoop.InternalParquetRecordReader: RecordReader initialized will read a total of 100 records.
+Nov 4, 2026 11:47:22 AM INFO: parquet.hadoop.InternalParquetRecordReader: at row 0. reading next block
+Nov 4, 2026 11:47:22 AM INFO: parquet.hadoop.InternalParquetRecordReader: block read in memory in 62 ms. row count = 100
+Nov 4, 2026 11:48:10 AM WARNING: parquet.hadoop.ParquetRecordReader: Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+Nov 4, 2026 11:48:10 AM INFO: parquet.hadoop.InternalParquetRecordReader: RecordReader initialized will read a total of 100 records.
+Nov 4, 2026 11:48:10 AM INFO: parquet.hadoop.InternalParquetRecordReader: at row 0. reading next block
+Nov 4, 2026 11:48:10 AM INFO: parquet.hadoop.InternalParquetRecordReader: block read in memory in 2 ms. row count = 100
+Nov 4, 2026 11:51:24 AM WARNING: parquet.hadoop.ParquetRecordReader: Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl
+Nov 4, 2026 11:51:24 AM INFO: parquet.hadoop.InternalParquetRecordReader: RecordReader initialized will read a total of 100 records.
+Nov 4, 2026 11:51:24 AM INFO: parquet.hadoop.InternalParquetRecordReader: at row 0. reading next block
+Nov 4, 2026 11:51:24 AM INFO: parquet.hadoop.InternalParquetRecordReader: block read in memory in 1 ms. row count = 100
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.consult_x1
+Query submitted at: 2026-11-04 12:18:40 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c45fe2f6c0ef912:9a6198500000000
+
+Fetched 0 row(s) in 0.22s
+Query: compute STATS bench.consult_x1
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 6 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 7.40s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.consult_x10
+Query submitted at: 2026-11-04 12:18:48 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=93484181b9eb350f:4dbc262200000000
+
+Fetched 0 row(s) in 0.05s
+Query: compute STATS bench.consult_x10
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 6 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 4.05s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.consult_x100
+Query submitted at: 2026-11-04 12:18:52 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=8947b83612ea6397:4779295500000000
+
+Fetched 0 row(s) in 0.04s
+Query: compute STATS bench.consult_x100
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 6 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 5.39s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.copies
+Query submitted at: 2026-11-04 12:18:58 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=14988d07b4877e6:6340f0d400000000
+
+Fetched 0 row(s) in 0.04s
+Query: compute STATS bench.copies
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 1 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 3.26s

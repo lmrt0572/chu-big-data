@@ -1,0 +1,25 @@
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop  (cost=1977.34..1977.40 rows=1 width=48) (actual time=10.666..10.669 rows=1 loops=1)
+   Buffers: shared hit=462 read=2
+   ->  Aggregate  (cost=34.33..34.34 rows=1 width=8) (actual time=0.564..0.565 rows=1 loops=1)
+         Buffers: shared hit=19 read=2
+         ->  Bitmap Heap Scan on fait_hospitalisation  (cost=11.99..33.42 rows=362 width=4) (actual time=0.379..0.465 rows=374 loops=1)
+               Recheck Cond: ((id_temps_admission >= 20190101) AND (id_temps_admission <= 20191231))
+               Heap Blocks: exact=16
+               Buffers: shared hit=16 read=2
+               ->  Bitmap Index Scan on ix_hosp_temps  (cost=0.00..11.90 rows=362 width=0) (actual time=0.364..0.365 rows=374 loops=1)
+                     Index Cond: ((id_temps_admission >= 20190101) AND (id_temps_admission <= 20191231))
+                     Buffers: shared read=2
+   ->  Aggregate  (cost=1943.01..1943.02 rows=1 width=8) (actual time=10.079..10.080 rows=1 loops=1)
+         Buffers: shared hit=443
+         ->  Seq Scan on dim_patient  (cost=0.00..1693.01 rows=100000 width=0) (actual time=0.014..6.882 rows=100000 loops=1)
+               Filter: (id_patient <> '-1'::integer)
+               Rows Removed by Filter: 1
+               Buffers: shared hit=443
+ Planning:
+   Buffers: shared hit=131
+ Planning Time: 3.871 ms
+ Execution Time: 10.840 ms
+(21 rows)
+

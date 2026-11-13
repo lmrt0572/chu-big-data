@@ -1,0 +1,22 @@
+                                                          QUERY PLAN                                                           
+-------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop  (cost=1997.10..1997.16 rows=1 width=48) (actual time=14.325..14.327 rows=1 loops=1)
+   Buffers: shared hit=3 read=459
+   ->  Aggregate  (cost=54.09..54.10 rows=1 width=8) (actual time=0.485..0.486 rows=1 loops=1)
+         Buffers: shared hit=3 read=16
+         ->  Seq Scan on fait_hospitalisation  (cost=0.00..53.18 rows=362 width=4) (actual time=0.077..0.402 rows=374 loops=1)
+               Filter: ((id_temps_admission >= 20190101) AND (id_temps_admission <= 20191231))
+               Rows Removed by Filter: 2105
+               Buffers: shared read=16
+   ->  Aggregate  (cost=1943.01..1943.02 rows=1 width=8) (actual time=13.820..13.820 rows=1 loops=1)
+         Buffers: shared read=443
+         ->  Seq Scan on dim_patient  (cost=0.00..1693.01 rows=100000 width=0) (actual time=0.022..10.323 rows=100000 loops=1)
+               Filter: (id_patient <> '-1'::integer)
+               Rows Removed by Filter: 1
+               Buffers: shared read=443
+ Planning:
+   Buffers: shared hit=48
+ Planning Time: 2.110 ms
+ Execution Time: 14.474 ms
+(18 rows)
+

@@ -1,0 +1,51 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- B6 sur bench.consult_v50 (50M de consultations, palier de volume réaliste). Même requête que F2 B6 dans PostgreSQL :
+-- la jointure avec les professionnels porte sur toutes les consultations de 2019, avant le regroupement.
+EXPLAIN
+SELECT p.id_professionnel, p.specialite, COUNT(*) AS nb_consultations
+FROM bench.consult_v50 f
+JOIN gold.dim_professionnel p ON f.id_professionnel = p.id_professionnel
+WHERE f.id_temps BETWEEN 20190101 AND 20191231
+GROUP BY p.id_professionnel, p.specialite
+ORDER BY nb_consultations DESC, id_professionnel
+LIMIT 20
+Query submitted at: 2026-10-30 18:26:18 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=804b025e1115e1fa:5e4a6e3e00000000
+Per-Host Resource Reservation: Memory=400.00MB
+Per-Host Resource Estimates: Memory=665.10MB
+""
+PLAN-ROOT SINK
+|
+08:MERGING-EXCHANGE [UNPARTITIONED]
+|  order by: count(*) DESC, p.id_professionnel ASC
+|  limit: 20
+|
+04:TOP-N [LIMIT=20]
+|  order by: count(*) DESC, p.id_professionnel ASC
+|
+07:AGGREGATE [FINALIZE]
+|  output: count:merge(*)
+|  group by: p.id_professionnel, p.specialite
+|
+06:EXCHANGE [HASH(p.id_professionnel,p.specialite)]
+|
+03:AGGREGATE [STREAMING]
+|  output: count(*)
+|  group by: p.id_professionnel, p.specialite
+|
+02:HASH JOIN [INNER JOIN, BROADCAST]
+|  hash predicates: f.id_professionnel = p.id_professionnel
+|  runtime filters: RF000 <- p.id_professionnel
+|
+|--05:EXCHANGE [BROADCAST]
+|  |
+|  01:SCAN HDFS [gold.dim_professionnel p]
+|     partitions=1/1 files=2 size=9.78MB
+|
+00:SCAN HDFS [bench.consult_v50 f]
+   partitions=1/1 files=4 size=799.36MB
+   predicates: f.id_temps <= 20191231, f.id_temps >= 20190101
+   runtime filters: RF000 -> f.id_professionnel
+Fetched 35 row(s) in 0.03s

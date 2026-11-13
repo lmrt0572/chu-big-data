@@ -1,0 +1,26 @@
+# Données : le dépôt ne contient aucune donnée, même pseudonymisée
+*.tsv
+*.tar.gz
+*.pbix
+*.parquet
+*.sha256
+
+# Secrets
+chu_secrets/
+*.properties
+.env
+Postgres.txt
+
+# Archives. Seul l'export Talend des jobs est gardé
+*.zip
+!etl/1_Bronze/talend/jobs_talend_J01_J04.zip
+
+# Sorties brutes des requêtes du benchmark (les résultats utiles sont dans les CSV, graphiques et plans)
+etl/5_Benchmark/resultats/**/sortie_*
+
+# Fichiers de travail
+~$*
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store

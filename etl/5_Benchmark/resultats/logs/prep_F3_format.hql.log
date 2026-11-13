@@ -1,0 +1,102 @@
+
+Logging initialized using configuration in jar:file:/usr/lib/hive/lib/hive-common-1.1.0-cdh5.12.0.jar!/hive-log4j.properties
+OK
+Time taken: 3.067 seconds
+OK
+Time taken: 0.173 seconds
+Query ID = cloudera_20261104094848_5ebc6284-5d8f-4c53-b86c-14275c578596
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793786249725_0196, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793786249725_0196/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793786249725_0196
+Hadoop job information for Stage-1: number of mappers: 5; number of reducers: 0
+2026-11-04 09:48:52,018 Stage-1 map = 0%,  reduce = 0%
+2026-11-04 09:49:52,430 Stage-1 map = 0%,  reduce = 0%, Cumulative CPU 101.15 sec
+2026-11-04 09:50:03,015 Stage-1 map = 20%,  reduce = 0%, Cumulative CPU 126.36 sec
+2026-11-04 09:50:52,009 Stage-1 map = 30%,  reduce = 0%, Cumulative CPU 226.15 sec
+2026-11-04 09:50:53,057 Stage-1 map = 40%,  reduce = 0%, Cumulative CPU 227.63 sec
+2026-11-04 09:51:53,668 Stage-1 map = 40%,  reduce = 0%, Cumulative CPU 328.55 sec
+2026-11-04 09:52:01,050 Stage-1 map = 60%,  reduce = 0%, Cumulative CPU 353.77 sec
+2026-11-04 09:52:46,878 Stage-1 map = 70%,  reduce = 0%, Cumulative CPU 444.7 sec
+2026-11-04 09:52:47,930 Stage-1 map = 80%,  reduce = 0%, Cumulative CPU 449.38 sec
+2026-11-04 09:53:35,114 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 494.42 sec
+MapReduce Total cumulative CPU time: 8 minutes 14 seconds 420 msec
+Ended Job = job_1793786249725_0196
+Stage-4 is selected by condition resolver.
+Stage-3 is filtered out by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/.hive-staging_hive_2026-11-04_09-48-33_242_5293325217804386795-1/-ext-10001
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/deces_texte
+Table bench.deces_texte stats: [numFiles=5, numRows=25088208, totalSize=1178650196, rawDataSize=1153561988]
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 5   Cumulative CPU: 494.42 sec   HDFS Read: 1179193284 HDFS Write: 1178650621 SUCCESS
+Total MapReduce CPU Time Spent: 8 minutes 14 seconds 420 msec
+OK
+Time taken: 304.957 seconds
+OK
+Time taken: 0.037 seconds
+Query ID = cloudera_20261104095353_9a8051d1-2a8e-4a0a-b962-013cc7e04cd5
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793786249725_0197, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793786249725_0197/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793786249725_0197
+Hadoop job information for Stage-1: number of mappers: 5; number of reducers: 0
+2026-11-04 09:53:55,328 Stage-1 map = 0%,  reduce = 0%
+2026-11-04 09:54:56,239 Stage-1 map = 0%,  reduce = 0%, Cumulative CPU 97.59 sec
+2026-11-04 09:55:18,384 Stage-1 map = 20%,  reduce = 0%, Cumulative CPU 146.27 sec
+2026-11-04 09:56:18,765 Stage-1 map = 20%,  reduce = 0%, Cumulative CPU 267.27 sec
+2026-11-04 09:56:23,064 Stage-1 map = 30%,  reduce = 0%, Cumulative CPU 270.53 sec
+2026-11-04 09:56:25,158 Stage-1 map = 40%,  reduce = 0%, Cumulative CPU 275.19 sec
+2026-11-04 09:57:25,665 Stage-1 map = 40%,  reduce = 0%, Cumulative CPU 373.39 sec
+2026-11-04 09:57:41,361 Stage-1 map = 50%,  reduce = 0%, Cumulative CPU 410.04 sec
+2026-11-04 09:57:47,725 Stage-1 map = 60%,  reduce = 0%, Cumulative CPU 421.8 sec
+2026-11-04 09:58:46,751 Stage-1 map = 70%,  reduce = 0%, Cumulative CPU 534.89 sec
+2026-11-04 09:58:47,873 Stage-1 map = 80%,  reduce = 0%, Cumulative CPU 538.23 sec
+2026-11-04 09:59:46,094 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 590.39 sec
+MapReduce Total cumulative CPU time: 9 minutes 50 seconds 390 msec
+Ended Job = job_1793786249725_0197
+Stage-4 is selected by condition resolver.
+Stage-3 is filtered out by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/.hive-staging_hive_2026-11-04_09-53-38_246_5618757161047875620-1/-ext-10001
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/deces_parquet
+Table bench.deces_parquet stats: [numFiles=5, numRows=25088208, totalSize=549390675, rawDataSize=125441040]
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 5   Cumulative CPU: 590.39 sec   HDFS Read: 1179193859 HDFS Write: 549391105 SUCCESS
+Total MapReduce CPU Time Spent: 9 minutes 50 seconds 390 msec
+OK
+Time taken: 369.607 seconds
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html#release for an explanation.
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.deces_parquet
+Query submitted at: 2026-11-04 09:59:48 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=424e9727e99e55e9:2fa60f9800000000
+
+Fetched 0 row(s) in 0.18s
+Query: compute STATS bench.deces_parquet
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 5 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 11.35s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.deces_texte
+Query submitted at: 2026-11-04 10:00:00 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1345112d039e8e48:64259a8b00000000
+
+Fetched 0 row(s) in 0.07s
+Query: compute STATS bench.deces_texte
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 5 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 21.02s

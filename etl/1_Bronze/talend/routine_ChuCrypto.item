@@ -1,0 +1,47 @@
+package routines;
+
+import java.nio.charset.StandardCharsets;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+
+/*
+ * Routine Talend de la couche Bronze.
+ * Une même valeur et une même clé donnent toujours le même résultat,
+ * ce qui garde les jointures possibles entre les sources.
+ */
+public class ChuCrypto {
+
+    private static final String HEXA = "0123456789abcdef";
+
+    /* Remplace une valeur par un pseudonyme de 64 caractères (règle R04). */
+    public static String hmac(String valeur, String cle) {
+        try {
+            Mac mac = Mac.getInstance("HmacSHA256");
+            mac.init(new SecretKeySpec(cle.getBytes(StandardCharsets.UTF_8), "HmacSHA256"));
+            byte[] octets = mac.doFinal(valeur.getBytes(StandardCharsets.UTF_8));
+            StringBuilder resultat = new StringBuilder(64);
+            for (byte octet : octets) {
+                resultat.append(HEXA.charAt((octet >> 4) & 0xf));
+                resultat.append(HEXA.charAt(octet & 0xf));
+            }
+            return resultat.toString();
+        } catch (Exception e) {
+            throw new RuntimeException("Calcul du HMAC impossible", e);
+        }
+    }
+
+    /* Résume une ligne de décès en 16 caractères, pour repérer les vrais doublons sans garder les noms. */
+    public static String empreinteLigne(String cle, String... colonnes) {
+        StringBuilder ligne = new StringBuilder();
+        for (int i = 0; i < colonnes.length; i++) {
+            if (i > 0) {
+                ligne.append('|');
+            }
+            if (colonnes[i] != null) {
+                ligne.append(colonnes[i]);
+            }
+        }
+        return hmac(ligne.toString(), cle).substring(0, 16);
+    }
+}

@@ -1,0 +1,53 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- B6 sur des copies sans statistiques des consultations et des professionnels (comparer à F4 B6, sur le Gold).
+-- Le second critère de tri rend le résultat identique d'un moteur à l'autre en cas d'égalité.
+EXPLAIN
+SELECT p.id_professionnel, p.specialite, COUNT(*) AS nb_consultations
+FROM bench.consult_sans_stats f
+JOIN bench.prof_sans_stats p ON f.id_professionnel = p.id_professionnel
+WHERE f.id_temps BETWEEN 20190101 AND 20191231
+GROUP BY p.id_professionnel, p.specialite
+ORDER BY nb_consultations DESC, id_professionnel
+LIMIT 20
+Query submitted at: 2026-10-30 18:56:56 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a640aae3f9d4d16f:25b60bbe00000000
+Per-Host Resource Reservation: Memory=400.00MB
+Per-Host Resource Estimates: Memory=2.31GB
+WARNING: The following tables are missing relevant table and/or column statistics.
+bench.consult_sans_stats, bench.prof_sans_stats
+""
+PLAN-ROOT SINK
+|
+08:MERGING-EXCHANGE [UNPARTITIONED]
+|  order by: count(*) DESC, p.id_professionnel ASC
+|  limit: 20
+|
+04:TOP-N [LIMIT=20]
+|  order by: count(*) DESC, p.id_professionnel ASC
+|
+07:AGGREGATE [FINALIZE]
+|  output: count:merge(*)
+|  group by: p.id_professionnel, p.specialite
+|
+06:EXCHANGE [HASH(p.id_professionnel,p.specialite)]
+|
+03:AGGREGATE [STREAMING]
+|  output: count(*)
+|  group by: p.id_professionnel, p.specialite
+|
+02:HASH JOIN [INNER JOIN, BROADCAST]
+|  hash predicates: f.id_professionnel = p.id_professionnel
+|  runtime filters: RF000 <- p.id_professionnel
+|
+|--05:EXCHANGE [BROADCAST]
+|  |
+|  01:SCAN HDFS [bench.prof_sans_stats p]
+|     partitions=1/1 files=1 size=9.79MB
+|
+00:SCAN HDFS [bench.consult_sans_stats f]
+   partitions=1/1 files=1 size=16.67MB
+   predicates: f.id_temps <= 20191231, f.id_temps >= 20190101
+   runtime filters: RF000 -> f.id_professionnel
+Fetched 37 row(s) in 0.36s

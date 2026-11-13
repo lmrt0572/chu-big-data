@@ -1,0 +1,42 @@
+                                                                                     QUERY PLAN                                                                                     
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=43083.27..43083.32 rows=20 width=26) (actual time=227.139..230.085 rows=20 loops=1)
+   Buffers: shared hit=1121 read=14332
+   ->  Sort  (cost=43083.27..43269.59 rows=74526 width=26) (actual time=227.136..230.080 rows=20 loops=1)
+         Sort Key: (count(*)) DESC, p.id_professionnel
+         Sort Method: top-N heapsort  Memory: 27kB
+         Buffers: shared hit=1121 read=14332
+         ->  Finalize GroupAggregate  (cost=32099.74..41100.16 rows=74526 width=26) (actual time=188.188..222.218 rows=72541 loops=1)
+               Group Key: p.id_professionnel, p.specialite
+               Buffers: shared hit=1118 read=14332
+               ->  Gather Merge  (cost=32099.74..39889.12 rows=62104 width=26) (actual time=188.182..205.416 rows=72541 loops=1)
+                     Workers Planned: 2
+                     Workers Launched: 2
+                     Buffers: shared hit=1118 read=14332
+                     ->  Partial GroupAggregate  (cost=31099.71..31720.75 rows=31052 width=26) (actual time=163.477..170.649 rows=24180 loops=3)
+                           Group Key: p.id_professionnel, p.specialite
+                           Buffers: shared hit=1118 read=14332
+                           ->  Sort  (cost=31099.71..31177.34 rows=31052 width=18) (actual time=163.461..164.391 rows=29166 loops=3)
+                                 Sort Key: p.id_professionnel, p.specialite
+                                 Sort Method: quicksort  Memory: 2928kB
+                                 Buffers: shared hit=1118 read=14332
+                                 Worker 0:  Sort Method: quicksort  Memory: 2972kB
+                                 Worker 1:  Sort Method: quicksort  Memory: 2932kB
+                                 ->  Parallel Hash Join  (cost=14360.88..28782.86 rows=31052 width=18) (actual time=51.223..158.427 rows=29166 loops=3)
+                                       Hash Cond: (p.id_professionnel = f.id_professionnel)
+                                       Buffers: shared hit=982 read=14332
+                                       ->  Parallel Seq Scan on dim_professionnel p  (cost=0.00..12108.07 rows=436907 width=18) (actual time=0.682..35.427 rows=349525 loops=3)
+                                             Buffers: shared read=7739
+                                       ->  Parallel Hash  (cost=13972.73..13972.73 rows=31052 width=4) (actual time=46.508..46.509 rows=29166 loops=3)
+                                             Buckets: 131072  Batches: 1  Memory Usage: 4480kB
+                                             Buffers: shared hit=960 read=6593
+                                             ->  Parallel Seq Scan on fait_consultation f  (cost=0.00..13972.73 rows=31052 width=4) (actual time=21.312..40.624 rows=29166 loops=3)
+                                                   Filter: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                                   Rows Removed by Filter: 313220
+                                                   Buffers: shared hit=960 read=6593
+ Planning:
+   Buffers: shared hit=106
+ Planning Time: 1.550 ms
+ Execution Time: 230.749 ms
+(38 rows)
+

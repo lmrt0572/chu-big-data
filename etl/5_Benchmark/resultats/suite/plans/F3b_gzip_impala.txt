@@ -1,0 +1,43 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- B7 (décès de 2019 par région) sur la copie des décès en Parquet gzip, sans partition.
+EXPLAIN
+SELECT r.code_region, r.libelle_region, SUM(f.nb_deces) AS deces_2019
+FROM bench.deces_gzip f
+JOIN gold.dim_region r ON f.id_region = r.id_region
+WHERE f.annee_deces = 2019
+GROUP BY r.code_region, r.libelle_region
+Query submitted at: 2026-10-30 19:09:47 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b64ab87c9f2fed33:3116476800000000
+Per-Host Resource Reservation: Memory=400.00MB
+Per-Host Resource Estimates: Memory=148.00MB
+""
+PLAN-ROOT SINK
+|
+07:EXCHANGE [UNPARTITIONED]
+|
+06:AGGREGATE [FINALIZE]
+|  output: sum:merge(f.nb_deces)
+|  group by: r.code_region, r.libelle_region
+|
+05:EXCHANGE [HASH(r.code_region,r.libelle_region)]
+|
+03:AGGREGATE [STREAMING]
+|  output: sum(f.nb_deces)
+|  group by: r.code_region, r.libelle_region
+|
+02:HASH JOIN [INNER JOIN, BROADCAST]
+|  hash predicates: f.id_region = r.id_region
+|  runtime filters: RF000 <- r.id_region
+|
+|--04:EXCHANGE [BROADCAST]
+|  |
+|  01:SCAN HDFS [gold.dim_region r]
+|     partitions=1/1 files=2 size=2.56KB
+|
+00:SCAN HDFS [bench.deces_gzip f]
+   partitions=1/1 files=1 size=49.59MB
+   predicates: f.annee_deces = 2019
+   runtime filters: RF000 -> f.id_region
+Fetched 30 row(s) in 0.20s

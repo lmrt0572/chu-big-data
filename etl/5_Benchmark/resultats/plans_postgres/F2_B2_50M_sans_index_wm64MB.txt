@@ -1,0 +1,43 @@
+                                                                                       QUERY PLAN                                                                                       
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ WindowAgg  (cost=717737.97..718479.89 rows=15437 width=49) (actual time=2627.647..2635.921 rows=15487 loops=1)
+   Buffers: shared hit=693 read=377152
+   ->  Hash Join  (cost=717737.97..718132.55 rows=15437 width=17) (actual time=2617.494..2623.820 rows=15487 loops=1)
+         Hash Cond: (d.id_diagnostic = t.id_diagnostic)
+         Buffers: shared hit=693 read=377152
+         ->  Seq Scan on dim_diagnostic d  (cost=0.00..353.91 rows=15491 width=9) (actual time=0.053..2.635 rows=15491 loops=1)
+               Buffers: shared hit=199
+         ->  Hash  (cost=717545.01..717545.01 rows=15437 width=12) (actual time=2617.381..2617.449 rows=15487 loops=1)
+               Buckets: 16384  Batches: 1  Memory Usage: 794kB
+               Buffers: shared hit=494 read=377152
+               ->  Subquery Scan on t  (cost=713479.68..717545.01 rows=15437 width=12) (actual time=2603.301..2615.380 rows=15487 loops=1)
+                     Buffers: shared hit=494 read=377152
+                     ->  Finalize GroupAggregate  (cost=713479.68..717390.64 rows=15437 width=12) (actual time=2603.300..2614.551 rows=15487 loops=1)
+                           Group Key: fait_consultation.id_diagnostic
+                           Buffers: shared hit=494 read=377152
+                           ->  Gather Merge  (cost=713479.68..717081.90 rows=30874 width=12) (actual time=2603.292..2610.033 rows=46461 loops=1)
+                                 Workers Planned: 2
+                                 Workers Launched: 2
+                                 Buffers: shared hit=494 read=377152
+                                 ->  Sort  (cost=712479.66..712518.25 rows=15437 width=12) (actual time=2581.289..2582.976 rows=15487 loops=3)
+                                       Sort Key: fait_consultation.id_diagnostic
+                                       Sort Method: quicksort  Memory: 1110kB
+                                       Buffers: shared hit=494 read=377152
+                                       Worker 0:  Sort Method: quicksort  Memory: 1110kB
+                                       Worker 1:  Sort Method: quicksort  Memory: 1110kB
+                                       ->  Partial HashAggregate  (cost=711251.32..711405.69 rows=15437 width=12) (actual time=2575.620..2578.169 rows=15487 loops=3)
+                                             Group Key: fait_consultation.id_diagnostic
+                                             Batches: 1  Memory Usage: 2833kB
+                                             Buffers: shared hit=480 read=377152
+                                             Worker 0:  Batches: 1  Memory Usage: 2833kB
+                                             Worker 1:  Batches: 1  Memory Usage: 2833kB
+                                             ->  Parallel Seq Scan on fait_consultation  (cost=0.00..698619.20 rows=2526425 width=4) (actual time=0.606..1969.343 rows=2192156 loops=3)
+                                                   Filter: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                                   Rows Removed by Filter: 14927127
+                                                   Buffers: shared hit=480 read=377152
+ Planning:
+   Buffers: shared hit=56
+ Planning Time: 1.962 ms
+ Execution Time: 2637.364 ms
+(39 rows)
+

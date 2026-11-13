@@ -1,0 +1,70 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- F8 Statistiques : copies des consultations et des dimensions sans statistiques (COMPUTE STATS jamais lancé).
+-- Les mêmes requêtes sur les tables du Gold, qui ont leurs statistiques, servent de comparaison.
+-- Sans statistiques, Impala ne connaît pas la taille des tables : il peut se tromper de côté pour la table
+-- chargée en mémoire dans une jointure, ou choisir une jointure redistribuée au lieu d'une diffusion.
+-- lancer_benchmark.sh ne lance pas COMPUTE STATS sur les tables dont le nom contient « sans_stats ».
+-- Le test ne tourne que dans Impala : dans Hive, hive.auto.convert.join=false (imposé sur la VM)
+-- empêche les statistiques de changer la façon de joindre.
+
+CREATE DATABASE IF NOT EXISTS bench
+Query submitted at: 2026-10-30 18:56:24 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1d424a5258dfae87:3952414200000000
+
+Fetched 0 row(s) in 0.11s
+Query: drop TABLE IF EXISTS bench.consult_sans_stats
+Query: create TABLE bench.consult_sans_stats STORED AS PARQUET AS
+SELECT id_consultation, id_tranche_age, id_diagnostic, id_etablissement, id_professionnel, id_patient, id_temps
+FROM gold.fait_consultation
++-------------------------+
+| summary                 |
++-------------------------+
+| Inserted 1027157 row(s) |
++-------------------------+
+Fetched 1 row(s) in 5.91s
+Query: drop TABLE IF EXISTS bench.etab_sans_stats
+Query: create TABLE bench.etab_sans_stats STORED AS PARQUET AS
+SELECT id_etablissement, identifiant_organisation, raison_sociale, code_region, libelle_region
+FROM gold.dim_etablissement
++------------------------+
+| summary                |
++------------------------+
+| Inserted 416666 row(s) |
++------------------------+
+Fetched 1 row(s) in 2.70s
+Query: drop TABLE IF EXISTS bench.prof_sans_stats
+Query: create TABLE bench.prof_sans_stats STORED AS PARQUET AS
+SELECT id_professionnel, code_professionnel, specialite
+FROM gold.dim_professionnel
++-------------------------+
+| summary                 |
++-------------------------+
+| Inserted 1048576 row(s) |
++-------------------------+
+Fetched 1 row(s) in 2.84s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.consult_sans_stats
+Query submitted at: 2026-10-30 18:56:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=4243e7a33e4f01b3:6d579c2700000000
+
+Fetched 0 row(s) in 0.05s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.etab_sans_stats
+Query submitted at: 2026-10-30 18:56:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1b46b3d1411b0aaf:537ceca00000000
+
+Fetched 0 row(s) in 0.03s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.prof_sans_stats
+Query submitted at: 2026-10-30 18:56:40 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=374f58b52cb81d37:61a15f7100000000
+
+Fetched 0 row(s) in 0.03s

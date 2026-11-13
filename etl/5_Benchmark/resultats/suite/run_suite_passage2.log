@@ -1,0 +1,30 @@
+2026-10-30 19:16:27 debut du benchmark
+2026-10-30 19:16:27 preparation prep_F1b_granularite_impala.sql
+2026-10-30 20:21:02 fin preparation prep_F1b_granularite_impala.sql
+2026-10-30 20:21:46 F1b B7_annee hive essai 1/4
+2026-10-30 20:28:51 F1b B7_annee hive essai 2/4
+2026-10-30 20:31:40 F1b B7_annee hive essai 3/4
+2026-10-30 20:32:53 F1b B7_annee hive essai 4/4
+2026-10-30 20:33:56 F1b B7_annee impala essai 1/4
+2026-10-30 20:33:58 F1b B7_annee impala essai 2/4
+2026-10-30 20:33:58 F1b B7_annee impala essai 3/4
+2026-10-30 20:33:59 F1b B7_annee impala essai 4/4
+2026-10-30 20:34:10 F1b B7_mois hive essai 1/4
+2026-10-30 20:39:07 F1b B7_mois hive essai 2/4
+2026-10-30 20:40:54 F1b B7_mois hive essai 3/4
+2026-10-30 20:41:59 F1b B7_mois hive essai 4/4
+2026-10-30 20:49:28 F1b B7_mois impala essai 1/4
+2026-10-30 20:49:30 F1b B7_mois impala essai 2/4
+2026-10-30 20:49:30 F1b B7_mois impala essai 3/4
+2026-10-30 20:49:31 F1b B7_mois impala essai 4/4
+2026-10-30 20:49:41 F1b B7_jour hive essai 1/4
+2026-10-30 20:50:56 F1b B7_jour hive essai 2/4
+2026-10-30 20:58:37 F1b B7_jour hive essai 3/4
+2026-10-30 21:05:00 F1b B7_jour hive essai 4/4
+2026-10-30 21:06:19 F1b B7_jour impala essai 1/4
+2026-10-30 21:06:23 F1b B7_jour impala essai 2/4
+2026-10-30 21:06:24 F1b B7_jour impala essai 3/4
+2026-10-30 21:06:25 F1b B7_jour impala essai 4/4
+2026-10-30 21:06:34 F1b mars_annee hive essai 1/4
+2026-10-30 21:10:39 F1b mars_annee hive essai 2/4
+2026-10-30 21:12:14 F1b mars_annee hive essai 3/4

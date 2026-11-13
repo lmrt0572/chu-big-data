@@ -1,0 +1,30 @@
+                                                                                      QUERY PLAN                                                                                      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=832587.48..832587.53 rows=20 width=26) (actual time=6841.636..6841.641 rows=20 loops=1)
+   Buffers: shared hit=3978 read=32940, temp read=54121 written=85415
+   ->  Sort  (cost=832587.48..835208.92 rows=1048576 width=26) (actual time=6841.633..6841.636 rows=20 loops=1)
+         Sort Key: (count(*)) DESC, p.id_professionnel
+         Sort Method: top-N heapsort  Memory: 27kB
+         Buffers: shared hit=3978 read=32940, temp read=54121 written=85415
+         ->  HashAggregate  (cost=727530.66..804685.25 rows=1048576 width=26) (actual time=5874.784..6819.893 rows=201735 loops=1)
+               Group Key: p.id_professionnel, p.specialite
+               Planned Partitions: 32  Batches: 33  Memory Usage: 4113kB  Disk Usage: 259392kB
+               Buffers: shared hit=3972 read=32940, temp read=54121 written=85415
+               ->  Hash Join  (cost=37476.53..304405.86 rows=5689073 width=18) (actual time=271.700..4102.069 rows=6576468 loops=1)
+                     Hash Cond: (f.id_professionnel = p.id_professionnel)
+                     Buffers: shared hit=3972 read=32940, temp read=23517 written=23517
+                     ->  Index Only Scan using cv_consult_temps on fait_consultation f  (cost=0.56..201406.03 rows=5689073 width=4) (actual time=0.075..685.643 rows=6576468 loops=1)
+                           Index Cond: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                           Heap Fetches: 0
+                           Buffers: shared hit=3972 read=25201
+                     ->  Hash  (cost=18224.76..18224.76 rows=1048576 width=18) (actual time=268.784..268.785 rows=1048576 loops=1)
+                           Buckets: 65536  Batches: 32  Memory Usage: 2147kB
+                           Buffers: shared read=7739, temp written=4811
+                           ->  Seq Scan on dim_professionnel p  (cost=0.00..18224.76 rows=1048576 width=18) (actual time=0.032..119.010 rows=1048576 loops=1)
+                                 Buffers: shared read=7739
+ Planning:
+   Buffers: shared hit=203 read=26 dirtied=1
+ Planning Time: 10.721 ms
+ Execution Time: 7487.276 ms
+(26 rows)
+

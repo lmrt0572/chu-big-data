@@ -1,0 +1,5 @@
+# Essai Hive sur Spark (F9), lancé avec un plafond de 30 min :
+#   nohup timeout 1800 bash lancer_benchmark.sh plan_spark.txt > run_spark.log 2>&1 &
+# Comparer à F4 B7 et B1 dans Hive sur MapReduce (mêmes groupes, donc même résultat attendu).
+F9|B7_hive_spark|B7|requetes/F9_hive_spark/B7_hive_spark.sql|hive
+F9|B1_hive_spark|B1|requetes/F9_hive_spark/B1_hive_spark.sql|hive

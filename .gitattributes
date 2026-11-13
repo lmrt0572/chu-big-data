@@ -1,0 +1,9 @@
+* text=auto
+*.sh text eol=lf
+*.hql text eol=lf
+*.sql text eol=lf
+*.pdf binary
+*.xlsx binary
+*.pbit binary
+*.png binary
+*.zip binary

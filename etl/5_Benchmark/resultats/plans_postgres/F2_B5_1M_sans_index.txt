@@ -1,0 +1,33 @@
+                                                                     QUERY PLAN                                                                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ GroupAggregate  (cost=2339.59..2370.79 rows=21 width=28) (actual time=13.168..13.588 rows=14 loops=1)
+   Group Key: p.sexe, ta.libelle_tranche
+   Buffers: shared hit=468 read=1
+   ->  Sort  (cost=2339.59..2345.79 rows=2479 width=16) (actual time=13.065..13.129 rows=2479 loops=1)
+         Sort Key: p.sexe, ta.libelle_tranche
+         Sort Method: quicksort  Memory: 229kB
+         Buffers: shared hit=465 read=1
+         ->  Hash Join  (cost=72.94..2199.83 rows=2479 width=16) (actual time=0.535..11.648 rows=2479 loops=1)
+               Hash Cond: (f.id_tranche_age = ta.id_tranche_age)
+               Buffers: shared hit=459 read=1
+               ->  Hash Join  (cost=71.78..2164.58 rows=2479 width=10) (actual time=0.460..11.261 rows=2479 loops=1)
+                     Hash Cond: (p.id_patient = f.id_patient)
+                     Buffers: shared hit=459
+                     ->  Seq Scan on dim_patient p  (cost=0.00..1443.01 rows=100001 width=6) (actual time=0.013..4.530 rows=100001 loops=1)
+                           Buffers: shared hit=443
+                     ->  Hash  (cost=40.79..40.79 rows=2479 width=8) (actual time=0.427..0.427 rows=2479 loops=1)
+                           Buckets: 4096  Batches: 1  Memory Usage: 129kB
+                           Buffers: shared hit=16
+                           ->  Seq Scan on fait_hospitalisation f  (cost=0.00..40.79 rows=2479 width=8) (actual time=0.012..0.214 rows=2479 loops=1)
+                                 Buffers: shared hit=16
+               ->  Hash  (cost=1.07..1.07 rows=7 width=14) (actual time=0.067..0.067 rows=7 loops=1)
+                     Buckets: 1024  Batches: 1  Memory Usage: 9kB
+                     Buffers: shared read=1
+                     ->  Seq Scan on dim_tranche_age ta  (cost=0.00..1.07 rows=7 width=14) (actual time=0.054..0.055 rows=7 loops=1)
+                           Buffers: shared read=1
+ Planning:
+   Buffers: shared hit=80
+ Planning Time: 1.893 ms
+ Execution Time: 13.762 ms
+(29 rows)
+

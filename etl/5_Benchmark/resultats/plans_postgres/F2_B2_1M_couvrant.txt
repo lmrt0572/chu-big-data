@@ -1,0 +1,27 @@
+                                                                                 QUERY PLAN                                                                                  
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ WindowAgg  (cost=3446.74..4180.62 rows=15080 width=49) (actual time=33.541..39.949 rows=15368 loops=1)
+   Buffers: shared hit=922
+   ->  Hash Join  (cost=3446.74..3841.32 rows=15080 width=17) (actual time=25.758..30.055 rows=15368 loops=1)
+         Hash Cond: (d.id_diagnostic = t.id_diagnostic)
+         Buffers: shared hit=922
+         ->  Seq Scan on dim_diagnostic d  (cost=0.00..353.91 rows=15491 width=9) (actual time=0.014..0.963 rows=15491 loops=1)
+               Buffers: shared hit=199
+         ->  Hash  (cost=3258.24..3258.24 rows=15080 width=12) (actual time=25.684..25.685 rows=15368 loops=1)
+               Buckets: 16384  Batches: 1  Memory Usage: 789kB
+               Buffers: shared hit=723
+               ->  Subquery Scan on t  (cost=2956.64..3258.24 rows=15080 width=12) (actual time=21.799..23.990 rows=15368 loops=1)
+                     Buffers: shared hit=723
+                     ->  HashAggregate  (cost=2956.64..3107.44 rows=15080 width=12) (actual time=21.798..23.259 rows=15368 loops=1)
+                           Group Key: fait_consultation.id_diagnostic
+                           Batches: 1  Memory Usage: 2065kB
+                           Buffers: shared hit=723
+                           ->  Index Scan using ix_consult_temps on fait_consultation  (cost=0.42..2545.40 rows=82248 width=4) (actual time=0.032..9.014 rows=87497 loops=1)
+                                 Index Cond: ((id_temps >= 20190101) AND (id_temps <= 20191231))
+                                 Buffers: shared hit=723
+ Planning:
+   Buffers: shared hit=171
+ Planning Time: 4.775 ms
+ Execution Time: 41.020 ms
+(23 rows)
+

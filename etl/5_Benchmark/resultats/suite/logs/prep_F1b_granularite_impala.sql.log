@@ -1,0 +1,1045 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- F1b Granularité des partitions : les décès du Gold rangés par année, par mois, puis par jour.
+-- Même données, même requête (B7 sur 2019) ; seule la taille des partitions change.
+-- Par année : 51 dossiers de quelques Mo. Par jour : environ 18 600 dossiers de quelques Ko.
+-- Le but est de montrer qu'on peut trop partitionner : beaucoup de petits fichiers coûtent cher à lister et à ouvrir.
+-- Créé dans Impala : l'indice /* +CLUSTERED */ trie les lignes par partition avant l'écriture,
+-- pour n'avoir qu'un fichier ouvert à la fois (sinon des milliers de fichiers ouverts saturent la mémoire).
+-- Le démon Impala de la VM n'a que 512 Mo : trier les 24,9 M de décès d'un coup dépasse la limite.
+-- Les lignes sont donc écrites par tranches de 3 années (les tranches vides ne coûtent rien).
+-- Les trois tables sont écrites de la même façon, pour que seule la granularité change.
+
+CREATE DATABASE IF NOT EXISTS bench
+Query submitted at: 2026-10-30 19:16:28 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=7c470b627d0c3310:932a346100000000
+
+Fetched 0 row(s) in 0.14s
+Query: drop TABLE IF EXISTS bench.deces_p_annee
+Query: create TABLE bench.deces_p_annee (id_deces BIGINT, nb_deces INT, id_region INT, id_temps INT)
+PARTITIONED BY (annee_deces INT)
+STORED AS PARQUET
+
+Fetched 0 row(s) in 0.30s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN -1 AND -1
+Query submitted at: 2026-10-30 19:16:30 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a045b353a94091d7:4c599ec500000000
+Modified 0 row(s) in 1.56s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1900 AND 1902
+Query submitted at: 2026-10-30 19:16:31 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ad425f19134d622c:4177400700000000
+Modified 0 row(s) in 0.41s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1903 AND 1905
+Query submitted at: 2026-10-30 19:16:32 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=694db0b7c35b98c3:fd1830c600000000
+Modified 0 row(s) in 0.29s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1906 AND 1908
+Query submitted at: 2026-10-30 19:16:32 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=9d42ca21bc70fa29:2809428c00000000
+Modified 0 row(s) in 0.19s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1909 AND 1911
+Query submitted at: 2026-10-30 19:16:32 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c44a8b4797a98916:d54454c200000000
+Modified 0 row(s) in 0.18s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1912 AND 1914
+Query submitted at: 2026-10-30 19:16:32 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=5f4501eefc45756f:ed0463d600000000
+Modified 0 row(s) in 0.20s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1915 AND 1917
+Query submitted at: 2026-10-30 19:16:32 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=f34a2b4f85bade1e:2d3de9a000000000
+Modified 0 row(s) in 0.35s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1918 AND 1920
+Query submitted at: 2026-10-30 19:16:33 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=e3455d5db2bce21a:43db853300000000
+Modified 0 row(s) in 0.15s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1921 AND 1923
+Query submitted at: 2026-10-30 19:16:33 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=6b4ce5a8981f0f54:6f91969100000000
+Modified 0 row(s) in 0.14s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1924 AND 1926
+Query submitted at: 2026-10-30 19:16:33 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=784e5ccd9f347ab8:542dfb8f00000000
+Modified 0 row(s) in 0.14s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1927 AND 1929
+Query submitted at: 2026-10-30 19:16:33 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=144667ab3ce98985:87f089da00000000
+Modified 0 row(s) in 0.17s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1930 AND 1932
+Query submitted at: 2026-10-30 19:16:33 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=da4271d63dccaa52:ac3b5d2500000000
+Modified 0 row(s) in 0.19s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1933 AND 1935
+Query submitted at: 2026-10-30 19:16:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=464225e91f26be02:6fca3c6e00000000
+Modified 0 row(s) in 0.19s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1936 AND 1938
+Query submitted at: 2026-10-30 19:16:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b948847c3eb63c86:96b7e3e00000000
+Modified 0 row(s) in 0.36s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1939 AND 1941
+Query submitted at: 2026-10-30 19:16:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ce40514617c95178:d69a875400000000
+Modified 0 row(s) in 0.18s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1942 AND 1944
+Query submitted at: 2026-10-30 19:16:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=754b7ef17466dd39:11015b6600000000
+Modified 0 row(s) in 0.20s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1945 AND 1947
+Query submitted at: 2026-10-30 19:16:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=8f40954211a210e9:47eda4f600000000
+Modified 0 row(s) in 0.15s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1948 AND 1950
+Query submitted at: 2026-10-30 19:16:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=8a443910bc5e0ee6:310e5d5b00000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1951 AND 1953
+Query submitted at: 2026-10-30 19:16:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c4d3f623ec7558d:a51e75a900000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1954 AND 1956
+Query submitted at: 2026-10-30 19:16:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=aa42489f73308e91:78293c3800000000
+Modified 0 row(s) in 0.18s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1957 AND 1959
+Query submitted at: 2026-10-30 19:16:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ea456e611463f30a:4424c5b400000000
+Modified 0 row(s) in 0.42s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1960 AND 1962
+Query submitted at: 2026-10-30 19:16:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=114100cfbaf937ee:5dd2b4ce00000000
+Modified 0 row(s) in 0.14s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1963 AND 1965
+Query submitted at: 2026-10-30 19:16:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=73411c8578734a86:224c949900000000
+Modified 0 row(s) in 0.17s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1966 AND 1968
+Query submitted at: 2026-10-30 19:16:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=4f46cb77e1fe5483:c0a288b00000000
+Modified 0 row(s) in 0.18s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1969 AND 1971
+Query submitted at: 2026-10-30 19:16:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=784d343aaadcb42c:92e489cc00000000
+Modified 188396 row(s) in 3.86s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1972 AND 1974
+Query submitted at: 2026-10-30 19:16:40 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1441f0ec829a9998:50883fd400000000
+Modified 1083308 row(s) in 4.75s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1975 AND 1977
+Query submitted at: 2026-10-30 19:16:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ab426369583a19e5:eafaead200000000
+Modified 1213839 row(s) in 4.74s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1978 AND 1980
+Query submitted at: 2026-10-30 19:16:49 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c84591a453c8a18f:955b0d2500000000
+Modified 1285092 row(s) in 3.48s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1981 AND 1983
+Query submitted at: 2026-10-30 19:16:53 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b946edcdc0cb38ea:495a4ab400000000
+Modified 1382735 row(s) in 2.02s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1984 AND 1986
+Query submitted at: 2026-10-30 19:16:55 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=e64d363a81b92cb3:ad529c1000000000
+Modified 1417058 row(s) in 2.63s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1987 AND 1989
+Query submitted at: 2026-10-30 19:16:58 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=2e40f1c74b36d721:f7037c5a00000000
+Modified 1423084 row(s) in 2.72s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1990 AND 1992
+Query submitted at: 2026-10-30 19:17:00 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ed440fd7f16775d0:ecd7011b00000000
+Modified 1606689 row(s) in 3.59s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1993 AND 1995
+Query submitted at: 2026-10-30 19:17:04 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=524265b78fa44916:723b41a600000000
+Modified 1623023 row(s) in 2.64s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1996 AND 1998
+Query submitted at: 2026-10-30 19:17:07 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=fc4795424950e5b0:f5dbe6c00000000
+Modified 1623994 row(s) in 3.32s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1999 AND 2001
+Query submitted at: 2026-10-30 19:17:10 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=f4b06870b7649c8:a65ff2ac00000000
+Modified 1655921 row(s) in 2.60s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2002 AND 2004
+Query submitted at: 2026-10-30 19:17:12 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=7647f19fddb3db37:9cc289f100000000
+Modified 1649774 row(s) in 2.18s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2005 AND 2007
+Query submitted at: 2026-10-30 19:17:15 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=bb4dcd660f96aaef:8e4d05a200000000
+Modified 1617148 row(s) in 3.29s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2008 AND 2010
+Query submitted at: 2026-10-30 19:17:18 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=8e4dea89d0b5e6d6:cebc20da00000000
+Modified 1662206 row(s) in 3.25s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2011 AND 2013
+Query submitted at: 2026-10-30 19:17:21 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=874ed4ffce2ab425:fb93b0e200000000
+Modified 1704495 row(s) in 2.21s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2014 AND 2016
+Query submitted at: 2026-10-30 19:17:23 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=6b4f5f2df3aee5ec:77f6bf9e00000000
+Modified 1771421 row(s) in 2.91s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2017 AND 2019
+Query submitted at: 2026-10-30 19:17:26 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=6b48a8e4aa82fccd:cd57024700000000
+Modified 1854185 row(s) in 3.62s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2020 AND 2022
+Query submitted at: 2026-10-30 19:17:30 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=7b425318c8992d9d:7dd299f800000000
+Modified 156852 row(s) in 0.84s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2023 AND 2025
+Query submitted at: 2026-10-30 19:17:31 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b74a24d3d67bff05:f76a4b3900000000
+Modified 0 row(s) in 0.15s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2026 AND 2028
+Query submitted at: 2026-10-30 19:17:31 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1e4e292084988a21:f1a9280500000000
+Modified 0 row(s) in 0.19s
+Query: insert INTO bench.deces_p_annee PARTITION (annee_deces) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2029 AND 2031
+Query submitted at: 2026-10-30 19:17:31 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=d14091468420a120:6587111700000000
+Modified 0 row(s) in 0.20s
+Query: -- mois et jour sont tirés de id_temps (aaaammjj) ; une date inconnue (-1) donne le mois 0 et le jour 0.
+DROP TABLE IF EXISTS bench.deces_p_mois
+Query submitted at: 2026-10-30 19:17:31 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=944b059a58e9010c:6f8abf5d00000000
+
+Fetched 0 row(s) in 0.02s
+Query: create TABLE bench.deces_p_mois (id_deces BIGINT, nb_deces INT, id_region INT, id_temps INT)
+PARTITIONED BY (annee_deces INT, mois INT)
+STORED AS PARQUET
+
+Fetched 0 row(s) in 0.06s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN -1 AND -1
+Query submitted at: 2026-10-30 19:17:31 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=704e2c45524f7d19:432574ba00000000
+Modified 0 row(s) in 1.91s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1900 AND 1902
+Query submitted at: 2026-10-30 19:17:33 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=554b24e56f7c7999:f58b135300000000
+Modified 0 row(s) in 0.20s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1903 AND 1905
+Query submitted at: 2026-10-30 19:17:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=324dda38d9d3f9d3:7a6756d800000000
+Modified 0 row(s) in 0.18s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1906 AND 1908
+Query submitted at: 2026-10-30 19:17:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=924215a565157a37:de0f8a7700000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1909 AND 1911
+Query submitted at: 2026-10-30 19:17:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=53488d592688e33a:715a1e8a00000000
+Modified 0 row(s) in 0.18s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1912 AND 1914
+Query submitted at: 2026-10-30 19:17:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=d04b38bdad8945af:b529129200000000
+Modified 0 row(s) in 0.19s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1915 AND 1917
+Query submitted at: 2026-10-30 19:17:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c24f142f7b3bb1b3:bcc3b1bd00000000
+Modified 0 row(s) in 0.20s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1918 AND 1920
+Query submitted at: 2026-10-30 19:17:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=574cd4fde3f2fbff:ead6cf7200000000
+Modified 0 row(s) in 0.21s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1921 AND 1923
+Query submitted at: 2026-10-30 19:17:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a24bd2b8dd7d4925:640c21e800000000
+Modified 0 row(s) in 0.21s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1924 AND 1926
+Query submitted at: 2026-10-30 19:17:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c045ab757f05d250:3c7d8b8600000000
+Modified 0 row(s) in 0.18s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1927 AND 1929
+Query submitted at: 2026-10-30 19:17:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=cc4025d5615a9c8c:9b425bb300000000
+Modified 0 row(s) in 0.21s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1930 AND 1932
+Query submitted at: 2026-10-30 19:17:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1c48d1c68d5368d5:9057782f00000000
+Modified 0 row(s) in 0.17s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1933 AND 1935
+Query submitted at: 2026-10-30 19:17:35 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=fa45fe77de5a6fa6:30e86e6000000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1936 AND 1938
+Query submitted at: 2026-10-30 19:17:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=e545a7ee57728afa:24b29cca00000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1939 AND 1941
+Query submitted at: 2026-10-30 19:17:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=644af6f8c45cf16c:4f19d65600000000
+Modified 0 row(s) in 0.19s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1942 AND 1944
+Query submitted at: 2026-10-30 19:17:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b941b16e5bb30cf3:af4219c00000000
+Modified 0 row(s) in 0.17s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1945 AND 1947
+Query submitted at: 2026-10-30 19:17:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=104ca2df5b28066b:1c4ac9200000000
+Modified 0 row(s) in 0.17s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1948 AND 1950
+Query submitted at: 2026-10-30 19:17:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1448a5576c51a182:d9b0611700000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1951 AND 1953
+Query submitted at: 2026-10-30 19:17:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=e4f3459d6a1ef0c:8f4ce28a00000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1954 AND 1956
+Query submitted at: 2026-10-30 19:17:37 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=3e427ec40170181d:a7e289700000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1957 AND 1959
+Query submitted at: 2026-10-30 19:17:37 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=9e45886e41ea5fa0:5b7b78a800000000
+Modified 0 row(s) in 0.69s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1960 AND 1962
+Query submitted at: 2026-10-30 19:17:37 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=2c4986663cf0532e:5ebb9cf100000000
+Modified 0 row(s) in 0.60s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1963 AND 1965
+Query submitted at: 2026-10-30 19:17:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1b4a23c9f8cf9338:7c8edc3a00000000
+Modified 0 row(s) in 0.16s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1966 AND 1968
+Query submitted at: 2026-10-30 19:17:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=d8420fa9f6c5178a:621c8faa00000000
+Modified 0 row(s) in 0.23s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1969 AND 1971
+Query submitted at: 2026-10-30 19:17:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=e440fa70c5584e33:c20a9b0a00000000
+Modified 188396 row(s) in 5.27s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1972 AND 1974
+Query submitted at: 2026-10-30 19:17:44 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=884318192b4d2a45:55892c9a00000000
+Modified 1083308 row(s) in 6.04s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1975 AND 1977
+Query submitted at: 2026-10-30 19:17:50 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c7426c9fe28fb563:7004160b00000000
+Modified 1213839 row(s) in 5.94s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1978 AND 1980
+Query submitted at: 2026-10-30 19:17:56 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=6e48da2638fc70bc:ed8d901d00000000
+Modified 1285092 row(s) in 5.12s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1981 AND 1983
+Query submitted at: 2026-10-30 19:18:01 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=3d46990831efe6ae:596b0c7e00000000
+Modified 1382735 row(s) in 7.62s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1984 AND 1986
+Query submitted at: 2026-10-30 19:18:08 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ba4ac716f9786048:356530b700000000
+Modified 1417058 row(s) in 10.76s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1987 AND 1989
+Query submitted at: 2026-10-30 19:18:19 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=54403b28c01a3a39:23ddbab700000000
+Modified 1423084 row(s) in 8.91s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1990 AND 1992
+Query submitted at: 2026-10-30 19:18:28 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=8b4d2c2f133c6b98:63b6136700000000
+Modified 1606689 row(s) in 10.25s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1993 AND 1995
+Query submitted at: 2026-10-30 19:18:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=fe4d4ba49262ddb9:d06b733e00000000
+Modified 1623023 row(s) in 4.79s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1996 AND 1998
+Query submitted at: 2026-10-30 19:18:43 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=8e474e1bed76f0f5:ed73215b00000000
+Modified 1623994 row(s) in 6.35s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1999 AND 2001
+Query submitted at: 2026-10-30 19:18:49 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=cd4c5b015a419c71:699df55d00000000
+Modified 1655921 row(s) in 7.88s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2002 AND 2004
+Query submitted at: 2026-10-30 19:18:57 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1b437e22cbc25268:3a7509dd00000000
+Modified 1649774 row(s) in 6.93s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2005 AND 2007
+Query submitted at: 2026-10-30 19:19:04 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ca4ec2ae795f516b:ea74e49500000000
+Modified 1617148 row(s) in 5.18s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2008 AND 2010
+Query submitted at: 2026-10-30 19:19:09 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=544028ab6c2d9c9f:5720f67c00000000
+Modified 1662206 row(s) in 7.63s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2011 AND 2013
+Query submitted at: 2026-10-30 19:19:17 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=d477419ae5b6ad1:514ef67b00000000
+Modified 1704495 row(s) in 6.96s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2014 AND 2016
+Query submitted at: 2026-10-30 19:19:24 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=6e49f7686267b2e5:bbd63f1700000000
+Modified 1771421 row(s) in 6.27s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2017 AND 2019
+Query submitted at: 2026-10-30 19:19:30 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=234b097059b15913:842ab9d400000000
+Modified 1854185 row(s) in 8.41s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2020 AND 2022
+Query submitted at: 2026-10-30 19:19:39 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=cb417890e1dd0370:f0ace9300000000
+Modified 156852 row(s) in 1.91s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2023 AND 2025
+Query submitted at: 2026-10-30 19:19:41 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=fc43c76815219c59:2c51199d00000000
+Modified 0 row(s) in 0.23s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2026 AND 2028
+Query submitted at: 2026-10-30 19:19:41 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=5c49cc89fa38a461:62db944b00000000
+Modified 0 row(s) in 0.15s
+Query: insert INTO bench.deces_p_mois PARTITION (annee_deces, mois) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2029 AND 2031
+Query submitted at: 2026-10-30 19:19:41 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=394ee8453dd1afb9:7e88bd2800000000
+Modified 0 row(s) in 0.15s
+Query: drop TABLE IF EXISTS bench.deces_p_jour
+Query: create TABLE bench.deces_p_jour (id_deces BIGINT, nb_deces INT, id_region INT, id_temps INT)
+PARTITIONED BY (annee_deces INT, mois INT, jour INT)
+STORED AS PARQUET
+
+Fetched 0 row(s) in 0.12s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN -1 AND -1
+Query submitted at: 2026-10-30 19:19:41 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b546a243d9aa3d20:4417bcbc00000000
+Modified 0 row(s) in 3.35s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1900 AND 1902
+Query submitted at: 2026-10-30 19:19:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=4d4410d54b86f9c7:1ec6655e00000000
+Modified 0 row(s) in 0.14s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1903 AND 1905
+Query submitted at: 2026-10-30 19:19:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=6e4ba76c93470e8e:e9fd510800000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1906 AND 1908
+Query submitted at: 2026-10-30 19:19:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1947d86e488ce183:519b635400000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1909 AND 1911
+Query submitted at: 2026-10-30 19:19:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=884256fe4c146cd5:25724a0d00000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1912 AND 1914
+Query submitted at: 2026-10-30 19:19:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=52444c1b35d9f193:13053ef800000000
+Modified 0 row(s) in 0.15s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1915 AND 1917
+Query submitted at: 2026-10-30 19:19:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b6431fbd3d6645c0:97a5b44200000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1918 AND 1920
+Query submitted at: 2026-10-30 19:19:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=284863f8d794d27b:9734453300000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1921 AND 1923
+Query submitted at: 2026-10-30 19:19:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=224494e314ffa607:14cb8d4d00000000
+Modified 0 row(s) in 0.19s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1924 AND 1926
+Query submitted at: 2026-10-30 19:19:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=2f47ce19e8cced26:2f61f88300000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1927 AND 1929
+Query submitted at: 2026-10-30 19:19:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=e24e4ab2108e260e:6cf4d74100000000
+Modified 0 row(s) in 0.12s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1930 AND 1932
+Query submitted at: 2026-10-30 19:19:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=f14bfba891381857:8e80fac700000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1933 AND 1935
+Query submitted at: 2026-10-30 19:19:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b048424d4f6d6dd5:91d3c91500000000
+Modified 0 row(s) in 0.12s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1936 AND 1938
+Query submitted at: 2026-10-30 19:19:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=16449423a8973a67:b3bae1d600000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1939 AND 1941
+Query submitted at: 2026-10-30 19:19:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1243d4467d3ae663:e71343e600000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1942 AND 1944
+Query submitted at: 2026-10-30 19:19:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ff4a0f851e047206:3e144c3000000000
+Modified 0 row(s) in 0.12s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1945 AND 1947
+Query submitted at: 2026-10-30 19:19:47 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=874dd77c244fedef:8c29236f00000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1948 AND 1950
+Query submitted at: 2026-10-30 19:19:47 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=84fab8ab7e01d53:98a564c800000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1951 AND 1953
+Query submitted at: 2026-10-30 19:19:47 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=844d8362b5e731da:c394e1ac00000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1954 AND 1956
+Query submitted at: 2026-10-30 19:19:47 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a54f1ad0f6bcb9fe:a9e507d200000000
+Modified 0 row(s) in 0.11s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1957 AND 1959
+Query submitted at: 2026-10-30 19:19:47 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a44f8be0f791c77a:fb5d243f00000000
+Modified 0 row(s) in 0.24s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1960 AND 1962
+Query submitted at: 2026-10-30 19:19:47 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=1c4ebdba61e7a7d2:595b0b6000000000
+Modified 0 row(s) in 0.12s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1963 AND 1965
+Query submitted at: 2026-10-30 19:19:47 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=534f9502bec5d921:d1d042f200000000
+Modified 0 row(s) in 0.12s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1966 AND 1968
+Query submitted at: 2026-10-30 19:19:48 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=e74687b2230446db:3177d1f600000000
+Modified 0 row(s) in 0.13s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1969 AND 1971
+Query submitted at: 2026-10-30 19:19:48 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=842f71e21bcbdca:d42a2d7400000000
+Modified 188396 row(s) in 106.23s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1972 AND 1974
+Query submitted at: 2026-10-30 19:21:34 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=144983256fbab49b:cf8006da00000000
+Modified 1083308 row(s) in 166.61s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1975 AND 1977
+Query submitted at: 2026-10-30 19:24:21 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=624aac3e011bc025:d9044b8100000000
+Modified 1213839 row(s) in 189.41s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1978 AND 1980
+Query submitted at: 2026-10-30 19:27:30 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c144790a1070498f:15c152ea00000000
+Modified 1285092 row(s) in 186.24s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1981 AND 1983
+Query submitted at: 2026-10-30 19:30:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=d74ec1c95f02d07d:269f555200000000
+Modified 1382735 row(s) in 180.12s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1984 AND 1986
+Query submitted at: 2026-10-30 19:33:36 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=874928c1867e022c:30a0adc200000000
+Modified 1417058 row(s) in 164.80s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1987 AND 1989
+Query submitted at: 2026-10-30 19:36:21 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a642d9b67f4195ae:d8ffb60500000000
+Modified 1423084 row(s) in 168.91s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1990 AND 1992
+Query submitted at: 2026-10-30 19:39:10 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b4c842d502afbaa:913c87ed00000000
+Modified 1606689 row(s) in 214.48s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1993 AND 1995
+Query submitted at: 2026-10-30 19:42:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=284efd2415876e6f:c9a7ab9600000000
+Modified 1623023 row(s) in 181.19s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1996 AND 1998
+Query submitted at: 2026-10-30 19:45:46 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=15494c4375af02c2:2c2c047a00000000
+Modified 1623994 row(s) in 175.18s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 1999 AND 2001
+Query submitted at: 2026-10-30 19:48:41 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a34811e15adc9713:524a2ac400000000
+Modified 1655921 row(s) in 194.66s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2002 AND 2004
+Query submitted at: 2026-10-30 19:51:56 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=f14cf71a455dad23:b5ad150d00000000
+Modified 1649774 row(s) in 249.68s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2005 AND 2007
+Query submitted at: 2026-10-30 19:56:05 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=4747908cceacb79c:c5a9111200000000
+Modified 1617148 row(s) in 236.57s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2008 AND 2010
+Query submitted at: 2026-10-30 20:00:02 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a743593e4c10b0b7:6b22bdc200000000
+Modified 1662206 row(s) in 188.50s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2011 AND 2013
+Query submitted at: 2026-10-30 20:03:11 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=58451b12808f5d3d:f70812500000000
+Modified 1704495 row(s) in 182.47s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2014 AND 2016
+Query submitted at: 2026-10-30 20:06:13 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=da419ab2f67fa671:f5acce4c00000000
+Modified 1771421 row(s) in 214.92s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2017 AND 2019
+Query submitted at: 2026-10-30 20:09:48 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=6240cb14c87d98b9:23f28dff00000000
+Modified 1854185 row(s) in 187.17s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2020 AND 2022
+Query submitted at: 2026-10-30 20:12:55 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=d447181e8c03216d:8729b8b200000000
+Modified 156852 row(s) in 28.24s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2023 AND 2025
+Query submitted at: 2026-10-30 20:13:23 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=8344b80208da42a1:81d7483e00000000
+Modified 0 row(s) in 1.14s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2026 AND 2028
+Query submitted at: 2026-10-30 20:13:25 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=434ca160ec161ac4:d88f3a6700000000
+Modified 0 row(s) in 1.70s
+Query: insert INTO bench.deces_p_jour PARTITION (annee_deces, mois, jour) /* +CLUSTERED */
+SELECT id_deces, nb_deces, id_region, id_temps, annee_deces,
+       CAST(CASE WHEN id_temps > 0 THEN pmod(CAST(id_temps / 100 AS INT), 100) ELSE 0 END AS INT),
+       CAST(CASE WHEN id_temps > 0 THEN pmod(id_temps, 100) ELSE 0 END AS INT)
+FROM gold.fait_deces WHERE annee_deces BETWEEN 2029 AND 2031
+Query submitted at: 2026-10-30 20:13:26 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=cf429e699e0ffa69:481245f200000000
+Modified 0 row(s) in 1.24s
+Query: -- Contrôle : mêmes totaux dans les trois tables.
+SELECT 'annee' AS rangement, COUNT(*) AS lignes, SUM(nb_deces) AS deces FROM bench.deces_p_annee
+UNION ALL SELECT 'mois', COUNT(*), SUM(nb_deces) FROM bench.deces_p_mois
+UNION ALL SELECT 'jour', COUNT(*), SUM(nb_deces) FROM bench.deces_p_jour
+Query submitted at: 2026-10-30 20:13:27 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=294eff21962f564d:6b2833d200000000
++-----------+----------+----------+
+| rangement | lignes   | deces    |
++-----------+----------+----------+
+| annee     | 24919220 | 24919220 |
+| mois      | 24919220 | 24919220 |
+| jour      | 24919220 | 24919220 |
++-----------+----------+----------+
+Fetched 3 row(s) in 75.68s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.deces_p_annee
+Query submitted at: 2026-10-30 20:14:44 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c44eaa7928f1c265:a6f3a1a300000000
+
+Fetched 0 row(s) in 0.08s
+Query: compute STATS bench.deces_p_annee
++------------------------------------------+
+| summary                                  |
++------------------------------------------+
+| Updated 51 partition(s) and 4 column(s). |
++------------------------------------------+
+Fetched 1 row(s) in 5.54s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.deces_p_jour
+Query submitted at: 2026-10-30 20:14:53 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=ce44fcb76bd86c91:5a6e80df00000000
+
+Fetched 0 row(s) in 0.02s
+Query: compute STATS bench.deces_p_jour
++---------------------------------------------+
+| summary                                     |
++---------------------------------------------+
+| Updated 18352 partition(s) and 4 column(s). |
++---------------------------------------------+
+Fetched 1 row(s) in 340.33s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.deces_p_mois
+Query submitted at: 2026-10-30 20:20:39 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=7e4a8f60226c3229:d237f45b00000000
+
+Fetched 0 row(s) in 0.12s
+Query: compute STATS bench.deces_p_mois
++-------------------------------------------+
+| summary                                   |
++-------------------------------------------+
+| Updated 603 partition(s) and 4 column(s). |
++-------------------------------------------+
+Fetched 1 row(s) in 15.55s

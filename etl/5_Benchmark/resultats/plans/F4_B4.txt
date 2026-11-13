@@ -1,0 +1,87 @@
+STAGE DEPENDENCIES:
+  Stage-1 is a root stage
+  Stage-2 depends on stages: Stage-1
+  Stage-0 depends on stages: Stage-2
+
+STAGE PLANS:
+  Stage: Stage-1
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            alias: f
+            Statistics: Num rows: 2479 Data size: 27269 Basic stats: COMPLETE Column stats: NONE
+            Filter Operator
+              predicate: (id_diagnostic is not null and id_temps_admission BETWEEN 20190101 AND 20191231) (type: boolean)
+              Statistics: Num rows: 620 Data size: 6819 Basic stats: COMPLETE Column stats: NONE
+              Reduce Output Operator
+                key expressions: id_diagnostic (type: int)
+                sort order: +
+                Map-reduce partition columns: id_diagnostic (type: int)
+                Statistics: Num rows: 620 Data size: 6819 Basic stats: COMPLETE Column stats: NONE
+          TableScan
+            alias: d
+            Statistics: Num rows: 15491 Data size: 92946 Basic stats: COMPLETE Column stats: NONE
+            Filter Operator
+              predicate: id_diagnostic is not null (type: boolean)
+              Statistics: Num rows: 7746 Data size: 46475 Basic stats: COMPLETE Column stats: NONE
+              Reduce Output Operator
+                key expressions: id_diagnostic (type: int)
+                sort order: +
+                Map-reduce partition columns: id_diagnostic (type: int)
+                Statistics: Num rows: 7746 Data size: 46475 Basic stats: COMPLETE Column stats: NONE
+                value expressions: code_diag (type: string)
+      Reduce Operator Tree:
+        Join Operator
+          condition map:
+               Inner Join 0 to 1
+          keys:
+            0 id_diagnostic (type: int)
+            1 id_diagnostic (type: int)
+          outputColumnNames: _col15
+          Statistics: Num rows: 8520 Data size: 51122 Basic stats: COMPLETE Column stats: NONE
+          Group By Operator
+            aggregations: count()
+            keys: _col15 (type: string)
+            mode: hash
+            outputColumnNames: _col0, _col1
+            Statistics: Num rows: 8520 Data size: 51122 Basic stats: COMPLETE Column stats: NONE
+            File Output Operator
+              compressed: false
+              table:
+                  input format: org.apache.hadoop.mapred.SequenceFileInputFormat
+                  output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
+                  serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
+
+  Stage: Stage-2
+    Map Reduce
+      Map Operator Tree:
+          TableScan
+            Reduce Output Operator
+              key expressions: _col0 (type: string)
+              sort order: +
+              Map-reduce partition columns: _col0 (type: string)
+              Statistics: Num rows: 8520 Data size: 51122 Basic stats: COMPLETE Column stats: NONE
+              value expressions: _col1 (type: bigint)
+      Reduce Operator Tree:
+        Group By Operator
+          aggregations: count(VALUE._col0)
+          keys: KEY._col0 (type: string)
+          mode: mergepartial
+          outputColumnNames: _col0, _col1
+          Statistics: Num rows: 4260 Data size: 25561 Basic stats: COMPLETE Column stats: NONE
+          File Output Operator
+            compressed: false
+            Statistics: Num rows: 4260 Data size: 25561 Basic stats: COMPLETE Column stats: NONE
+            table:
+                input format: org.apache.hadoop.mapred.TextInputFormat
+                output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+                serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+
+  Stage: Stage-0
+    Fetch Operator
+      limit: -1
+      Processor Tree:
+        ListSink
+
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html#release for an explanation.

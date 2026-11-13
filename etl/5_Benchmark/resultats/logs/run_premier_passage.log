@@ -1,0 +1,253 @@
+2026-11-04 08:03:31 debut du benchmark
+2026-11-04 08:03:31 preparation prep_F1_partitionnement.hql
+2026-11-04 08:12:02 fin preparation prep_F1_partitionnement.hql
+2026-11-04 08:12:21 F1 sans_partition hive essai 1/4
+2026-11-04 08:14:10 F1 sans_partition hive essai 2/4
+2026-11-04 08:15:58 F1 sans_partition hive essai 3/4
+2026-11-04 08:17:41 F1 sans_partition hive essai 4/4
+2026-11-04 08:19:34 F1 sans_partition impala essai 1/4
+2026-11-04 08:19:37 F1 sans_partition impala essai 2/4
+2026-11-04 08:19:38 F1 sans_partition impala essai 3/4
+2026-11-04 08:19:39 F1 sans_partition impala essai 4/4
+2026-11-04 08:19:57 F1 avec_partition hive essai 1/4
+2026-11-04 08:21:36 F1 avec_partition hive essai 2/4
+2026-11-04 08:23:13 F1 avec_partition hive essai 3/4
+2026-11-04 08:24:53 F1 avec_partition hive essai 4/4
+2026-11-04 08:26:29 F1 avec_partition impala essai 1/4
+2026-11-04 08:26:30 F1 avec_partition impala essai 2/4
+2026-11-04 08:26:31 F1 avec_partition impala essai 3/4
+2026-11-04 08:26:31 F1 avec_partition impala essai 4/4
+2026-11-04 08:26:49 F1 mauvais_filtre hive essai 1/4
+2026-11-04 08:29:51 F1 mauvais_filtre hive essai 2/4
+2026-11-04 08:32:56 F1 mauvais_filtre hive essai 3/4
+2026-11-04 08:36:04 F1 mauvais_filtre hive essai 4/4
+2026-11-04 08:39:08 F1 mauvais_filtre impala essai 1/4
+2026-11-04 08:39:11 F1 mauvais_filtre impala essai 2/4
+2026-11-04 08:39:13 F1 mauvais_filtre impala essai 3/4
+2026-11-04 08:39:15 F1 mauvais_filtre impala essai 4/4
+2026-11-04 08:39:33 F4 B1 hive essai 1/4
+2026-11-04 08:41:50 F4 B1 hive essai 2/4
+2026-11-04 08:44:06 F4 B1 hive essai 3/4
+2026-11-04 08:46:25 F4 B1 hive essai 4/4
+2026-11-04 08:48:41 F4 B1 impala essai 1/4
+2026-11-04 08:48:42 F4 B1 impala essai 2/4
+2026-11-04 08:48:43 F4 B1 impala essai 3/4
+2026-11-04 08:48:44 F4 B1 impala essai 4/4
+2026-11-04 08:49:01 F4 B2 hive essai 1/4
+2026-11-04 08:51:17 F4 B2 hive essai 2/4
+2026-11-04 08:53:32 F4 B2 hive essai 3/4
+2026-11-04 08:55:45 F4 B2 hive essai 4/4
+2026-11-04 08:58:03 F4 B2 impala essai 1/4
+2026-11-04 08:58:04 F4 B2 impala essai 2/4
+2026-11-04 08:58:05 F4 B2 impala essai 3/4
+2026-11-04 08:58:06 F4 B2 impala essai 4/4
+2026-11-04 08:58:23 F4 B3 hive essai 1/4
+2026-11-04 09:00:31 F4 B3 hive essai 2/4
+2026-11-04 09:02:41 F4 B3 hive essai 3/4
+2026-11-04 09:04:53 F4 B3 hive essai 4/4
+2026-11-04 09:07:03 F4 B3 impala essai 1/4
+2026-11-04 09:07:04 F4 B3 impala essai 2/4
+2026-11-04 09:07:04 F4 B3 impala essai 3/4
+2026-11-04 09:07:04 F4 B3 impala essai 4/4
+2026-11-04 09:07:21 F4 B4 hive essai 1/4
+2026-11-04 09:08:55 F4 B4 hive essai 2/4
+2026-11-04 09:10:29 F4 B4 hive essai 3/4
+2026-11-04 09:12:03 F4 B4 hive essai 4/4
+2026-11-04 09:13:37 F4 B4 impala essai 1/4
+2026-11-04 09:13:38 F4 B4 impala essai 2/4
+2026-11-04 09:13:38 F4 B4 impala essai 3/4
+2026-11-04 09:13:39 F4 B4 impala essai 4/4
+2026-11-04 09:13:56 F4 B5 hive essai 1/4
+2026-11-04 09:16:08 F4 B5 hive essai 2/4
+2026-11-04 09:18:19 F4 B5 hive essai 3/4
+2026-11-04 09:20:29 F4 B5 hive essai 4/4
+2026-11-04 09:22:39 F4 B5 impala essai 1/4
+2026-11-04 09:22:40 F4 B5 impala essai 2/4
+2026-11-04 09:22:41 F4 B5 impala essai 3/4
+2026-11-04 09:22:42 F4 B5 impala essai 4/4
+2026-11-04 09:22:59 F4 B6 hive essai 1/4
+2026-11-04 09:25:13 F4 B6 hive essai 2/4
+2026-11-04 09:27:28 F4 B6 hive essai 3/4
+2026-11-04 09:29:41 F4 B6 hive essai 4/4
+2026-11-04 09:31:57 F4 B6 impala essai 1/4
+2026-11-04 09:31:58 F4 B6 impala essai 2/4
+2026-11-04 09:31:59 F4 B6 impala essai 3/4
+2026-11-04 09:32:00 F4 B6 impala essai 4/4
+2026-11-04 09:32:17 F4 B7 hive essai 1/4
+2026-11-04 09:33:52 F4 B7 hive essai 2/4
+2026-11-04 09:35:27 F4 B7 hive essai 3/4
+2026-11-04 09:37:01 F4 B7 hive essai 4/4
+2026-11-04 09:38:40 F4 B7 impala essai 1/4
+2026-11-04 09:38:40 F4 B7 impala essai 2/4
+2026-11-04 09:38:41 F4 B7 impala essai 3/4
+2026-11-04 09:38:42 F4 B7 impala essai 4/4
+2026-11-04 09:39:00 F4 B8 hive essai 1/4
+2026-11-04 09:41:16 F4 B8 hive essai 2/4
+2026-11-04 09:43:31 F4 B8 hive essai 3/4
+2026-11-04 09:45:52 F4 B8 hive essai 4/4
+2026-11-04 09:48:13 F4 B8 impala essai 1/4
+2026-11-04 09:48:14 F4 B8 impala essai 2/4
+2026-11-04 09:48:15 F4 B8 impala essai 3/4
+2026-11-04 09:48:16 F4 B8 impala essai 4/4
+2026-11-04 09:48:17 preparation prep_F3_format.hql
+2026-11-04 10:00:29 fin preparation prep_F3_format.hql
+2026-11-04 10:00:50 F3 texte hive essai 1/4
+2026-11-04 10:03:49 F3 texte hive essai 2/4
+2026-11-04 10:06:50 F3 texte hive essai 3/4
+2026-11-04 10:09:53 F3 texte hive essai 4/4
+2026-11-04 10:12:50 F3 texte impala essai 1/4
+2026-11-04 10:12:59 F3 texte impala essai 2/4
+2026-11-04 10:13:01 F3 texte impala essai 3/4
+2026-11-04 10:13:02 F3 texte impala essai 4/4
+2026-11-04 10:13:24 F3 parquet hive essai 1/4
+2026-11-04 10:15:25 F3 parquet hive essai 2/4
+2026-11-04 10:17:21 F3 parquet hive essai 3/4
+2026-11-04 10:19:18 F3 parquet hive essai 4/4
+2026-11-04 10:21:19 F3 parquet impala essai 1/4
+2026-11-04 10:21:21 F3 parquet impala essai 2/4
+2026-11-04 10:21:21 F3 parquet impala essai 3/4
+2026-11-04 10:21:22 F3 parquet impala essai 4/4
+2026-11-04 10:21:22 preparation prep_F5_precalcul.hql
+2026-11-04 10:24:20 fin preparation prep_F5_precalcul.hql
+2026-11-04 10:24:36 F5 B7_agregat hive essai 1/4
+2026-11-04 10:25:35 F5 B7_agregat hive essai 2/4
+2026-11-04 10:26:32 F5 B7_agregat hive essai 3/4
+2026-11-04 10:27:29 F5 B7_agregat hive essai 4/4
+2026-11-04 10:28:26 F5 B7_agregat impala essai 1/4
+2026-11-04 10:28:26 F5 B7_agregat impala essai 2/4
+2026-11-04 10:28:27 F5 B7_agregat impala essai 3/4
+2026-11-04 10:28:27 F5 B7_agregat impala essai 4/4
+2026-11-04 10:28:44 F5 B1_agregat hive essai 1/4
+2026-11-04 10:30:25 F5 B1_agregat hive essai 2/4
+2026-11-04 10:32:03 F5 B1_agregat hive essai 3/4
+2026-11-04 10:33:43 F5 B1_agregat hive essai 4/4
+2026-11-04 10:35:20 F5 B1_agregat impala essai 1/4
+2026-11-04 10:35:22 F5 B1_agregat impala essai 2/4
+2026-11-04 10:35:23 F5 B1_agregat impala essai 3/4
+2026-11-04 10:35:23 F5 B1_agregat impala essai 4/4
+2026-11-04 10:35:41 F5 B2_agregat hive essai 1/4
+2026-11-04 10:37:17 F5 B2_agregat hive essai 2/4
+2026-11-04 10:38:53 F5 B2_agregat hive essai 3/4
+2026-11-04 10:40:30 F5 B2_agregat hive essai 4/4
+2026-11-04 10:42:10 F5 B2_agregat impala essai 1/4
+2026-11-04 10:42:11 F5 B2_agregat impala essai 2/4
+2026-11-04 10:42:11 F5 B2_agregat impala essai 3/4
+2026-11-04 10:42:12 F5 B2_agregat impala essai 4/4
+2026-11-04 10:42:13 preparation prep_F6_jointures.hql
+2026-11-04 10:50:26 fin preparation prep_F6_jointures.hql
+2026-11-04 10:50:44 F6 source_4_jointures hive essai 1/4
+2026-11-04 10:56:19 F6 source_4_jointures hive essai 2/4
+2026-11-04 11:01:49 F6 source_4_jointures hive essai 3/4
+2026-11-04 11:07:22 F6 source_4_jointures hive essai 4/4
+2026-11-04 11:13:05 F6 etoile_1_jointure hive essai 1/4
+2026-11-04 11:14:42 F6 etoile_1_jointure hive essai 2/4
+2026-11-04 11:16:17 F6 etoile_1_jointure hive essai 3/4
+2026-11-04 11:17:51 F6 etoile_1_jointure hive essai 4/4
+2026-11-04 11:19:41 F6 shuffle_join hive essai 1/4
+2026-11-04 11:21:18 F6 shuffle_join hive essai 2/4
+2026-11-04 11:22:54 F6 shuffle_join hive essai 3/4
+2026-11-04 11:24:31 F6 shuffle_join hive essai 4/4
+2026-11-04 11:26:07 F6 shuffle_join impala essai 1/4
+2026-11-04 11:26:09 F6 shuffle_join impala essai 2/4
+2026-11-04 11:26:11 F6 shuffle_join impala essai 3/4
+2026-11-04 11:26:12 F6 shuffle_join impala essai 4/4
+2026-11-04 11:26:30 F6 map_join hive essai 1/4
+2026-11-04 11:26:47 ECHEC F6 map_join hive, voir logs/ECHEC_F6_map_join_hive.txt
+2026-11-04 11:27:04 F6 bucket_map_join hive essai 1/4
+2026-11-04 11:27:21 ECHEC F6 bucket_map_join hive, voir logs/ECHEC_F6_bucket_map_join_hive.txt
+2026-11-04 11:27:38 F6 sort_merge_bucket hive essai 1/4
+2026-11-04 11:28:51 F6 sort_merge_bucket hive essai 2/4
+2026-11-04 11:30:07 F6 sort_merge_bucket hive essai 3/4
+2026-11-04 11:31:30 F6 sort_merge_bucket hive essai 4/4
+2026-11-04 11:32:48 preparation prep_F7_volume.hql
+2026-11-04 11:33:37 ECHEC preparation prep_F7_volume.hql, voir logs/prep_F7_volume.hql.log
+2026-11-04 11:33:38 export pour PostgreSQL
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_temps, date_jour, jour, mois, trimestre, annee FROM gold.dim_temps
+Query submitted at: 2026-11-04 11:33:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=2b49354a7dc7047f:40ae9a4800000000
+Fetched 19724 row(s) in 0.39s
+dim_temps : 19724 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_tranche_age, age_min, age_max, libelle_tranche FROM gold.dim_tranche_age
+Query submitted at: 2026-11-04 11:33:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=d34c2b8a25e5ec03:e65c6dcb00000000
+Fetched 7 row(s) in 0.06s
+dim_tranche_age : 7 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_region, code_region, libelle_region FROM gold.dim_region
+Query submitted at: 2026-11-04 11:33:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=694d165bbd2740d2:d83a95c400000000
+Fetched 21 row(s) in 0.09s
+dim_region : 21 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_etablissement, identifiant_organisation, raison_sociale, code_region FROM gold.dim_etablissement
+Query submitted at: 2026-11-04 11:33:39 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b0461d96486d29f6:cf80444e00000000
+Fetched 416666 row(s) in 4.19s
+dim_etablissement : 416666 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_diagnostic, code_diag, libelle_diagnostic FROM gold.dim_diagnostic
+Query submitted at: 2026-11-04 11:33:43 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=7d47e5d0089c94a6:68cc2daa00000000
+Fetched 15491 row(s) in 0.40s
+dim_diagnostic : 15491 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_patient, sexe FROM gold.dim_patient
+Query submitted at: 2026-11-04 11:33:44 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a34b9fc473adccbd:b59b47600000000
+Fetched 100001 row(s) in 0.84s
+dim_patient : 100001 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_professionnel, code_professionnel, specialite FROM gold.dim_professionnel
+Query submitted at: 2026-11-04 11:33:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=874e78c184629a02:6de4d44800000000
+Fetched 1048576 row(s) in 6.46s
+dim_professionnel : 1048576 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_consultation, id_tranche_age, id_diagnostic, id_etablissement, id_professionnel, id_patient, id_temps FROM gold.fait_consultation
+Query submitted at: 2026-11-04 11:33:51 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=3f443c1d3c1f0ab3:c7c9cff000000000
+Fetched 1027157 row(s) in 7.50s
+fait_consultation : 1027157 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_hospitalisation, id_etablissement, id_tranche_age, id_diagnostic, id_patient, id_temps_admission FROM gold.fait_hospitalisation
+Query submitted at: 2026-11-04 11:33:59 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=b04c941a7725aadc:bcd09ec400000000
+Fetched 2479 row(s) in 0.16s
+fait_hospitalisation : 2479 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select id_satisfaction, nb_avis, note_globale, id_region, id_etablissement, id_temps FROM gold.fait_satisfaction
+Query submitted at: 2026-11-04 11:33:59 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=2e44a61c5fc8831b:563da96200000000
+Fetched 2302 row(s) in 0.19s
+fait_satisfaction : 2302 lignes
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: select annee_deces, id_region, nb_deces FROM bench.agg_deces_region
+Query submitted at: 2026-11-04 11:34:00 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=2a4e3cbff490e9cc:8267006f00000000
+Fetched 1068 row(s) in 0.19s
+agg_deces_region : 1068 lignes
+2026-11-04 11:34:00 TERMINE

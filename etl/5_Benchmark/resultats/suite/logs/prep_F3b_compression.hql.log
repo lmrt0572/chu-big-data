@@ -1,0 +1,136 @@
+
+Logging initialized using configuration in jar:file:/usr/lib/hive/lib/hive-common-1.1.0-cdh5.12.0.jar!/hive-log4j.properties
+OK
+Time taken: 1.105 seconds
+OK
+Time taken: 0.063 seconds
+Query ID = cloudera_20261030185757_5e69bad2-558d-48e6-b4fa-85aa5913aca4
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793271968456_0524, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793271968456_0524/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793271968456_0524
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2026-10-30 18:57:19,366 Stage-1 map = 0%,  reduce = 0%
+2026-10-30 18:57:37,432 Stage-1 map = 32%,  reduce = 0%, Cumulative CPU 10.84 sec
+2026-10-30 18:57:42,637 Stage-1 map = 54%,  reduce = 0%, Cumulative CPU 16.13 sec
+2026-10-30 18:57:48,903 Stage-1 map = 76%,  reduce = 0%, Cumulative CPU 21.33 sec
+2026-10-30 18:57:55,282 Stage-1 map = 97%,  reduce = 0%, Cumulative CPU 26.43 sec
+2026-10-30 18:57:57,751 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 28.16 sec
+MapReduce Total cumulative CPU time: 28 seconds 160 msec
+Ended Job = job_1793271968456_0524
+Stage-4 is selected by condition resolver.
+Stage-3 is filtered out by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/.hive-staging_hive_2026-10-30_18-57-10_524_1021043541438757901-1/-ext-10001
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/deces_snappy
+Table bench.deces_snappy stats: [numFiles=1, numRows=24919220, totalSize=115588307, rawDataSize=124596100]
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1   Cumulative CPU: 28.16 sec   HDFS Read: 115685676 HDFS Write: 115588394 SUCCESS
+Total MapReduce CPU Time Spent: 28 seconds 160 msec
+OK
+Time taken: 48.844 seconds
+OK
+Time taken: 0.011 seconds
+Query ID = cloudera_20261030185757_ccfb3e82-cc3f-46af-8edc-e5302dc44975
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793271968456_0525, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793271968456_0525/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793271968456_0525
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2026-10-30 18:58:11,174 Stage-1 map = 0%,  reduce = 0%
+2026-10-30 18:58:27,057 Stage-1 map = 21%,  reduce = 0%, Cumulative CPU 10.02 sec
+2026-10-30 18:58:33,274 Stage-1 map = 36%,  reduce = 0%, Cumulative CPU 15.19 sec
+2026-10-30 18:58:39,508 Stage-1 map = 52%,  reduce = 0%, Cumulative CPU 20.62 sec
+2026-10-30 18:58:45,749 Stage-1 map = 67%,  reduce = 0%, Cumulative CPU 26.08 sec
+2026-10-30 18:58:51,927 Stage-1 map = 83%,  reduce = 0%, Cumulative CPU 31.72 sec
+2026-10-30 18:58:57,261 Stage-1 map = 97%,  reduce = 0%, Cumulative CPU 37.1 sec
+2026-10-30 18:58:59,316 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 38.16 sec
+MapReduce Total cumulative CPU time: 38 seconds 160 msec
+Ended Job = job_1793271968456_0525
+Stage-4 is selected by condition resolver.
+Stage-3 is filtered out by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/.hive-staging_hive_2026-10-30_18-57-59_382_5341911569316207090-1/-ext-10001
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/deces_gzip
+Table bench.deces_gzip stats: [numFiles=1, numRows=24919220, totalSize=51999013, rawDataSize=124596100]
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1   Cumulative CPU: 38.16 sec   HDFS Read: 115685674 HDFS Write: 51999098 SUCCESS
+Total MapReduce CPU Time Spent: 38 seconds 160 msec
+OK
+Time taken: 61.337 seconds
+OK
+Time taken: 0.007 seconds
+Query ID = cloudera_20261030185959_6e59e77f-8f8b-4eec-a971-ba23a04c60ff
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1793271968456_0526, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1793271968456_0526/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1793271968456_0526
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2026-10-30 18:59:07,718 Stage-1 map = 0%,  reduce = 0%
+2026-10-30 18:59:24,374 Stage-1 map = 39%,  reduce = 0%, Cumulative CPU 11.5 sec
+2026-10-30 18:59:30,693 Stage-1 map = 60%,  reduce = 0%, Cumulative CPU 17.36 sec
+2026-10-30 18:59:37,061 Stage-1 map = 80%,  reduce = 0%, Cumulative CPU 22.85 sec
+2026-10-30 18:59:42,281 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 27.65 sec
+MapReduce Total cumulative CPU time: 27 seconds 650 msec
+Ended Job = job_1793271968456_0526
+Stage-4 is selected by condition resolver.
+Stage-3 is filtered out by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/.hive-staging_hive_2026-10-30_18-59-00_731_2286046874573232797-1/-ext-10001
+Moving data to: hdfs://quickstart.cloudera:8020/user/hive/warehouse/bench.db/deces_non_compresse
+Table bench.deces_non_compresse stats: [numFiles=1, numRows=24919220, totalSize=218386158, rawDataSize=124596100]
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1   Cumulative CPU: 27.65 sec   HDFS Read: 115685683 HDFS Write: 218386252 SUCCESS
+Total MapReduce CPU Time Spent: 27 seconds 650 msec
+OK
+Time taken: 44.053 seconds
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html#release for an explanation.
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.deces_gzip
+Query submitted at: 2026-10-30 18:59:45 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=6f41d4e96dfb577e:24ac24f00000000
+
+Fetched 0 row(s) in 0.10s
+Query: compute STATS bench.deces_gzip
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 5 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 3.50s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.deces_non_compresse
+Query submitted at: 2026-10-30 18:59:52 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=324f26df556bc8c0:33b5e7b200000000
+
+Fetched 0 row(s) in 0.03s
+Query: compute STATS bench.deces_non_compresse
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 5 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 2.38s
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: invalidate METADATA bench.deces_snappy
+Query submitted at: 2026-10-30 18:59:56 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=c1450559ceb15585:3cc9c94500000000
+
+Fetched 0 row(s) in 0.03s
+Query: compute STATS bench.deces_snappy
++-----------------------------------------+
+| summary                                 |
++-----------------------------------------+
+| Updated 1 partition(s) and 5 column(s). |
++-----------------------------------------+
+Fetched 1 row(s) in 3.50s

@@ -1,0 +1,46 @@
+# Plan du benchmark, lu ligne par ligne par lancer_benchmark.sh, dans l'ordre.
+# Format : famille|test|groupe|fichier|moteurs
+# Les tests sur le Bronze ne tournent que dans Hive, car Impala ne sait pas lire ses tables.
+# Une ligne PREPARER crée les tables de test de la famille qui suit.
+# Les tests d'un même groupe doivent rendre exactement le même résultat, sinon la comparaison ne vaut rien.
+# Les familles importantes passent en premier : si la nuit s'arrête, l'essentiel est déjà mesuré.
+
+PREPARER|prep_F1_partitionnement.hql|||
+F1|sans_partition|B7|requetes/F1_partitionnement/p1_sans_partition.sql|hive impala
+F1|avec_partition|B7|requetes/F1_partitionnement/p2_avec_partition.sql|hive impala
+F1|mauvais_filtre|B7|requetes/F1_partitionnement/p3_mauvais_filtre.sql|hive impala
+
+F4|B1|B1|requetes/F4_moteur/B1_consultation_etablissement.sql|hive impala
+F4|B2|B2|requetes/F4_moteur/B2_consultation_diagnostic.sql|hive impala
+F4|B3|B3|requetes/F4_moteur/B3_hospitalisation_globale.sql|hive impala
+F4|B4|B4|requetes/F4_moteur/B4_hospitalisation_diagnostic.sql|hive impala
+F4|B5|B5|requetes/F4_moteur/B5_hospitalisation_sexe_age.sql|hive impala
+F4|B6|B6|requetes/F4_moteur/B6_consultation_professionnel.sql|hive impala
+F4|B7|B7|requetes/F4_moteur/B7_deces_region.sql|hive impala
+F4|B8|B8|requetes/F4_moteur/B8_satisfaction_region.sql|hive impala
+
+PREPARER|prep_F3_format.hql|||
+F3|texte|F3|requetes/F3_format/f1_texte.sql|hive impala
+F3|parquet|F3|requetes/F3_format/f2_parquet.sql|hive impala
+
+PREPARER|prep_F5_precalcul.hql|||
+F5|B7_agregat|B7|requetes/F5_precalcul/a1_B7_agregat.sql|hive impala
+F5|B1_agregat|B1|requetes/F5_precalcul/a2_B1_agregat.sql|hive impala
+F5|B2_agregat|B2|requetes/F5_precalcul/a3_B2_agregat.sql|hive impala
+
+PREPARER|prep_F6_jointures.hql|||
+F6|source_4_jointures|REGION|requetes/F6_jointures/j1_source_4_jointures.sql|hive
+F6|etoile_1_jointure|REGION|requetes/F6_jointures/j2_etoile_1_jointure.sql|hive
+F6|shuffle_join|SPECIALITE|requetes/F6_jointures/j3_shuffle_join.sql|hive impala
+F6|map_join|SPECIALITE|requetes/F6_jointures/j4_map_join.sql|hive
+F6|bucket_map_join|SPECIALITE|requetes/F6_jointures/j5_bucket_map_join.sql|hive
+F6|bucket_map_join_indice|SPECIALITE|requetes/F6_jointures/j5b_bucket_map_join_indice.sql|hive
+F6|sort_merge_bucket|SPECIALITE|requetes/F6_jointures/j6_sort_merge_bucket.sql|hive
+
+PREPARER|prep_F7_volume.hql|||
+F7|B1_1M|B1|requetes/F7_volume/B1_x1.sql|hive impala
+F7|B6_1M|SPECIALITE|requetes/F7_volume/B6_x1.sql|hive impala
+F7|B1_10M|B1_10M|requetes/F7_volume/B1_x10.sql|hive impala
+F7|B6_10M|B6_10M|requetes/F7_volume/B6_x10.sql|hive impala
+F7|B1_100M|B1_100M|requetes/F7_volume/B1_x100.sql|hive impala
+F7|B6_100M|B6_100M|requetes/F7_volume/B6_x100.sql|hive impala

@@ -1,0 +1,41 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- Marche 1 de l'escalier : modèle en étoile (1 jointure), mais tables en texte. Seul le modèle change par rapport à la marche 0.
+EXPLAIN
+SELECT d.region, COUNT(*) AS nb_consultations
+FROM bench.fait_consult_etab_texte f
+JOIN bench.dim_etab_region_texte d ON f.identifiant_organisation = d.identifiant_organisation
+GROUP BY d.region
+Query submitted at: 2026-10-30 18:51:38 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=244ccdb010d1ee51:4031b9d700000000
+Per-Host Resource Reservation: Memory=400.00MB
+Per-Host Resource Estimates: Memory=85.72MB
+""
+PLAN-ROOT SINK
+|
+07:EXCHANGE [UNPARTITIONED]
+|
+06:AGGREGATE [FINALIZE]
+|  output: count:merge(*)
+|  group by: d.region
+|
+05:EXCHANGE [HASH(d.region)]
+|
+03:AGGREGATE [STREAMING]
+|  output: count(*)
+|  group by: d.region
+|
+02:HASH JOIN [INNER JOIN, BROADCAST]
+|  hash predicates: f.identifiant_organisation = d.identifiant_organisation
+|  runtime filters: RF000 <- d.identifiant_organisation
+|
+|--04:EXCHANGE [BROADCAST]
+|  |
+|  01:SCAN HDFS [bench.dim_etab_region_texte d]
+|     partitions=1/1 files=1 size=8.37MB
+|
+00:SCAN HDFS [bench.fait_consult_etab_texte f]
+   partitions=1/1 files=1 size=15.10MB
+   runtime filters: RF000 -> f.identifiant_organisation
+Fetched 29 row(s) in 1.05s

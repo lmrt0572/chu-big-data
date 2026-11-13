@@ -1,0 +1,43 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- Décès de mars 2019 par région, sur les décès partitionnés par jour.
+-- Une question sur un seul mois : ici, des partitions plus fines permettent de lire moins de données.
+EXPLAIN
+SELECT r.code_region, r.libelle_region, SUM(f.nb_deces) AS deces_mars_2019
+FROM bench.deces_p_jour f
+JOIN gold.dim_region r ON f.id_region = r.id_region
+WHERE f.annee_deces = 2019 AND f.mois = 3
+GROUP BY r.code_region, r.libelle_region
+Query submitted at: 2026-10-30 21:13:55 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=48f7a9017d7f9a:d807245900000000
+Per-Host Resource Reservation: Memory=400.00MB
+Per-Host Resource Estimates: Memory=52.00MB
+""
+PLAN-ROOT SINK
+|
+07:EXCHANGE [UNPARTITIONED]
+|
+06:AGGREGATE [FINALIZE]
+|  output: sum:merge(f.nb_deces)
+|  group by: r.code_region, r.libelle_region
+|
+05:EXCHANGE [HASH(r.code_region,r.libelle_region)]
+|
+03:AGGREGATE [STREAMING]
+|  output: sum(f.nb_deces)
+|  group by: r.code_region, r.libelle_region
+|
+02:HASH JOIN [INNER JOIN, BROADCAST]
+|  hash predicates: f.id_region = r.id_region
+|  runtime filters: RF000 <- r.id_region
+|
+|--04:EXCHANGE [BROADCAST]
+|  |
+|  01:SCAN HDFS [gold.dim_region r]
+|     partitions=1/1 files=2 size=2.56KB
+|
+00:SCAN HDFS [bench.deces_p_jour f]
+   partitions=31/18352 files=31 size=354.54KB
+   runtime filters: RF000 -> f.id_region
+Fetched 29 row(s) in 5.90s

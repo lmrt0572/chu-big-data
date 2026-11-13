@@ -1,0 +1,51 @@
+# Suite du benchmark (plan du 05/11), lue par : nohup bash lancer_benchmark.sh plan_suite.txt > run_suite.log 2>&1 &
+# Format : famille|test|groupe|fichier|moteurs (voir plan.txt).
+# Les familles passent par ordre d'importance pour le rapport : si la suite s'arrête, l'essentiel est mesuré.
+# Les groupes B1, B6, B7 sont ceux de plan.txt : le résultat doit rester identique à F4.
+# Les groupes *_varie sont ceux de PostgreSQL (F2) : mêmes tables, donc même résultat attendu.
+
+# F7b Volume réaliste (remplace F7). Impala seulement : Hive ne sert pas aux requêtes du tableau de bord.
+PREPARER|prep_F7b_volume_realiste_impala.sql|||
+F7b|B1_1M|B1|requetes/F7b_volume_realiste/B1_1M.sql|impala
+F7b|B2_1M|B2|requetes/F7b_volume_realiste/B2_1M.sql|impala
+F7b|B6_1M|B6|requetes/F7b_volume_realiste/B6_1M.sql|impala
+F7b|B1_10M|B1_10M_varie|requetes/F7b_volume_realiste/B1_10M.sql|impala
+F7b|B2_10M|B2_10M_varie|requetes/F7b_volume_realiste/B2_10M.sql|impala
+F7b|B6_10M|B6_10M_varie|requetes/F7b_volume_realiste/B6_10M.sql|impala
+F7b|B1_50M|B1_50M_varie|requetes/F7b_volume_realiste/B1_50M.sql|impala
+F7b|B2_50M|B2_50M_varie|requetes/F7b_volume_realiste/B2_50M.sql|impala
+F7b|B6_50M|B6_50M_varie|requetes/F7b_volume_realiste/B6_50M.sql|impala
+F7b|B1_100M|B1_100M_varie|requetes/F7b_volume_realiste/B1_100M.sql|impala
+F7b|B2_100M|B2_100M_varie|requetes/F7b_volume_realiste/B2_100M.sql|impala
+F7b|B6_100M|B6_100M_varie|requetes/F7b_volume_realiste/B6_100M.sql|impala
+
+# N3 Escalier avant/après (graphique phare) : un seul facteur change à chaque marche.
+# Marche 0 dans Hive seulement : Impala ne sait pas lire les tables du Bronze.
+PREPARER|prep_N3_escalier.hql|||
+N3|s0_origine_texte_4_jointures|REGION|requetes/F6_jointures/j1_source_4_jointures.sql|hive
+N3|s1_etoile_texte|REGION|requetes/N3_escalier/s1_etoile_texte.sql|hive impala
+N3|s2_etoile_parquet|REGION|requetes/F6_jointures/j2_etoile_1_jointure.sql|hive impala
+
+# F1b Granularité des partitions : année, mois, jour, pour une question annuelle (B7) et une question mensuelle.
+# Impala seulement : dans Hive, la VM saturée en mémoire donnait des temps de 55 à 455 s pour une même requête
+# (essais du 05/11 gardés dans resultats_suite.csv, inexploitables pour comparer les partitions).
+PREPARER|prep_F1b_granularite_impala.sql|||
+F1b|B7_annee|B7|requetes/F1b_granularite/B7_annee.sql|impala
+F1b|B7_mois|B7|requetes/F1b_granularite/B7_mois.sql|impala
+F1b|B7_jour|B7|requetes/F1b_granularite/B7_jour.sql|impala
+F1b|mars_annee|MARS|requetes/F1b_granularite/mars_annee.sql|impala
+F1b|mars_mois|MARS|requetes/F1b_granularite/mars_mois.sql|impala
+F1b|mars_jour|MARS|requetes/F1b_granularite/mars_jour.sql|impala
+
+# F8 Statistiques : les mêmes requêtes sur des copies sans statistiques, puis sur le Gold (avec statistiques).
+PREPARER|prep_F8_statistiques_impala.sql|||
+F8|B1_sans_stats|B1|requetes/F8_statistiques/B1_sans_stats.sql|impala
+F8|B1_avec_stats|B1|requetes/F4_moteur/B1_consultation_etablissement.sql|impala
+F8|B6_sans_stats|B6|requetes/F8_statistiques/B6_sans_stats.sql|impala
+F8|B6_avec_stats|B6|requetes/F4_moteur/B6_consultation_professionnel.sql|impala
+
+# F3b Compression de Parquet : Snappy (choix actuel), Gzip, sans compression.
+PREPARER|prep_F3b_compression.hql|||
+F3b|snappy|B7|requetes/F3b_compression/B7_snappy.sql|hive impala
+F3b|gzip|B7|requetes/F3b_compression/B7_gzip.sql|hive impala
+F3b|non_compresse|B7|requetes/F3b_compression/B7_non_compresse.sql|hive impala

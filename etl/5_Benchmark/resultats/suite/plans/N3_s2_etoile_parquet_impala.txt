@@ -1,0 +1,41 @@
+Starting Impala Shell without Kerberos authentication
+Connected to quickstart.cloudera:21000
+Server version: impalad version 2.9.0-cdh5.12.0 RELEASE (build 03c6ddbdcec39238be4f5b14a300d5c4f576097e)
+Query: -- Même question sur le modèle en étoile : la région est déjà dans la dimension, il reste 1 jointure.
+EXPLAIN
+SELECT d.region, COUNT(*) AS nb_consultations
+FROM bench.fait_consult_etab f
+JOIN bench.dim_etab_region d ON f.identifiant_organisation = d.identifiant_organisation
+GROUP BY d.region
+Query submitted at: 2026-10-30 18:56:06 (Coordinator: http://quickstart.cloudera:25000)
+Query progress can be monitored at: http://quickstart.cloudera:25000/query_plan?query_id=a2486932737f9bfb:7d21adc200000000
+Per-Host Resource Reservation: Memory=400.00MB
+Per-Host Resource Estimates: Memory=53.72MB
+""
+PLAN-ROOT SINK
+|
+07:EXCHANGE [UNPARTITIONED]
+|
+06:AGGREGATE [FINALIZE]
+|  output: count:merge(*)
+|  group by: d.region
+|
+05:EXCHANGE [HASH(d.region)]
+|
+03:AGGREGATE [STREAMING]
+|  output: count(*)
+|  group by: d.region
+|
+02:HASH JOIN [INNER JOIN, BROADCAST]
+|  hash predicates: f.identifiant_organisation = d.identifiant_organisation
+|  runtime filters: RF000 <- d.identifiant_organisation
+|
+|--04:EXCHANGE [BROADCAST]
+|  |
+|  01:SCAN HDFS [bench.dim_etab_region d]
+|     partitions=1/1 files=1 size=2.03MB
+|
+00:SCAN HDFS [bench.fait_consult_etab f]
+   partitions=1/1 files=3 size=5.54MB
+   runtime filters: RF000 -> f.identifiant_organisation
+Fetched 29 row(s) in 0.28s
